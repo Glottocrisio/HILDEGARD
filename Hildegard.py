@@ -3,9 +3,11 @@ import DBManipulation as gm
 import DBPSpotlight  as dbs
 import KGAlignmentpy as kga
 import wikifier as w
-import wikishortpath as wsp
+import tools as t
 import EntityTyping as et
-from ImportDataset import *
+import ImportDataset  as id
+from SPARQLWrapper import SPARQLWrapper, JSON
+import sdowmock as sdow
 
 #creare grafo di conoscenza a partire da dataset sui beni culturali
     # trovare collegamenti interni 
@@ -46,6 +48,26 @@ from ImportDataset import *
 #   print(path)
 #else:
 #   print(None)
+
+# Example usage
+# Define the SPARQL query
+
+
+#id.fetchSPARQLendpoint("museum", "arco", "it")
+start_entity = "Barack_Obama"
+end_entity = "Albert_Einstein"
+start = "Battle_of_Issus"
+end = "Trier"
+
+#shortest_path = sp.shortest_path_between_entities(start_entity, end_entity)
+#shortest_path = sp.DBpedia_short_path(start_entity, end_entity)
+#shortest_path = sp.retrieve_common_entities(start, end)
+sdow.related_entities_triples(start, end)
+#if shortest_path:
+#    print(f"Shortest path from {start_entity} to {end_entity}:")
+#    print(" -> ".join(shortest_path))
+#else:
+#    print(f"No path found from {start_entity} to {end_entity}")
 
 driver = GraphDatabase.driver("neo4j://localhost:7687",
                               auth=("neo4j","pipi1233")) 

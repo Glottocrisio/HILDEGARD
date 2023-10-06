@@ -21,15 +21,6 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="DB.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="EntityTyping.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="helpers.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="Hildegard.py" />
     <Compile Include="ImportDataset.py">
       <SubType>Code</SubType>
@@ -41,13 +32,16 @@
     <Compile Include="KGAlignmentpy.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="bfs.py">
+    <Compile Include="metrics.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="sdowmock.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="wikifier.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="wikishortpath.py">
+    <Compile Include="tools.py">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>

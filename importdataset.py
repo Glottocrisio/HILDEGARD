@@ -26,9 +26,7 @@ def fetchSPARQLendpoint(text, endpoint, lang):
         )
         sparql.setReturnFormat(JSON)
     elif endpoint == "arco":
-        sparql = SPARQLWrapper(
-            "https://dati.cultura.gov.it/sparql/"
-        )
+        sparql = SPARQLWrapper("https://dati.cultura.gov.it/sparql")
         sparql.setReturnFormat(TURTLE)
         if text=="region":
             region = input("Insert the name of the region you want to explore:")
@@ -55,31 +53,31 @@ def fetchSPARQLendpoint(text, endpoint, lang):
 
         if text=="museum":
             museo = input("Insert the name of the museum or site you want to explore, from the previous output:")
-            sparql.setQuery( 
-                "PREFIX cov: <https://w3id.org/italia/onto/COV/>"
-                "PREFIX arco-core: <https://w3id.org/arco/ontology/core/>"
-                "PREFIX datigov: <http://dati.gov.it/onto/>"
-                "PREFIX dcterms: <http://purl.org/dc/terms/>"
-                "PREFIX io: <https://schema.gov.it/lodview/onto/l0/>"
-                "PREFIX cis: <http://dati.beniculturali.it/cis/>"
+            query =  """
+                    PREFIX cov: <https://w3id.org/italia/onto/COV/>
+                    PREFIX arco-core: <https://w3id.org/arco/ontology/core/>
+                    PREFIX datigov: <http://dati.gov.it/onto/>
+                    PREFIX dcterms: <http://purl.org/dc/terms/>
+                    PREFIX io: <https://schema.gov.it/lodview/onto/l0/>
+                    PREFIX cis: <http://dati.beniculturali.it/cis/>
 
-                "SELECT DISTINCT ?cultpro"
-                "WHERE {"
-
-                " {?cultpro rdfs:label \"Museo Archeologico Nazionale di Napoli\"."
-                "   ?cultpro  rdf:type cov:Organization"
-                "}"
-
-                "UNION"
-                " {?cultpro rdfs:label \"Museo Archeologico Nazionale di Napoli\"."
-                "  ?cultpro rdf:type cis:CulturalInstituteOrSite}"
-                "}"
-                "LIMIT 2"
-
-                  )
+                    SELECT DISTINCT ?cultpro
+                    WHERE {
+                        ?cultpro rdfs:label \"""" + str(museo) + """\".
+                        ?cultpro rdf:type cov:Organization
+                    }
+                    UNION
+                    {
+                        ?cultpro rdfs:label \"""" + str(museo) + """\".
+                        ?cultpro rdf:type cis:CulturalInstituteOrSite
+                    }
+                    LIMIT 2
+                """
+                  
 
             try:
-                ret = sparql.queryAndConvert(TURTLE)
+                sparql.setQuery(query)
+                ret= sparql.query(query)
 
                 # works for "p" values extracted from wikidata
                 uri = ret["results"]["bindings"][0]["p"]["value"]
