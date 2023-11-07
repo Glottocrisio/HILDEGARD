@@ -1,0 +1,33 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia-en: <https://en.wikipedia.org/wiki/> .
+
+# Entities
+dbpedia-en:Pompei rdf:type dbpedia-en:Italian_commune_in_Campania .
+dbpedia-en:Pompei foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Pompei> .
+dbpedia-en:Pompei rdfs:label "Pompei" .
+
+dbpedia-en:Naples rdf:type dbpedia-en:City_and_commune_in_Campania_Italy .
+dbpedia-en:Naples foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Naples> .
+dbpedia-en:Naples rdfs:label "Naples" .
+
+dbpedia-en:Alexander_the_Great rdf:type dbpedia-en:King_of_Macedonia_and_conqueror_of_Achaemenid_Persia .
+dbpedia-en:Alexander_the_Great foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Alexander_the_Great> .
+dbpedia-en:Alexander_the_Great rdfs:label "Alexander the Great" .
+
+dbpedia-en:House_of_the_Faun rdf:type dbpedia-en:Roman_domus_in_Pompeii_perhaps_the_largest_in_the_city_at_the_time_of_its_destruction .
+dbpedia-en:House_of_the_Faun foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/House_of_the_Faun> .
+dbpedia-en:House_of_the_Faun rdfs:label "House of the Faun" .
+
+dbpedia-en:Alexander_Mosaic rdf:type dbpedia-en:Roman_mosaic_of_Pompeii .
+dbpedia-en:Alexander_Mosaic foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Alexander_Mosaic> .
+dbpedia-en:Alexander_Mosaic rdfs:label "Alexander Mosaic" .
+
+dbpedia-en:National_Archaeological_Museum_Naples rdf:type dbpedia-en:Italian_archeological_museum_known_for_Roman_materials .
+dbpedia-en:National_Archaeological_Museum_Naples foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/National_Archaeological_Museum,_Naples> .
+dbpedia-en:National_Archaeological_Museum_Naples rdfs:label "National Archaeological Museum, Naples" .
+
+dbpedia-en:Pompey rdf:type dbpedia-en:Roman_general_and_statesman .
+dbpedia-en:Pompey foaf:isPrimaryTopicOf <https://en.wikipedia.org/wiki/Pompey> .
+dbpedia-en:Pompey rdfs:label "Pompey" .

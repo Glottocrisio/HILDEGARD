@@ -11,6 +11,8 @@
     <OutputPath>.</OutputPath>
     <Name>Hildegard</Name>
     <RootNamespace>Hildegard</RootNamespace>
+    <InterpreterId>Global|VisualStudio|Python 3.7 (64 bit)</InterpreterId>
+    <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -28,8 +30,10 @@
     <Compile Include="DBManipulation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="DBPSpotlight.py" />
     <Compile Include="KGAlignmentpy.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="KGmanipulation.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="metrics.py">
@@ -44,6 +48,20 @@
     <Compile Include="tools.py">
       <SubType>Code</SubType>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="alexander2pompeishortpath.ttl" />
+    <Content Include="alexander2pompeishortpath2.ttl" />
+    <Content Include="battleIssusTriershortestpath.ttl" />
+    <Content Include="Entities_shortest_Path_Alessandro_Pompei.ttl" />
+    <Content Include="oggetticulturalimuseoarcheologiconazionaleit" />
+    <Content Include="oggetticulturalimuseoarcheologiconazionaleitmerged.ttl" />
+    <Content Include="wikifiedtriples.ttl" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterpreterReference Include="CondaEnv|CondaEnv|env" />
+    <InterpreterReference Include="Global|PythonCore|3.7" />
+    <InterpreterReference Include="Global|VisualStudio|Python 3.7 (64 bit)" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

@@ -5,54 +5,61 @@ from SPARQLWrapper import SPARQLWrapper, JSON, RDF, TURTLE
 
 
 def fetchSPARQLendpoint(text, endpoint, lang):
-    if endpoint == "wikidata":
+    if endpoint == "w":
         sparql = SPARQLWrapper(
             "https://query.wikidata.org/sparql/"
         )
-        sparql.setReturnFormat(JSON)
-    elif endpoint == "yago":
+        
+    elif endpoint == "y":
         sparql = SPARQLWrapper(
             "https://yago-knowledge.org/sparql/"
         )
-        sparql.setReturnFormat(JSON)
-    elif endpoint == "dbpedia":
+       
+    elif endpoint == "d":
         sparql = SPARQLWrapper(
             "https://dbpedia.org/sparql/"
         )
-        sparql.setReturnFormat(JSON)
-    elif endpoint == "europeana":
+        
+    elif endpoint == "e":
         sparql = SPARQLWrapper(
             "https://sparql.europeana.eu/"
         )
-        sparql.setReturnFormat(JSON)
-    elif endpoint == "arco":
+        
+    elif endpoint == "a":
         sparql = SPARQLWrapper("https://dati.cultura.gov.it/sparql")
-        sparql.setReturnFormat(TURTLE)
         if text=="region":
-            region = input("Insert the name of the region you want to explore:")
-            sparql.setQuery( "PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>\n"
-            "PREFIX arco-location: <https://w3id.org/arco/ontology/location/>\n"
-            "PREFIX CLV: <https://w3id.org/italia/onto/CLV/>\n"
-            "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/>\n"
-            "SELECT  distinct ?cultpro ?id ?type ?title ?description ?address ?regNome ?def\n"
-            "WHERE {\n"
-             "?cultpro a arco-arco:ArchitecturalOrLandscapeHeritage.\n"
-             "?cultpro dc:identifier ?id.\n"
-             "?cultpro dc:title ?title.\n"
-             "?cultpro dc:description ?description.\n"
-             "?cultpro arco-location:hasCulturalPropertyAddress ?address.\n"
-             "?address CLV:hasRegion ?region.\n"
-             "?region rdfs:label ?regNome.\n"
-             "?cultpro arco-dd:hasCulturalPropertyType ?type.\n"
-             "?type arco-dd:hasCulturalPropertyDefinition ?def\n"
-             "FILTER regex(?regNome, " + str(region) + 
-             ", \"i"")\n"
-             "FILTER regex(?def, \"museo\", \"i"")\n       } "
-         
-             )
+            region = input("Insert the name of the region you want to explore: \n")
+            query = """
+                PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>
+                PREFIX arco-location: <https://w3id.org/arco/ontology/location/>
+                PREFIX CLV: <https://w3id.org/italia/onto/CLV/>
+                PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/>
+                SELECT  distinct ?cultpro ?id ?type ?title ?description ?address ?regNome ?def
+                WHERE {
+                ?cultpro a arco-arco:ArchitecturalOrLandscapeHeritage.
+                ?cultpro dc:identifier ?id.
+                ?cultpro dc:title ?title.
+                ?cultpro dc:description ?description.
+                ?cultpro arco-location:hasCulturalPropertyAddress ?address.
+                ?address CLV:hasRegion ?region.
+                ?region rdfs:label ?regNome.
+                ?cultpro arco-dd:hasCulturalPropertyType ?type.
+                ?type arco-dd:hasCulturalPropertyDefinition ?def.
+                FILTER regex(?regNome, \"""" + str(region) + """\", \"i")
+                FILTER regex(?def, \"museo\", \"i")     } 
+            """
+               
+            sparql.setQuery(query)
+            sparql.setReturnFormat(JSON)
 
-        if text=="museum":
-            museo = input("Insert the name of the museum or site you want to explore, from the previous output:")
+            # Execute the query
+            results = sparql.query().convert()
+            i = 0
+            while i <  len(results['results']['bindings']):
+                print(results['results']['bindings'][i]['title'])
+                i = i + 1
+            
+            museo = input("Insert the name of the museum or site you want to explore, from the previous output:\n")
             query =  """
                     PREFIX cov: <https://w3id.org/italia/onto/COV/>
                     PREFIX arco-core: <https://w3id.org/arco/ontology/core/>
@@ -62,7 +69,7 @@ def fetchSPARQLendpoint(text, endpoint, lang):
                     PREFIX cis: <http://dati.beniculturali.it/cis/>
 
                     SELECT DISTINCT ?cultpro
-                    WHERE {
+                    WHERE {{
                         ?cultpro rdfs:label \"""" + str(museo) + """\".
                         ?cultpro rdf:type cov:Organization
                     }
@@ -70,100 +77,144 @@ def fetchSPARQLendpoint(text, endpoint, lang):
                     {
                         ?cultpro rdfs:label \"""" + str(museo) + """\".
                         ?cultpro rdf:type cis:CulturalInstituteOrSite
-                    }
+                    }}
                     LIMIT 2
                 """
-                  
+            
+            sparql.setQuery(query)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            i = 0
+            while i <  len(results['results']['bindings']):
+                if i == 0:
+                    catalogagencydict = results['results']['bindings'][i]
+                    catalogagency = catalogagencydict['cultpro']['value']
+                else:
+                    cultinstdict = results['results']['bindings'][i]
+                    cultinst = cultinstdict['cultpro']['value']
+                print(results['results']['bindings'][i])
+                i = i + 1
 
-            try:
-                sparql.setQuery(query)
-                ret= sparql.query(query)
+            query = """
+            PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>
+            PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>
+            PREFIX arco-location: <https://w3id.org/arco/ontology/location/>
+            PREFIX CLV: <https://w3id.org/italia/onto/CLV/>
+            PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/>
+            PREFIX cov: <https://w3id.org/italia/onto/COV/>
+            PREFIX arco-core: <https://w3id.org/arco/ontology/core/>
+            PREFIX datigov: <http://dati.gov.it/onto/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX io:  <https://w3id.org/italia/onto/l0/>
+            
+            SELECT DISTINCT ?cultobj ?title ?museo ?descr
+            WHERE {
+            {?cultobj arco-arco:hasCataloguingAgency  <""" + str(catalogagency) + """>.
+                 <""" + str(catalogagency) + """>  rdfs:label  ?museo.
+                ?cultobj   dc:description ?descr.
+                ?cultobj  rdfs:label ?title}
+              union
+              {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
+              <""" + str(cultinst) + """> rdfs:label  ?museo.
+               ?cultobj   dc:description ?descr.
+               ?cultobj  rdfs:label ?title }
+            FILTER(LANG(?title) = 'it')    }
+        """
+            sparql.setQuery(query)
+            sparql.setReturnFormat(TURTLE)
+            results = sparql.query().convert()
+            
+        
 
-                # works for "p" values extracted from wikidata
-                uri = ret["results"]["bindings"][0]["p"]["value"]
+            #    # Specify the folder and file path to save the results
+            #    file_path = "C:/Users/Palma/Desktop/PHD/DatasetThesis/HildegardData/"
+            #    file_path = filepath + input("Insert the name of the file you want to save as KB:")
+            #    # Save the results to the specified file
+            #    with open(file_path, 'w') as file:
+            #        file.write(result_data)  
+        else:
+            museo = input("Insert the name of the museum or site you want to explore:\n")
+            query =  """
+                    PREFIX cov: <https://w3id.org/italia/onto/COV/>
+                    PREFIX arco-core: <https://w3id.org/arco/ontology/core/>
+                    PREFIX datigov: <http://dati.gov.it/onto/>
+                    PREFIX dcterms: <http://purl.org/dc/terms/>
+                    PREFIX io: <https://schema.gov.it/lodview/onto/l0/>
+                    PREFIX cis: <http://dati.beniculturali.it/cis/>
 
-                info = {
-                    "uri" : uri,
-                    "label" : text
-                }
+                    SELECT DISTINCT ?cultpro
+                    WHERE {{
+                        ?cultpro rdfs:label \"""" + str(museo) + """\".
+                        ?cultpro rdf:type cov:Organization
+                    }
+                    UNION
+                    {
+                        ?cultpro rdfs:label \"""" + str(museo) + """\".
+                        ?cultpro rdf:type cis:CulturalInstituteOrSite
+                    }}
+                    LIMIT 2
+                """
+            
+            sparql.setQuery(query)
+            sparql.setReturnFormat(JSON)
+            results = sparql.query().convert()
+            i = 0
+            while i <  len(results['results']['bindings']):
+                if i == 0:
+                    catalogagencydict = results['results']['bindings'][i]
+                    catalogagency = catalogagencydict['cultpro']['value']
+                else:
+                    cultinstdict = results['results']['bindings'][i]
+                    cultinst = cultinstdict['cultpro']['value']
+                print(results['results']['bindings'][i])
+                i = i + 1
 
-                return info
+            query = """
+            PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>
+            PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>
+            PREFIX arco-location: <https://w3id.org/arco/ontology/location/>
+            PREFIX CLV: <https://w3id.org/italia/onto/CLV/>
+            PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/>
+            PREFIX cov: <https://w3id.org/italia/onto/COV/>
+            PREFIX arco-core: <https://w3id.org/arco/ontology/core/>
+            PREFIX datigov: <http://dati.gov.it/onto/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX io:  <https://w3id.org/italia/onto/l0/>
+            
+            SELECT DISTINCT ?cultobj ?title ?museo ?descr
+            WHERE {
+            {?cultobj arco-arco:hasCataloguingAgency  <""" + str(catalogagency) + """>.
+                 <""" + str(catalogagency) + """>  rdfs:label  ?museo.
+                ?cultobj   dc:description ?descr.
+                ?cultobj  rdfs:label ?title}
+              union
+              {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
+              <""" + str(cultinst) + """> rdfs:label  ?museo.
+               ?cultobj   dc:description ?descr.
+               ?cultobj  rdfs:label ?title }
+            FILTER(LANG(?title) = 'it')    }
+        """
+            sparql.setQuery(query)
+            sparql.setReturnFormat(TURTLE)
+            results = sparql.query().convert()
 
-            except Exception as e:
-                print(e)
+ 
+            # Specify the folder and file path to save the results
+            file_path = "C:/Users/Palma/Desktop/PHD/DatasetThesis/HildegardData/"
+            file_path = file_path + input("Insert the name of the file you want to save as KB:")
+            # Save the results to the specified file
+            with open(file_path, 'w') as file:
+                file.write(str(results))
 
-                return 0
-
-            catalogagency="" #prima linea risultato query precedente
-            cultinst=""  #seconda linea risultato query precedente
-            sparql.setQuery("PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>\n"
-            "PREFIX arco-arco: <https://w3id.org/arco/ontology/arco/>\n"
-            "PREFIX arco-location: <https://w3id.org/arco/ontology/location/>\n"
-            "PREFIX CLV: <https://w3id.org/italia/onto/CLV/>\n"
-            "PREFIX arco-dd: <https://w3id.org/arco/ontology/denotative-description/>\n"
-            "PREFIX cov: <https://w3id.org/italia/onto/COV/>\n"
-            "PREFIX arco-core: <https://w3id.org/arco/ontology/core/>\n"
-            "PREFIX datigov: <http://dati.gov.it/onto/>\n"
-            "PREFIX dcterms: <http://purl.org/dc/terms/>\n"
-            "PREFIX io:  <https://w3id.org/italia/onto/l0/>\n"
-            "PREFIX a-res: <>\n\n"
-            "SELECT DISTINCT ?cultobj ?title ?museo ?descr\n"
-            "WHERE {\n\n"
-            "{?cultobj arco-arco:hasCataloguingAgency " + str(catalogagency) +  ".\n"
-                + str(catalogagency) +  "rdfs:label  ?museo.\n"
-            "    ?cultobj   dc:description ?descr.\n"
-            "    ?cultobj  rdfs:label ?title}\n"
-            "  union\n"
-            "  {?cultobj  arco-location:hasCulturalInstituteOrSite " + str(cultinst) + ".\n"
-             + str(cultinst) + " rdfs:label  ?museo.\n"
-            "   ?cultobj   dc:description ?descr.\n"
-            "   ?cultobj  rdfs:label ?title\n}\n"
-            "FILTER(LANG(?title) = 'it')\n""     }"
-        )
-
-            try:
-                #ret = sparql.queryAndConvert("Turtle")
-                sparql.setReturnFormat("Turtle")
-                # works for "p" values extracted from wikidata
-                # Execute the query
-                results = sparql.query()
-
-                # Retrieve the results
-                result_data = results.convert()
-                
-                #ret = sparql.query()         
-                #res = ret._convertN3(ret)
-                # Specify the folder and file path to save the results
-                file_path = "C:/Users/Palma/Desktop/PHD/DatasetThesis/HildegardData/"
-                file_path = filepath + input("Insert the name of the file you want to save as KB:")
-                # Save the results to the specified file
-                with open(file_path, 'w') as file:
-                    file.write(result_data)
-
-                # Close the SPARQLWrapper connection (optional)
-                sparql.close()
-                uri = ret["results"]["bindings"][0]["p"]["value"]
-
-                info = {
-                    "uri" : uri,
-                    "label" : text
-                }
-
-                return info
-
-            except Exception as e:
-                print(e)
-
-                return 0
-
+     
 
 #This function takes as 
 #Momentarily, KGs are at disposal only in Turtle Format
-def importKnowledgebase(tx):
-    datapath = input("Please insert the path of the database file, if offline, or the uri where it is stored. In this case, provide the link "
-                     +"of the github raw file")
+
+
+def importKnowledgebase(tx, datapath):
     if datapath[0] != "h":
-        datapath = "file:///"+datapath
+        datapath = "file:///" + datapath.replace("\\", "/")
     if datapath[-3:] == "csv":
         query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' AS row CREATE (:Object {cultobj: row.cultobj, title: row.title,  museum: row.museo,  description: row.descr});")
     else: #we suppose that the available fromats are only csv and ttl. This option captures also the case of a uri ending in ".git"

@@ -1,0 +1,52 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+ex:Pompei rdf:type ex:ItalianCommune ;
+    rdfs:label "Pompei" ;
+    ex:hasCaption "Italian commune in Campania" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/Pompei> ;
+    ex:linksTo ex:Naples, ex:Alexander_the_Great .
+
+ex:Naples rdf:type ex:CityInCampania ;
+    rdfs:label "Naples" ;
+    ex:hasCaption "City and commune in Campania, Italy" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/Naples> ;
+    ex:linksTo ex:Alexander_the_Great, ex:Pompei .
+
+ex:Alexander_the_Great rdf:type ex:MacedonianKing ;
+    rdfs:label "Alexander the Great" ;
+    ex:hasCaption "King of Macedonia and conqueror of Achaemenid Persia (356–323 BC)" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/Alexander_the_Great> ;
+    ex:conquered ex:Achaemenid_Persia ;
+    ex:linksTo ex:Pompei, ex:House_of_the_Faun, ex:Alexander_Mosaic, ex:National_Archaeological_Museum_Naples, ex:Pompey .
+
+ex:House_of_the_Faun rdf:type ex:RomanDomus ;
+    rdfs:label "House of the Faun" ;
+    ex:hasCaption "Roman domus in Pompeii, perhaps the largest in the city at the time of its destruction" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/House_of_the_Faun> ;
+    ex:locatedIn ex:Pompei ;
+    ex:linksTo ex:Alexander_the_Great, ex:Pompei .
+
+ex:Alexander_Mosaic rdf:type ex:RomanMosaic ;
+    rdfs:label "Alexander Mosaic" ;
+    ex:hasCaption "Roman mosaic of Pompeii" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/Alexander_Mosaic> ;
+    ex:locatedIn ex:Pompei ;
+    ex:linksTo ex:Alexander_the_Great, ex:Pompei .
+
+ex:National_Archaeological_Museum_Naples rdf:type ex:ItalianArchaeologicalMuseum ;
+    rdfs:label "National Archaeological Museum, Naples" ;
+    ex:hasCaption "Italian archaeological museum known for Roman materials" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/National_Archaeological_Museum_Naples> ;
+    ex:knownFor ex:RomanMaterials ;
+    ex:linksTo ex:Alexander_the_Great, ex:Pompei .
+
+ex:Pompey rdf:type ex:RomanGeneral ;
+    rdfs:label "Pompey" ;
+    ex:hasCaption "Roman general and statesman (106–48 BC)" ;
+    ex:hasLink <https://en.wikipedia.org/wiki/Pompey> ;
+    ex:isStatesman true ;
+    ex:activeYears "106–48 BC";
+    ex:linksTo ex:Alexander_the_Great, ex:Pompei .

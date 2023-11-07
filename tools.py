@@ -6,8 +6,173 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 import re
 import spacy
 import urllib.parse, urllib.request, json
+from itertools import combinations
+from rdflib import Graph
+import mediawikiapi as mwa
+import pywikigraph as wgr
+import wikipedia as w
+#from selenium import webdriver
+#from selenium.webdriver.common.keys import Keys
+#from selenium.webdriver.common.by import By
+#from selenium.webdriver.firefox.options import Options
+from wikidata.client import Client
+
 
 sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+
+def get_dbpedia_uri_lang(entity, lang = "it"):
+    #Find entity in wikidata using requests
+    wikidat = SPARQLWrapper("https://query.wikidata.org/sparql")
+    query = """
+        PREFIX wd: <http://www.wikidata.org/entity/>
+        SELECT DISTINCT ?qid
+        WHERE {
+          BIND(STRLANG(\"""" + entity + """\", "en") AS ?label ) .
+          ?item rdfs:label ?label .
+          BIND(STRAFTER(STR(?item), STR(wd:)) AS ?qid) .
+        }
+
+        LIMIT 1
+    """
+    wikidat.setQuery(query)
+    wikidat.setReturnFormat(JSON)
+    results = wikidat.queryAndConvert()
+    result = results['results']['bindings'][0]['qid']['value']
+    try:
+        queryy = """
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
+            PREFIX wd: <http://www.wikidata.org/entity/> 
+            SELECT  *
+            WHERE {
+                    wd:""" + result + """ rdfs:label ?label .
+                    FILTER (langMatches( lang(?label), \"""" + lang + """\" ) )
+                  } 
+            LIMIT 1
+        """
+          
+        wikidat.setQuery(queryy)
+        wikidat.setReturnFormat(JSON)
+        resultss = wikidat.queryAndConvert()
+        resul = resultss['results']['bindings'][0]['label']['value']
+        uri = 'https://'+ str(lang)+ '.dbpedia.org/page/' + str(resul)
+
+    except Exception as e:
+        response = requests.get("https://dbpedia.org/page/" + str(entity))
+        soup = BeautifulSoup(response.content, "html.parser")
+        text = str(soup.text)
+        text_list = text.split("\n")
+        text_list = [x for x in text_list if x != '']
+        wikicommons = []
+        dbr = []
+        lang_list = []
+
+        for line in text_list:
+            #if substring of href == lang THEN assign to the variable 'uri' the value of 'href'
+            if line[-4:] == "("+ str(lang) + ")":
+                line = line[:-4]
+                lang_list.append(line)
+            if line[:12] == "wiki-commons":
+                wikicommons.append(line)
+            if line[:3] == "dbr":
+                dbr.append(line)
+
+        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}wikimediacommons.txt", "a") as f:
+            for x in wikicommons:
+                try:
+                  f.write(str(x) + "\n")
+                except Exception as e:
+                    pass
+            f.close()
+
+        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}dbpediaresources.txt", "a") as g:
+            for x in dbr:
+                try:
+                    g.write(str(x) + "\n")
+                except Exception as e:
+                    pass
+            g.close()
+
+        i = 0
+        lang_list.reverse()
+        while i < len(lang_list):
+            try:
+                get_uri = requests.get("https://dbpedia.org/page/" + str(lang_list[i]))
+                break
+            except Exception as e:
+                i = i + 1
+                #get_uri = requests.get("https://dbpedia.org/page/" + str(lang_list[i]))
+        uri = "https://dbpedia.org/page/" + str(lang_list[i])
+        print(uri)
+    return uri
+
+def wikigraph_short_path(start, end):
+    wg = wgr.WikiGraph()
+    paths = wg.get_shortest_paths_info(start, end, directed = False)
+    print(paths)
+    return paths
+
+def get_wikipedia_link_in_lang(english_wikipedia_link, lang):
+    wiki_wiki = wa.Wikipedia('HILDE&GARD/1.0 (your@email.com)',lang)
+
+    page_en = wiki_wiki.page(english_wikipedia_link)
+
+    if page_en.exists():
+        target_pages = page_en.langlinks
+        for sprache in target_pages:
+            if sprache == lang:
+                print(sprache.fullurl)
+                return sprache.fullurl
+      
+def entitylinking(text):
+    url ="https://api.dbpedia-spotlight.org/en/annotate"
+    headers={'accept':'application/json'}
+
+    resp = requests.get(url, headers=headers, params={"text": text})
+     
+    data = resp.json()
+    print(data)
+    return data
+
+def get_dbpedia_uri_italian(wikipedia_entity_english):
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    query = f"""
+        PREFIX dbpedia-owl: <http://dbpedia.org/ontology/>
+        PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+        SELECT ?italianURI
+        WHERE {{
+          ?englishURI rdfs:label {wikipedia_entity_english}@en .
+          ?englishURI dbpedia-owl:wikiPageWikiLink ?italianURI .
+          FILTER (LANG(?italianURI) = "it")
+        }}
+    """
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+    results = sparql.query().convert()
+    
+    links = []
+    for result in results["results"]["bindings"]:
+        linked_resource = result["linkedResource"]["value"]
+        if linked_resource.startswith("http://dbpedia.org/resource/"):
+            link = linked_resource.split("/resource/")[1]
+            links.append(link)
+
+    query_url = f"https://api.dbpedia-spotlight.org/en/annotate?text={wikipedia_uri_english}&confidence=0.3"
+
+    response = requests.get(query_url)
+
+    response_json = response.json()
+
+    dbpedia_uri_italian = None
+    for annotation in response_json["annotations"]:
+        if annotation["@type"] == "DBpediaSpotlight:Entity" and annotation["dbpediaURI"].endswith("/it"):
+            dbpedia_uri_italian = annotation["dbpediaURI"]
+            break
+
+    return dbpedia_uri_italian
+
+
 
 def retrieve_common_entities(start, end):
     sparql.setQuery(f"""
@@ -144,7 +309,7 @@ def find_shortest_path(start_article, end_article, max_depth=6):
 
 
 # Create a function to get links from an article
-def get_links(article_title):
+def get_wikilinks(article_title):
     wiki_wiki = wa.Wikipedia('HILDE&GARD/1.0 (your@email.com)', 'en')
     page = wiki_wiki.page(article_title)
     return [link.title for link in page.links]
@@ -255,3 +420,27 @@ def CosineSimilarity(lang, title1, title2):
 #    #path = results["results"]["bindings"][0]["path"]["value"]
 #    print(results)
 #    return results
+
+def text2list(filename, delimiter=","):
+    try:
+      with open(filename, "r") as f:
+        contents = f.read()
+    except Exception as e:
+        with open(filename + ".txt", "r") as f:
+            contents = f.read()
+    elements = contents.split(delimiter)
+    del elements[-1]
+    return elements
+
+
+
+def get_combos(elements):
+
+  seen_couplets = set()
+  couplets = []
+  for i in range(len(elements)):
+    for j in range(i + 1, len(elements)):
+      if elements[i] != elements[j] and (elements[i], elements[j]) not in seen_couplets:
+        couplets.append((elements[i], elements[j]))
+        seen_couplets.add((elements[i], elements[j]))
+  return couplets

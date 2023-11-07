@@ -4,7 +4,11 @@ from selenium import webdriver
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.support.ui import WebDriverWait
 import time
+from bs4 import BeautifulSoup as bs
+#from selenium.webdriver.support import expected_conditions as ec
+import os
 
 def related_entities(start, end):
     options = Options()
@@ -35,7 +39,7 @@ def related_entities(start, end):
     return nodes
 
 
-def delete_until_given_instance_of_word_in_string(string, word, n):
+def delete_until_word(string, word, n):
 
   count = string.count(word)
   if count < n:
@@ -80,26 +84,60 @@ def related_entities_triples(start, end, bi = True, file = True):
 
     browser.find_element(By.CSS_SELECTOR, "button").click()
 
-    time.sleep(7)
-    webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0]
-    webtext.text
-    time.sleep(5)
+    # Workaround to  using beautifulsoup
+    #filename = f"{start}-{end}.html"
+
+    ## Carica il contenuto della pagina web
+    #response = requests.get(f"https://www.sixdegreesofwikipedia.com/?source={start}&target={end}")
+    #html = response.text
+
+    #with open(filename, "r") as f:
+    #    html = f.read()
+
+    #soup = bs.BeautifulSoup(html, "html.parser")
+    #print(soup.find("div", class_="main-content").prettify())
+
+    #with open(filename, "w") as f:
+    #    f.write(html)
+
+    #time.sleep(7)
+    try:
+        webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0] 
+    except Exception as e:
+        div2 = True 
+        webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0] 
+    #WebDriverWait(browser, 10).until(ec.text_to_be_present_in_element(webtext.text, "Individual paths"))
+    
+    #time.sleep(5)
     hrefs_list = []
     titles_list = []
     captions_list = []
     token = 0
-    time.sleep(5)
+    #time.sleep(5)
+    #with open("webtext.txt", "w") as f:
+    #        f.write(str(webtext.text))
+    #with open("webtext.txt", "r") as f:
+    #    webtexto = f.read()
+    #f.close()
+    #try:
+    #    os.remove("C:/Users/Palma/Desktop/PHD/HILD&GARD/webtext.txt")
+    #except OSError as e:
+    #    print(e)
+
     webtexto = webtext.text
-    time.sleep(5)
 
     print(webtexto)
-
-    ropes = delete_until_given_instance_of_word_in_string(webtexto, "paths", 3)
+    if div2:
+        try:
+            ropes = delete_until_word(webtexto, "paths", 3)
+        except Exception as e:
+            ropes = delete_until_word(webtext, "paths", 2)
 
     ropeslist = ropes.split("\n")
+    if ropeslist[0] == '': ropeslist.remove('')
    
     for line in ropeslist:
-        if ropeslist.index(line) % 2 == 1 and ropeslist.index(line) < len(ropeslist) - 1:
+        if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) < len(ropeslist) - 1:
             titles_list.append(line)
             try:
                 chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
@@ -117,25 +155,33 @@ def related_entities_triples(start, end, bi = True, file = True):
 
         browser.find_element(By.CSS_SELECTOR, "button").click()
 
-        time.sleep(15)
-        webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0]
-        webtext.text
+        #time.sleep(15)
+        try:
+            webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0]
+        except Exception as e:
+            webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0]
+        #webtext.text
         time.sleep(5)
         hrefs_list = []
         titles_list = []
         captions_list = []
         token = 0
+
         webtexto = webtext.text
-        time.sleep(5)
+        #time.sleep(5)
 
         print(webtexto)
 
-        ropes = delete_until_given_instance_of_word_in_string(webtexto, "paths", 3)
+        if div2:
+            try:
+                ropes = delete_until_word(webtexto, "paths", 3)
+            except Exception as e:
+                ropes = delete_until_word(webtexto, "paths", 2)
 
         ropeslist = ropes.split("\n")
-   
+        if ropeslist[0] == '': ropeslist.remove('')
         for line in ropeslist:
-            if ropeslist.index(line) % 2 == 1 and ropeslist.index(line) < len(ropeslist) - 1:
+            if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) < len(ropeslist) - 1:
                 titles_list.append(line)
                 try:
                     chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
@@ -148,14 +194,14 @@ def related_entities_triples(start, end, bi = True, file = True):
         print(titles_list)
 
         for line in ropeslist:
-            if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) > 1:
+            if ropeslist.index(line) % 2 == 1 and ropeslist.index(line) >= 1:
                captions_list.append(line)
         print(captions_list)
 
 
 
     for line in ropeslist:
-        if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) > 1:
+        if ropeslist.index(line) % 2 == 1 and ropeslist.index(line) >= 1:
             captions_list.append(line)
     print(captions_list)
 
@@ -166,11 +212,11 @@ def related_entities_triples(start, end, bi = True, file = True):
 
     if file == True:
 
-        with open(f"{start}to{end}shortestpath_entities_triples.txt", "a") as f:
+        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{start}to{end}shortestpath_entities_triples.txt", "a") as f:
             f.write(str(triples))
             f.close()
 
-        with open(f"{start}to{end}shortestpath_relations_triples.txt", "a") as f:
+        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{start}to{end}shortestpath_relations_triples.txt", "a") as f:
             f.write(str(triplestriples))
             f.close()
 
