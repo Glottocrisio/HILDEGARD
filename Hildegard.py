@@ -33,31 +33,31 @@ import metrics as metr
 
 
  
-efile = input("Insert file name where all entities are stored: \n")
-dbpedia_uri_lang_list = []
-try:
-    with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile), "r") as f:
-            list_e = f.read()
-            list_e = list_e.split(',')
-            f.close()
-except Exception as e:
-    print("File does not exists: please retry.")
-    efile = input("Insert file name where all entities are stored: \n")
-    with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile), "r") as f:
-            list_e = f.read()
-            list_e = list_e.split(',')
-            f.close()
-for e in list_e:
-    dbpedia_uri_italian = t.get_dbpedia_uri_lang(e)
-    if dbpedia_uri_italian:
-        dbpedia_uri_lang_list.append(dbpedia_uri_italian)
-        print(dbpedia_uri_italian)
-    else:
-        print("Could not find DBpedia URI in Italian for the given Wikipedia URI in English.")
-with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile) + "italianuris.txt", "w") as f:
-    for lang_uri in dbpedia_uri_lang_list:
-            f.write(lang_uri + "\n")
-            f.close()
+#efile = input("Insert file name where all entities are stored: \n")
+#dbpedia_uri_lang_list = []
+#try:
+#    with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile), "r") as f:
+#            list_e = f.read()
+#            list_e = list_e.split(',')
+#            f.close()
+#except Exception as e:
+#    print("File does not exists: please retry.")
+#    efile = input("Insert file name where all entities are stored: \n")
+#    with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile), "r") as f:
+#            list_e = f.read()
+#            list_e = list_e.split(',')
+#            f.close()
+#for e in list_e:
+#    dbpedia_uri_italian = t.get_dbpedia_uri_lang(e)
+#    if dbpedia_uri_italian:
+#        dbpedia_uri_lang_list.append(dbpedia_uri_italian)
+#        print(dbpedia_uri_italian)
+#    else:
+#        print("Could not find DBpedia URI in Italian for the given Wikipedia URI in English.")
+#with open("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\" + str(efile) + "italianuris.txt", "w") as f:
+#    for lang_uri in dbpedia_uri_lang_list:
+#            f.write(lang_uri + "\n")
+#            f.close()
 
 
 
