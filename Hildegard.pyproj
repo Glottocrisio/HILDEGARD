@@ -11,7 +11,7 @@
     <OutputPath>.</OutputPath>
     <Name>Hildegard</Name>
     <RootNamespace>Hildegard</RootNamespace>
-    <InterpreterId>Global|VisualStudio|Python 3.7 (64 bit)</InterpreterId>
+    <InterpreterId>Global|PythonCore|3.7</InterpreterId>
     <SuppressEnvironmentCreationPrompt>True</SuppressEnvironmentCreationPrompt>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
@@ -53,10 +53,12 @@
     <Content Include="alexander2pompeishortpath.ttl" />
     <Content Include="alexander2pompeishortpath2.ttl" />
     <Content Include="battleIssusTriershortestpath.ttl" />
+    <Content Include="cidoc-crm.txt" />
+    <Content Include="cidoc-crm_7_1_2.xml" />
     <Content Include="Entities_shortest_Path_Alessandro_Pompei.ttl" />
     <Content Include="oggetticulturalimuseoarcheologiconazionaleit" />
     <Content Include="oggetticulturalimuseoarcheologiconazionaleitmerged.ttl" />
-    <Content Include="wikifiedtriples.ttl" />
+    <Content Include="wikifiedtripless.ttl" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="CondaEnv|CondaEnv|env" />

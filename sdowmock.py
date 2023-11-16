@@ -79,33 +79,19 @@ def related_entities_triples(start, end, bi = True, file = True):
     options = Options()
     options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
     browser = webdriver.Firefox(executable_path=r'C:\Program Files\Mozilla Firefox\gecko\geckodriver.exe', options=options)
-    #?source=Alexander the Great&target=Bible
     browser.get((f"https://www.sixdegreesofwikipedia.com/?source={start}&target={end}"))
 
     browser.find_element(By.CSS_SELECTOR, "button").click()
 
-    # Workaround to  using beautifulsoup
-    #filename = f"{start}-{end}.html"
-
-    ## Carica il contenuto della pagina web
-    #response = requests.get(f"https://www.sixdegreesofwikipedia.com/?source={start}&target={end}")
-    #html = response.text
-
-    #with open(filename, "r") as f:
-    #    html = f.read()
-
-    #soup = bs.BeautifulSoup(html, "html.parser")
-    #print(soup.find("div", class_="main-content").prettify())
-
-    #with open(filename, "w") as f:
-    #    f.write(html)
-
-    #time.sleep(7)
-    try:
-        webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0] 
-    except Exception as e:
+    
+    webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0] 
+    if len(webtext) < 20:
         div2 = True 
-        webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0] 
+        response = requests.get(f"https://www.sixdegreesofwikipedia.com/?source={start}&target={end}")
+        soup = bs(response.content, "html.parser")
+        webtext = str(soup.text)
+        if len(webtext) < 20:
+            webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]")[0] 
     #WebDriverWait(browser, 10).until(ec.text_to_be_present_in_element(webtext.text, "Individual paths"))
     
     #time.sleep(5)

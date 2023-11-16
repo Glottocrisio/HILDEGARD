@@ -208,18 +208,7 @@ def fetchSPARQLendpoint(text, endpoint, lang):
 
      
 
-#This function takes as 
-#Momentarily, KGs are at disposal only in Turtle Format
 
-
-def importKnowledgebase(tx, datapath):
-    if datapath[0] != "h":
-        datapath = "file:///" + datapath.replace("\\", "/")
-    if datapath[-3:] == "csv":
-        query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' AS row CREATE (:Object {cultobj: row.cultobj, title: row.title,  museum: row.museo,  description: row.descr});")
-    else: #we suppose that the available fromats are only csv and ttl. This option captures also the case of a uri ending in ".git"
-        query = ("CALL n10s.rdf.import.fetch(\"" + str(datapath) +"\",\"Turtle\");")
-    tx.run(query, datapath=datapath)
 
 
 ## Simple test of SPARQL Query

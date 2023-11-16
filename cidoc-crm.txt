@@ -1,0 +1,48 @@
+**CRM specification - what interests me for HILDEGARD**
+
+Classes
+
+E2 Temporal Entity
+E4 Period
+E5 Event
+E18 Physical Thing
+E19 Physical Object
+E21 Person
+E27 Site
+E29 Design or Procedure
+E39 Actor
+E53 Place
+E57 Material
+E67 Birth
+
+Properties
+
+P2 has type
+P4 has time-span
+P5 consist of
+P7 took place at
+P10 falls within
+P14 carried out by
+P15 was influenced by
+P20 had specific purpose
+P53 has former or current location
+P67 refers to
+P69 is associated with
+P94 has created
+P96 by mother
+P97 from father
+P102 has title
+P103 was intended for
+P104 is subject to
+P106 is composed of
+P124 transformed
+P126 employed
+P129 is about
+P130 shows features of
+P132 spatiotemporally overlaps with
+P138 represents
+P148 has component
+P165 incorporates (is incorporated in)
+P172 contains
+P190 has symbolic content
+P196 defines

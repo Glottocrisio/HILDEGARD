@@ -4,9 +4,12 @@ from neo4j import GraphDatabase
 
 def find_related(tx, name):
     query = ("MATCH (n) WHERE ANY(propValue IN [prop in keys(n) | n[prop]] WHERE propValue CONTAINS '" + str(name) + "') OPTIONAL MATCH (n)-[r]-(relatedNode) RETURN n, COLLECT(DISTINCT r) AS relationships, relatedNode")
+    result = []
     for record in tx.run(query, name=name):
+        result.append(record)
         print(record["n"])
         print(record["relationships"])
+    return result
 
 def find_related_key(tx, value):
     query = ("MATCH (n) WHERE ANY(propValue IN [prop in keys(n) | n[prop]] WHERE propValue CONTAINS '" + str(value) + "') ""RETURN keys(n)")
@@ -28,8 +31,29 @@ def shortest_path(tx, nnodes):
     for record in tx.run(query, names=names):
         print(record["n"])
 
-def create_link(tx, link):
-    query = ("MATCH (d) where d.ns0__variable=\"descr\" MATCH (t) where t.ns0__variable=\"title\" MATCH (d)<-[:ns0__binding]-(commonNode)- [:ns0__binding]->(t) CREATE (d)-[:"+str(link)+"]->(t);")
+def create_link(tx, link, node_type1:str, node_type2:str):
+    query = (f"MATCH (d) where d.ns0__variable=\"{node_type1}\" MATCH (t) where t.ns0__variable=\"{node_type2}\" MATCH (d)<-[:ns0__binding]-(commonNode)- [:ns0__binding]->(t) CREATE (d)-[:{link}]->(t);")
     for record in tx.run(query, link=link):
         print(record["n"])
+
+
+def delete(tx, subgraph):
+    query = ("MATCH (n) WHERE NOT n.ns0__value IN " + str(subgraph) + " RETURN n;")
+    for record in tx.run(query, subgraph=subgraph):
+        uri = record["n"]._properties["uri"]
+        tx.run("MATCH (n) WHERE n.uri=$uri DETACH DELETE n", uri=uri)
+
      
+#This function takes as 
+#Momentarily, KGs are at disposal only in Turtle Format
+
+def importKnowledgebase(self, datapath):
+    with open(datapath, 'r') as file:
+        if datapath[0] != "h":
+            datapath = "file:///" + datapath.replace("\\", "/")
+        if datapath[-3:] == "csv":
+            query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' AS row CREATE (:Object {cultobj: row.cultobj, title: row.title,  museum: row.museo,  description: row.descr});")
+        else: #we suppose that the available fromats are only csv and ttl. This option captures also the case of a uri ending in ".git"
+            query = ("CALL n10s.rdf.import.fetch(\"" + str(datapath) +"\",\"Turtle\");") # {{handleVocabUris: 'IGNORE', handleMultival: 'ARRAY', commitSize: 500, nodeCacheSize: 200000}})
+        for record in self.run(query, datapath=datapath):
+            print(record)

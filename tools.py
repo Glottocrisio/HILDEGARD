@@ -11,33 +11,79 @@ from rdflib import Graph
 import mediawikiapi as mwa
 import pywikigraph as wgr
 import wikipedia as w
-#from selenium import webdriver
-#from selenium.webdriver.common.keys import Keys
-#from selenium.webdriver.common.by import By
-#from selenium.webdriver.firefox.options import Options
 from wikidata.client import Client
 
+cidoc_class_mapping = {
+    "E2": "Temporal Entity",
+    "E4": "Period",
+    "E5": "Event",
+    "E18": "Physical Thing",
+    "E19": "Physical Object",
+    "E21": "Person",
+    "E27": "Site",
+    "E29": "Design or Procedure",
+    "E39": "Actor",
+    "E53": "Place",
+    "E57": "Material",
+    "E67": "Birth"
+}
+
+
+cidoc_property_mapping = {
+    "P2": "has type",
+    "P4": "has time-span",
+    "P5": "consist of",
+    "P7": "took place at",
+    "P10": "falls within",
+    "P14": "carried out by",
+    "P15": "was influenced by",
+    "P20": "had specific purpose",
+    "P53": "has former or current location",
+    "P67": "refers to",
+    "P69": "is associated with",
+    "P94": "has created",
+    "P96": "by mother",
+    "P97": "from father",
+    "P102": "has title",
+    "P103": "was intended for",
+    "P104": "is subject to",
+    "P106": "is composed of",
+    "P124": "transformed",
+    "P126": "employed",
+    "P129": "is about",
+    "P130": "shows features of",
+    "P132": "spatiotemporally overlaps with",
+    "P138": "represents",
+    "P148": "has component",
+    "P165": "incorporates (is incorporated in)",
+    "P172": "contains",
+    "P190": "has symbolic content",
+    "P196": "defines"
+}
 
 sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 
 def get_dbpedia_uri_lang(entity, lang = "it"):
     #Find entity in wikidata using requests
     wikidat = SPARQLWrapper("https://query.wikidata.org/sparql")
-    query = """
-        PREFIX wd: <http://www.wikidata.org/entity/>
-        SELECT DISTINCT ?qid
-        WHERE {
-          BIND(STRLANG(\"""" + entity + """\", "en") AS ?label ) .
-          ?item rdfs:label ?label .
-          BIND(STRAFTER(STR(?item), STR(wd:)) AS ?qid) .
-        }
+    try:
+        query = """
+            PREFIX wd: <http://www.wikidata.org/entity/>
+            SELECT DISTINCT ?qid
+            WHERE {
+              BIND(STRLANG(\"""" + entity + """\", "en") AS ?label ) .
+              ?item rdfs:label ?label .
+              BIND(STRAFTER(STR(?item), STR(wd:)) AS ?qid) .
+            }
 
-        LIMIT 1
-    """
-    wikidat.setQuery(query)
-    wikidat.setReturnFormat(JSON)
-    results = wikidat.queryAndConvert()
-    result = results['results']['bindings'][0]['qid']['value']
+            LIMIT 1
+        """
+        wikidat.setQuery(query)
+        wikidat.setReturnFormat(JSON)
+        results = wikidat.queryAndConvert()
+        result = results['results']['bindings'][0]['qid']['value']
+    except Exception as e:
+        pass
     try:
         queryy = """
             PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#> 
@@ -55,6 +101,8 @@ def get_dbpedia_uri_lang(entity, lang = "it"):
         resultss = wikidat.queryAndConvert()
         resul = resultss['results']['bindings'][0]['label']['value']
         uri = 'https://'+ str(lang)+ '.dbpedia.org/page/' + str(resul)
+        print(uri)
+        return uri
 
     except Exception as e:
         response = requests.get("https://dbpedia.org/page/" + str(entity))
@@ -76,34 +124,34 @@ def get_dbpedia_uri_lang(entity, lang = "it"):
             if line[:3] == "dbr":
                 dbr.append(line)
 
-        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}wikimediacommons.txt", "a") as f:
-            for x in wikicommons:
-                try:
-                  f.write(str(x) + "\n")
-                except Exception as e:
-                    pass
-            f.close()
+        if len(lang_list) and len(wikicommons) and len(dbr) > 0: 
+            with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}wikimediacommons.txt", "a") as f:
+                for x in wikicommons:
+                    try:
+                      f.write(str(x) + "\n")
+                    except Exception as e:
+                        pass
+                f.close()
 
-        with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}dbpediaresources.txt", "a") as g:
-            for x in dbr:
-                try:
-                    g.write(str(x) + "\n")
-                except Exception as e:
-                    pass
-            g.close()
+            with open(f"C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\{entity}{lang}dbpediaresources.txt", "a") as g:
+                for x in dbr:
+                    try:
+                        g.write(str(x) + "\n")
+                    except Exception as e:
+                        pass
+                g.close()
 
-        i = 0
-        lang_list.reverse()
-        while i < len(lang_list):
-            try:
-                get_uri = requests.get("https://dbpedia.org/page/" + str(lang_list[i]))
-                break
-            except Exception as e:
-                i = i + 1
-                #get_uri = requests.get("https://dbpedia.org/page/" + str(lang_list[i]))
-        uri = "https://dbpedia.org/page/" + str(lang_list[i])
-        print(uri)
-    return uri
+            i = 0
+            lang_list.reverse()
+            while i < 2:
+                try:
+                    get_uri = requests.get("https://" + str(lang)+ ".dbpedia.org/page/" + str(lang_list[i]))
+                except Exception as e:
+                    i = i + 1
+                uri = "https://" + str(lang)+ ".dbpedia.org/resource/" + str(lang_list[i])
+
+                #print(uri)
+                return uri
 
 def wikigraph_short_path(start, end):
     wg = wgr.WikiGraph()
