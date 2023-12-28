@@ -1,0 +1,411 @@
+Node: http://example.org/Satires, Degree: 8
+Node: http://example.org/Book, Degree: 1
+Node: http://example.org/Augustus, Degree: 7
+Node: https://en.wikipedia.org/wiki/Augustus, Degree: 1
+Node: http://example.org/Trier, Degree: 16
+Node: http://example.org/Place, Degree: 1
+Node: http://example.org/Ballista, Degree: 8
+Node: Ballista, Degree: 1
+Node: http://example.org/RomanEmpire, Degree: 8
+Node: http://example.org/BattleOfIssus, Degree: 23
+Node: http://example.org/WesternRomanEmpire, Degree: 8
+Node: https://en.wikipedia.org/wiki/Ballista, Degree: 1
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, Degree: 1
+Node: http://example.org/AncientRome, Degree: 8
+Node: http://example.org/AlexanderTheGreat, Degree: 16
+Node: Book by Juvenalis, Degree: 1
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), Degree: 1
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, Degree: 1
+Node: http://example.org/RomanEmperor, Degree: 8
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, Degree: 8
+Node: Wikimedia list article, Degree: 1
+Node: Ruler of the Roman Empire during the imperial period, Degree: 1
+Node: http://example.org/Jesus, Degree: 8
+Node: Roman emperor, Degree: 1
+Node: http://example.org/Person, Degree: 4
+Node: http://example.org/Event, Degree: 1
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, Degree: 1
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), Degree: 1
+Node: http://example.org/Weapon, Degree: 1
+Node: http://example.org/Country, Degree: 1
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), Degree: 1
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, Degree: 1
+Node: Period of ancient Rome following the Republic, Degree: 1
+Node: http://example.org/Territory, Degree: 1
+Node: Roman Empire, Degree: 1
+Node: Ancient Rome, Degree: 1
+Node: Independently administered western provinces of the Roman Empire, Degree: 1
+Node: The second great battle of Alexander's conquest of Asia, Degree: 1
+Node: https://en.wikipedia.org/wiki/Trier, Degree: 1
+Node: http://example.org/Article, Degree: 1
+Node: Town in Rhineland-Palatinate, Germany, Degree: 1
+Node: Battle of Issus, Degree: 1
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, Degree: 1
+Node: Augustus, Degree: 1
+Node: Western Roman Empire, Degree: 1
+Node: Jesus, Degree: 1
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, Degree: 1
+Node: Ancient missile weapon, Degree: 1
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, Degree: 1
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, Degree: 1
+Node: List of World Heritage Sites in Southern Europe, Degree: 1
+Node: Trier, Degree: 1
+Node: http://example.org/Period, Degree: 1
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, Degree: 1
+Node: Alexander the Great, Degree: 1
+Node: Satires (Juvenal), Degree: 1
+Node: https://en.wikipedia.org/wiki/Jesus, Degree: 1
+Average Degree: 3.0526315789473686
+Node: http://example.org/Satires, Betweenness- Centrality: 0.13896103896103895
+Node: http://example.org/Book, Betweenness- Centrality: 0.0
+Node: http://example.org/Augustus, Betweenness- Centrality: 0.10681818181818181
+Node: https://en.wikipedia.org/wiki/Augustus, Betweenness- Centrality: 0.0
+Node: http://example.org/Trier, Betweenness- Centrality: 0.305844155844156
+Node: http://example.org/Place, Betweenness- Centrality: 0.0
+Node: http://example.org/Ballista, Betweenness- Centrality: 0.13896103896103895
+Node: Ballista, Betweenness- Centrality: 0.0
+Node: http://example.org/RomanEmpire, Betweenness- Centrality: 0.13896103896103895
+Node: http://example.org/BattleOfIssus, Betweenness- Centrality: 0.305844155844156
+Node: http://example.org/WesternRomanEmpire, Betweenness- Centrality: 0.13896103896103895
+Node: https://en.wikipedia.org/wiki/Ballista, Betweenness- Centrality: 0.0
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, Betweenness- Centrality: 0.0
+Node: http://example.org/AncientRome, Betweenness- Centrality: 0.13896103896103895
+Node: http://example.org/AlexanderTheGreat, Betweenness- Centrality: 0.29318181818181827
+Node: Book by Juvenalis, Betweenness- Centrality: 0.0
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, Betweenness- Centrality: 0.0
+Node: http://example.org/RomanEmperor, Betweenness- Centrality: 0.10681818181818181
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, Betweenness- Centrality: 0.13896103896103895
+Node: Wikimedia list article, Betweenness- Centrality: 0.0
+Node: Ruler of the Roman Empire during the imperial period, Betweenness- Centrality: 0.0
+Node: http://example.org/Jesus, Betweenness- Centrality: 0.10681818181818181
+Node: Roman emperor, Betweenness- Centrality: 0.0
+Node: http://example.org/Person, Betweenness- Centrality: 0.007792207792207792
+Node: http://example.org/Event, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), Betweenness- Centrality: 0.0
+Node: http://example.org/Weapon, Betweenness- Centrality: 0.0
+Node: http://example.org/Country, Betweenness- Centrality: 0.0
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, Betweenness- Centrality: 0.0
+Node: Period of ancient Rome following the Republic, Betweenness- Centrality: 0.0
+Node: http://example.org/Territory, Betweenness- Centrality: 0.0
+Node: Roman Empire, Betweenness- Centrality: 0.0
+Node: Ancient Rome, Betweenness- Centrality: 0.0
+Node: Independently administered western provinces of the Roman Empire, Betweenness- Centrality: 0.0
+Node: The second great battle of Alexander's conquest of Asia, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Trier, Betweenness- Centrality: 0.0
+Node: http://example.org/Article, Betweenness- Centrality: 0.0
+Node: Town in Rhineland-Palatinate, Germany, Betweenness- Centrality: 0.0
+Node: Battle of Issus, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, Betweenness- Centrality: 0.0
+Node: Augustus, Betweenness- Centrality: 0.0
+Node: Western Roman Empire, Betweenness- Centrality: 0.0
+Node: Jesus, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, Betweenness- Centrality: 0.0
+Node: Ancient missile weapon, Betweenness- Centrality: 0.0
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, Betweenness- Centrality: 0.0
+Node: List of World Heritage Sites in Southern Europe, Betweenness- Centrality: 0.0
+Node: Trier, Betweenness- Centrality: 0.0
+Node: http://example.org/Period, Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, Betweenness- Centrality: 0.0
+Node: Alexander the Great, Betweenness- Centrality: 0.0
+Node: Satires (Juvenal), Betweenness- Centrality: 0.0
+Node: https://en.wikipedia.org/wiki/Jesus, Betweenness- Centrality: 0.0
+Node: http://example.org/Satires, Closeness- Centrality: 0.417910447761194
+Node: http://example.org/Book, Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/Augustus, Closeness- Centrality: 0.4148148148148148
+Node: https://en.wikipedia.org/wiki/Augustus, Closeness- Centrality: 0.29473684210526313
+Node: http://example.org/Trier, Closeness- Centrality: 0.5773195876288659
+Node: http://example.org/Place, Closeness- Centrality: 0.3684210526315789
+Node: http://example.org/Ballista, Closeness- Centrality: 0.417910447761194
+Node: Ballista, Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/RomanEmpire, Closeness- Centrality: 0.417910447761194
+Node: http://example.org/BattleOfIssus, Closeness- Centrality: 0.5773195876288659
+Node: http://example.org/WesternRomanEmpire, Closeness- Centrality: 0.417910447761194
+Node: https://en.wikipedia.org/wiki/Ballista, Closeness- Centrality: 0.2962962962962963
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, Closeness- Centrality: 0.29473684210526313
+Node: http://example.org/AncientRome, Closeness- Centrality: 0.417910447761194
+Node: http://example.org/AlexanderTheGreat, Closeness- Centrality: 0.5773195876288659
+Node: Book by Juvenalis, Closeness- Centrality: 0.2962962962962963
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), Closeness- Centrality: 0.3684210526315789
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/RomanEmperor, Closeness- Centrality: 0.4148148148148148
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, Closeness- Centrality: 0.417910447761194
+Node: Wikimedia list article, Closeness- Centrality: 0.2962962962962963
+Node: Ruler of the Roman Empire during the imperial period, Closeness- Centrality: 0.29473684210526313
+Node: http://example.org/Jesus, Closeness- Centrality: 0.4148148148148148
+Node: Roman emperor, Closeness- Centrality: 0.29473684210526313
+Node: http://example.org/Person, Closeness- Centrality: 0.4
+Node: http://example.org/Event, Closeness- Centrality: 0.3684210526315789
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, Closeness- Centrality: 0.2962962962962963
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/Weapon, Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/Country, Closeness- Centrality: 0.2962962962962963
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), Closeness- Centrality: 0.29473684210526313
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, Closeness- Centrality: 0.2962962962962963
+Node: Period of ancient Rome following the Republic, Closeness- Centrality: 0.2962962962962963
+Node: http://example.org/Territory, Closeness- Centrality: 0.2962962962962963
+Node: Roman Empire, Closeness- Centrality: 0.2962962962962963
+Node: Ancient Rome, Closeness- Centrality: 0.2962962962962963
+Node: Independently administered western provinces of the Roman Empire, Closeness- Centrality: 0.2962962962962963
+Node: The second great battle of Alexander's conquest of Asia, Closeness- Centrality: 0.3684210526315789
+Node: https://en.wikipedia.org/wiki/Trier, Closeness- Centrality: 0.3684210526315789
+Node: http://example.org/Article, Closeness- Centrality: 0.2962962962962963
+Node: Town in Rhineland-Palatinate, Germany, Closeness- Centrality: 0.3684210526315789
+Node: Battle of Issus, Closeness- Centrality: 0.3684210526315789
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, Closeness- Centrality: 0.29473684210526313
+Node: Augustus, Closeness- Centrality: 0.29473684210526313
+Node: Western Roman Empire, Closeness- Centrality: 0.2962962962962963
+Node: Jesus, Closeness- Centrality: 0.29473684210526313
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, Closeness- Centrality: 0.2962962962962963
+Node: Ancient missile weapon, Closeness- Centrality: 0.2962962962962963
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, Closeness- Centrality: 0.2962962962962963
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, Closeness- Centrality: 0.3684210526315789
+Node: List of World Heritage Sites in Southern Europe, Closeness- Centrality: 0.2962962962962963
+Node: Trier, Closeness- Centrality: 0.3684210526315789
+Node: http://example.org/Period, Closeness- Centrality: 0.2962962962962963
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, Closeness- Centrality: 0.3684210526315789
+Node: Alexander the Great, Closeness- Centrality: 0.3684210526315789
+Node: Satires (Juvenal), Closeness- Centrality: 0.2962962962962963
+Node: https://en.wikipedia.org/wiki/Jesus, Closeness- Centrality: 0.29473684210526313
+Node: http://example.org/Satires, PageRank- Centrality: 0.04391738371614348
+Node: http://example.org/Book, PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/Augustus, PageRank- Centrality: 0.040951044977713874
+Node: https://en.wikipedia.org/wiki/Augustus, PageRank- Centrality: 0.007604438825447059
+Node: http://example.org/Trier, PageRank- Centrality: 0.0841478068466319
+Node: http://example.org/Place, PageRank- Centrality: 0.007399741124712673
+Node: http://example.org/Ballista, PageRank- Centrality: 0.04391738371614348
+Node: Ballista, PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/RomanEmpire, PageRank- Centrality: 0.04391738371614348
+Node: http://example.org/BattleOfIssus, PageRank- Centrality: 0.0841478068466319
+Node: http://example.org/WesternRomanEmpire, PageRank- Centrality: 0.04391738371614348
+Node: https://en.wikipedia.org/wiki/Ballista, PageRank- Centrality: 0.007964689583661928
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, PageRank- Centrality: 0.007604438825447059
+Node: http://example.org/AncientRome, PageRank- Centrality: 0.04391738371614348
+Node: http://example.org/AlexanderTheGreat, PageRank- Centrality: 0.082428524104185
+Node: Book by Juvenalis, PageRank- Centrality: 0.007964689583661928
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), PageRank- Centrality: 0.007302354225925441
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/RomanEmperor, PageRank- Centrality: 0.040951044977713874
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, PageRank- Centrality: 0.04391738371614348
+Node: Wikimedia list article, PageRank- Centrality: 0.007964689583661928
+Node: Ruler of the Roman Empire during the imperial period, PageRank- Centrality: 0.007604438825447059
+Node: http://example.org/Jesus, PageRank- Centrality: 0.04095104497771388
+Node: Roman emperor, PageRank- Centrality: 0.007604438825447059
+Node: http://example.org/Person, PageRank- Centrality: 0.022220933860161354
+Node: http://example.org/Event, PageRank- Centrality: 0.007399741124712673
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, PageRank- Centrality: 0.007964689583661928
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/Weapon, PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/Country, PageRank- Centrality: 0.007964689583661928
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), PageRank- Centrality: 0.007604438825447059
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, PageRank- Centrality: 0.007964689583661928
+Node: Period of ancient Rome following the Republic, PageRank- Centrality: 0.007964689583661928
+Node: http://example.org/Territory, PageRank- Centrality: 0.007964689583661928
+Node: Roman Empire, PageRank- Centrality: 0.007964689583661928
+Node: Ancient Rome, PageRank- Centrality: 0.007964689583661928
+Node: Independently administered western provinces of the Roman Empire, PageRank- Centrality: 0.007964689583661928
+Node: The second great battle of Alexander's conquest of Asia, PageRank- Centrality: 0.007399741124712673
+Node: https://en.wikipedia.org/wiki/Trier, PageRank- Centrality: 0.007399741124712673
+Node: http://example.org/Article, PageRank- Centrality: 0.007964689583661928
+Node: Town in Rhineland-Palatinate, Germany, PageRank- Centrality: 0.007399741124712673
+Node: Battle of Issus, PageRank- Centrality: 0.007399741124712673
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, PageRank- Centrality: 0.007604438825447059
+Node: Augustus, PageRank- Centrality: 0.007604438825447059
+Node: Western Roman Empire, PageRank- Centrality: 0.007964689583661928
+Node: Jesus, PageRank- Centrality: 0.007604438825447059
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, PageRank- Centrality: 0.007964689583661928
+Node: Ancient missile weapon, PageRank- Centrality: 0.007964689583661928
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, PageRank- Centrality: 0.007964689583661928
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, PageRank- Centrality: 0.007399741124712673
+Node: List of World Heritage Sites in Southern Europe, PageRank- Centrality: 0.007964689583661928
+Node: Trier, PageRank- Centrality: 0.007399741124712673
+Node: http://example.org/Period, PageRank- Centrality: 0.007964689583661928
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, PageRank- Centrality: 0.007302354225925441
+Node: Alexander the Great, PageRank- Centrality: 0.007302354225925441
+Node: Satires (Juvenal), PageRank- Centrality: 0.007964689583661928
+Node: https://en.wikipedia.org/wiki/Jesus, PageRank- Centrality: 0.007604438825447059
+Node: http://example.org/Satires, Betweenness- Centrality: 0.19726474754494522
+Node: http://example.org/Book, Betweenness- Centrality: 0.028222142402768657
+Node: http://example.org/Augustus, Betweenness- Centrality: 0.21651166456028612
+Node: https://en.wikipedia.org/wiki/Augustus, Betweenness- Centrality: 0.030975705050365426
+Node: http://example.org/Trier, Betweenness- Centrality: 0.4178070771120259
+Node: http://example.org/Place, Betweenness- Centrality: 0.05977397807788592
+Node: http://example.org/Ballista, Betweenness- Centrality: 0.19726474754494522
+Node: Ballista, Betweenness- Centrality: 0.02822214240276866
+Node: http://example.org/RomanEmpire, Betweenness- Centrality: 0.1972647475449452
+Node: http://example.org/BattleOfIssus, Betweenness- Centrality: 0.4178070771120259
+Node: http://example.org/WesternRomanEmpire, Betweenness- Centrality: 0.1972647475449452
+Node: https://en.wikipedia.org/wiki/Ballista, Betweenness- Centrality: 0.02822214240276866
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, Betweenness- Centrality: 0.030975705050365426
+Node: http://example.org/AncientRome, Betweenness- Centrality: 0.1972647475449452
+Node: http://example.org/AlexanderTheGreat, Betweenness- Centrality: 0.4303350195576478
+Node: Book by Juvenalis, Betweenness- Centrality: 0.028222142402768657
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), Betweenness- Centrality: 0.06156632041465934
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, Betweenness- Centrality: 0.028222142402768657
+Node: http://example.org/RomanEmperor, Betweenness- Centrality: 0.21651166456028612
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, Betweenness- Centrality: 0.1972647475449452
+Node: Wikimedia list article, Betweenness- Centrality: 0.028222142402768657
+Node: Ruler of the Roman Empire during the imperial period, Betweenness- Centrality: 0.030975705050365426
+Node: http://example.org/Jesus, Betweenness- Centrality: 0.21651166456028612
+Node: Roman emperor, Betweenness- Centrality: 0.030975705050365426
+Node: http://example.org/Person, Betweenness- Centrality: 0.15449343556573777
+Node: http://example.org/Event, Betweenness- Centrality: 0.05977397807788592
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, Betweenness- Centrality: 0.028222142402768657
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), Betweenness- Centrality: 0.028222142402768657
+Node: http://example.org/Weapon, Betweenness- Centrality: 0.02822214240276866
+Node: http://example.org/Country, Betweenness- Centrality: 0.028222142402768657
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), Betweenness- Centrality: 0.030975705050365426
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, Betweenness- Centrality: 0.028222142402768657
+Node: Period of ancient Rome following the Republic, Betweenness- Centrality: 0.028222142402768657
+Node: http://example.org/Territory, Betweenness- Centrality: 0.028222142402768657
+Node: Roman Empire, Betweenness- Centrality: 0.028222142402768657
+Node: Ancient Rome, Betweenness- Centrality: 0.028222142402768657
+Node: Independently administered western provinces of the Roman Empire, Betweenness- Centrality: 0.028222142402768657
+Node: The second great battle of Alexander's conquest of Asia, Betweenness- Centrality: 0.05977397807788592
+Node: https://en.wikipedia.org/wiki/Trier, Betweenness- Centrality: 0.05977397807788592
+Node: http://example.org/Article, Betweenness- Centrality: 0.028222142402768657
+Node: Town in Rhineland-Palatinate, Germany, Betweenness- Centrality: 0.05977397807788592
+Node: Battle of Issus, Betweenness- Centrality: 0.05977397807788592
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, Betweenness- Centrality: 0.030975705050365426
+Node: Augustus, Betweenness- Centrality: 0.030975705050365426
+Node: Western Roman Empire, Betweenness- Centrality: 0.028222142402768657
+Node: Jesus, Betweenness- Centrality: 0.030975705050365426
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, Betweenness- Centrality: 0.028222142402768657
+Node: Ancient missile weapon, Betweenness- Centrality: 0.02822214240276866
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, Betweenness- Centrality: 0.028222142402768657
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, Betweenness- Centrality: 0.05977397807788592
+Node: List of World Heritage Sites in Southern Europe, Betweenness- Centrality: 0.028222142402768657
+Node: Trier, Betweenness- Centrality: 0.05977397807788592
+Node: http://example.org/Period, Betweenness- Centrality: 0.028222142402768657
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, Betweenness- Centrality: 0.06156632041465934
+Node: Alexander the Great, Betweenness- Centrality: 0.06156632041465934
+Node: Satires (Juvenal), Betweenness- Centrality: 0.028222142402768657
+Node: https://en.wikipedia.org/wiki/Jesus, Betweenness- Centrality: 0.030975705050365426
+Node: http://example.org/Satires, Subgraph- Centrality: 45.71234961896769
+Node: http://example.org/Book, Subgraph- Centrality: 2.4967949227465516
+Node: http://example.org/Augustus, Subgraph- Centrality: 53.89417831182849
+Node: https://en.wikipedia.org/wiki/Augustus, Subgraph- Centrality: 2.6348269731353344
+Node: http://example.org/Trier, Subgraph- Centrality: 190.88924050248104
+Node: http://example.org/Place, Subgraph- Centrality: 5.233139542483872
+Node: http://example.org/Ballista, Subgraph- Centrality: 45.71234961896763
+Node: Ballista, Subgraph- Centrality: 2.4967949227465422
+Node: http://example.org/RomanEmpire, Subgraph- Centrality: 45.71234961896763
+Node: http://example.org/BattleOfIssus, Subgraph- Centrality: 190.88924050248104
+Node: http://example.org/WesternRomanEmpire, Subgraph- Centrality: 45.712349618967636
+Node: https://en.wikipedia.org/wiki/Ballista, Subgraph- Centrality: 2.4967949227465427
+Node: First emperor of the Roman Empire and founder of the Julio-Claudian dynasty, Subgraph- Centrality: 2.63482697313533
+Node: http://example.org/AncientRome, Subgraph- Centrality: 45.71234961896763
+Node: http://example.org/AlexanderTheGreat, Subgraph- Centrality: 202.15326467786088
+Node: Book by Juvenalis, Subgraph- Centrality: 2.4967949227465476
+Node: King of Macedonia and conqueror of Achaemenid Persia (356–323 BC), Subgraph- Centrality: 5.435183359921715
+Node: https://en.wikipedia.org/wiki/Roman%20Empire, Subgraph- Centrality: 2.496794922746542
+Node: http://example.org/RomanEmperor, Subgraph- Centrality: 53.89417831182845
+Node: http://example.org/ListofWorldHeritageSitesInSouthernEurope, Subgraph- Centrality: 45.71234961896763
+Node: Wikimedia list article, Subgraph- Centrality: 2.496794922746542
+Node: Ruler of the Roman Empire during the imperial period, Subgraph- Centrality: 2.6348269731353264
+Node: http://example.org/Jesus, Subgraph- Centrality: 53.89417831182845
+Node: Roman emperor, Subgraph- Centrality: 2.634826973135328
+Node: http://example.org/Person, Subgraph- Centrality: 28.585358805567857
+Node: http://example.org/Event, Subgraph- Centrality: 5.2331395424838725
+Node: https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe, Subgraph- Centrality: 2.4967949227465414
+Node: https://en.wikipedia.org/wiki/Satires%20(Juvenal), Subgraph- Centrality: 2.496794922746548
+Node: http://example.org/Weapon, Subgraph- Centrality: 2.4967949227465427
+Node: http://example.org/Country, Subgraph- Centrality: 2.4967949227465422
+Node: Central figure of Christianity (6 or 4 BC – AD 30 or 33), Subgraph- Centrality: 2.634826973135328
+Node: https://en.wikipedia.org/wiki/Ancient%20Rome, Subgraph- Centrality: 2.4967949227465427
+Node: Period of ancient Rome following the Republic, Subgraph- Centrality: 2.496794922746542
+Node: http://example.org/Territory, Subgraph- Centrality: 2.4967949227465427
+Node: Roman Empire, Subgraph- Centrality: 2.496794922746542
+Node: Ancient Rome, Subgraph- Centrality: 2.496794922746542
+Node: Independently administered western provinces of the Roman Empire, Subgraph- Centrality: 2.4967949227465427
+Node: The second great battle of Alexander's conquest of Asia, Subgraph- Centrality: 5.2331395424838725
+Node: https://en.wikipedia.org/wiki/Trier, Subgraph- Centrality: 5.2331395424838725
+Node: http://example.org/Article, Subgraph- Centrality: 2.496794922746542
+Node: Town in Rhineland-Palatinate, Germany, Subgraph- Centrality: 5.2331395424838725
+Node: Battle of Issus, Subgraph- Centrality: 5.233139542483873
+Node: https://en.wikipedia.org/wiki/Roman%20emperor, Subgraph- Centrality: 2.634826973135328
+Node: Augustus, Subgraph- Centrality: 2.63482697313533
+Node: Western Roman Empire, Subgraph- Centrality: 2.4967949227465422
+Node: Jesus, Subgraph- Centrality: 2.634826973135328
+Node: https://en.wikipedia.org/wiki/Western%20Roman%20Empire, Subgraph- Centrality: 2.4967949227465427
+Node: Ancient missile weapon, Subgraph- Centrality: 2.496794922746542
+Node: Country that began growing on the Italian Peninsula from the 8th century BC, Subgraph- Centrality: 2.496794922746542
+Node: https://en.wikipedia.org/wiki/Battle_of_Issus, Subgraph- Centrality: 5.2331395424838725
+Node: List of World Heritage Sites in Southern Europe, Subgraph- Centrality: 2.496794922746542
+Node: Trier, Subgraph- Centrality: 5.233139542483871
+Node: http://example.org/Period, Subgraph- Centrality: 2.496794922746542
+Node: https://en.wikipedia.org/wiki/Alexander%20the%20Great, Subgraph- Centrality: 5.435183359921714
+Node: Alexander the Great, Subgraph- Centrality: 5.435183359921714
+Node: Satires (Juvenal), Subgraph- Centrality: 2.496794922746548
+Node: https://en.wikipedia.org/wiki/Jesus, Subgraph- Centrality: 2.6348269731353278
+Node: http://example.org/Pompey, Degree: 5
+Node: 106–48 BC, Degree: 1
+Node: true, Degree: 8
+Node: http://example.org/Naples, Degree: 4
+Node: http://example.org/Alexander_the_Great, Degree: 10
+Node: http://example.org/House_of_the_Faun, Degree: 5
+Node: http://example.org/Pompei, Degree: 11
+Node: http://example.org/National_Archaeological_Museum_Naples, Degree: 4
+Node: http://example.org/RomanMaterials, Degree: 1
+Node: http://example.org/Achaemenid_Persia, Degree: 1
+Node: http://example.org/Alexander_Mosaic, Degree: 4
+Average Degree: 4.909090909090909
+Node: http://example.org/Pompey, Betweenness- Centrality: 0.2
+Node: 106–48 BC, Betweenness- Centrality: 0.0
+Node: true, Betweenness- Centrality: 0.14074074074074075
+Node: http://example.org/Naples, Betweenness- Centrality: 0.0
+Node: http://example.org/Alexander_the_Great, Betweenness- Centrality: 0.34074074074074073
+Node: http://example.org/House_of_the_Faun, Betweenness- Centrality: 0.0
+Node: http://example.org/Pompei, Betweenness- Centrality: 0.14074074074074075
+Node: http://example.org/National_Archaeological_Museum_Naples, Betweenness- Centrality: 0.2
+Node: http://example.org/RomanMaterials, Betweenness- Centrality: 0.0
+Node: http://example.org/Achaemenid_Persia, Betweenness- Centrality: 0.0
+Node: http://example.org/Alexander_Mosaic, Betweenness- Centrality: 0.0
+Node: http://example.org/Pompey, Closeness- Centrality: 0.5882352941176471
+Node: 106–48 BC, Closeness- Centrality: 0.38461538461538464
+Node: true, Closeness- Centrality: 0.7692307692307693
+Node: http://example.org/Naples, Closeness- Centrality: 0.5263157894736842
+Node: http://example.org/Alexander_the_Great, Closeness- Centrality: 0.8333333333333334
+Node: http://example.org/House_of_the_Faun, Closeness- Centrality: 0.5263157894736842
+Node: http://example.org/Pompei, Closeness- Centrality: 0.7692307692307693
+Node: http://example.org/National_Archaeological_Museum_Naples, Closeness- Centrality: 0.5882352941176471
+Node: http://example.org/RomanMaterials, Closeness- Centrality: 0.38461538461538464
+Node: http://example.org/Achaemenid_Persia, Closeness- Centrality: 0.47619047619047616
+Node: http://example.org/Alexander_Mosaic, Closeness- Centrality: 0.5263157894736842
+Node: http://example.org/Pompey, PageRank- Centrality: 0.09971800102547976
+Node: 106–48 BC, PageRank- Centrality: 0.03482621217965727
+Node: true, PageRank- Centrality: 0.1534583521055795
+Node: http://example.org/Naples, PageRank- Centrality: 0.07011542734840971
+Node: http://example.org/Alexander_the_Great, PageRank- Centrality: 0.18080187687749052
+Node: http://example.org/House_of_the_Faun, PageRank- Centrality: 0.07011542734840971
+Node: http://example.org/Pompei, PageRank- Centrality: 0.1534583521055795
+Node: http://example.org/National_Archaeological_Museum_Naples, PageRank- Centrality: 0.09971800102547977
+Node: http://example.org/RomanMaterials, PageRank- Centrality: 0.03482621217965727
+Node: http://example.org/Achaemenid_Persia, PageRank- Centrality: 0.03284671045584731
+Node: http://example.org/Alexander_Mosaic, PageRank- Centrality: 0.07011542734840971
+Node: http://example.org/Pompey, Betweenness- Centrality: 0.27863420830350416
+Node: 106–48 BC, Betweenness- Centrality: 0.05493280919858811
+Node: true, Betweenness- Centrality: 0.44778185049000574
+Node: http://example.org/Naples, Betweenness- Centrality: 0.26780406678894464
+Node: http://example.org/Alexander_the_Great, Betweenness- Centrality: 0.4628079760405448
+Node: http://example.org/House_of_the_Faun, Betweenness- Centrality: 0.26780406678894464
+Node: http://example.org/Pompei, Betweenness- Centrality: 0.44778185049000574
+Node: http://example.org/National_Archaeological_Museum_Naples, Betweenness- Centrality: 0.2786342083035041
+Node: http://example.org/RomanMaterials, Betweenness- Centrality: 0.05493280919858811
+Node: http://example.org/Achaemenid_Persia, Betweenness- Centrality: 0.09124297432633494
+Node: http://example.org/Alexander_Mosaic, Betweenness- Centrality: 0.26780406678894464
+Node: http://example.org/Pompey, Subgraph- Centrality: 13.57667306391205
+Node: 106–48 BC, Subgraph- Centrality: 1.9208280911791404
+Node: true, Subgraph- Centrality: 32.28665650760735
+Node: http://example.org/Naples, Subgraph- Centrality: 12.286321322259552
+Node: http://example.org/Alexander_the_Great, Subgraph- Centrality: 34.54195809183519
+Node: http://example.org/House_of_the_Faun, Subgraph- Centrality: 12.286321322259552
+Node: http://example.org/Pompei, Subgraph- Centrality: 32.28665650760735
+Node: http://example.org/National_Archaeological_Museum_Naples, Subgraph- Centrality: 13.576673063912072
+Node: http://example.org/RomanMaterials, Subgraph- Centrality: 1.9208280911791462
+Node: http://example.org/Achaemenid_Persia, Subgraph- Centrality: 2.559368179400074
+Node: http://example.org/Alexander_Mosaic, Subgraph- Centrality: 12.286321322259552
+Welcome to Hildegard, a tool for linking and enrich heritage objects contained in a specific site. Have you alreadyuploaded your knowledge base to Neo4J? (y/n)

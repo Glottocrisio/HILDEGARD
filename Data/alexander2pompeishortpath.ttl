@@ -1,0 +1,38 @@
+@prefix ex: <http://example.org/> .
+
+ex:Pompei ex:isCommuneInCampania true .
+ex:Pompei ex:linksTo ex:Naples .
+ex:Pompei ex:linksTo ex:Alexander_the_Great .
+
+ex:Naples ex:isCityInCampania true .
+ex:Naples ex:linksTo ex:Alexander_the_Great .
+ex:Naples ex:linksTo ex:Pompei .
+
+ex:Alexander_the_Great ex:isKingOfMacedonia true .
+ex:Alexander_the_Great ex:conquered ex:Achaemenid_Persia .
+ex:Alexander_the_Great ex:linksTo ex:Pompei .
+ex:Alexander_the_Great ex:linksTo ex:House_of_the_Faun .
+
+ex:House_of_the_Faun ex:isRomanDomus true .
+ex:House_of_the_Faun ex:locatedIn ex:Pompei .
+ex:House_of_the_Faun ex:linksTo ex:Alexander_the_Great .
+ex:House_of_the_Faun ex:linksTo ex:Pompei .
+
+ex:Alexander_Mosaic ex:isRomanMosaic true .
+ex:Alexander_Mosaic ex:locatedIn ex:Pompei .
+ex:Alexander_Mosaic ex:linksTo ex:Alexander_the_Great .
+ex:Alexander_Mosaic ex:linksTo ex:Pompei .
+
+ex:National_Archaeological_Museum_Naples ex:isItalianArchaeologicalMuseum true .
+ex:National_Archaeological_Museum_Naples ex:knownFor ex:RomanMaterials .
+ex:National_Archaeological_Museum_Naples ex:linksTo ex:Alexander_the_Great .
+ex:National_Archaeological_Museum_Naples ex:linksTo ex:Pompei .
+
+ex:Pompei ex:linksTo ex:Pompey .
+ex:Pompei ex:linksTo ex:Alexander_the_Great .
+
+ex:Pompey ex:isRomanGeneral true .
+ex:Pompey ex:isStatesman true .
+ex:Pompey ex:activeYears "106–48 BC".
+ex:Pompey ex:linksTo ex:Alexander_the_Great .
+ex:Pompei ex:linksTo ex:Alexander_the_Great .

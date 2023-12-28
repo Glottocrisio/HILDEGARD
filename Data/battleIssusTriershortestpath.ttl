@@ -1,0 +1,101 @@
+@prefix ex: <http://example.org/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+# Define the subjects
+ex:Trier rdf:type ex:Place ;
+         ex:title "Trier" ;
+         ex:caption "Town in Rhineland-Palatinate, Germany" ;
+         ex:href <https://en.wikipedia.org/wiki/Trier> .
+
+ex:Augustus rdf:type ex:Person ;
+            ex:title "Augustus" ;
+            ex:caption "First emperor of the Roman Empire and founder of the Julio-Claudian dynasty" ;
+            ex:href <https://en.wikipedia.org/wiki/Augustus> .
+
+ex:AlexanderTheGreat rdf:type ex:Person ;
+                     ex:title "Alexander the Great" ;
+                     ex:caption "King of Macedonia and conqueror of Achaemenid Persia (356–323 BC)" ;
+                     ex:href <https://en.wikipedia.org/wiki/Alexander%20the%20Great> .
+
+ex:BattleOfIssus rdf:type ex:Event ;
+                 ex:title "Battle of Issus" ;
+                 ex:caption "The second great battle of Alexander's conquest of Asia" ;
+                 ex:href <https://en.wikipedia.org/wiki/Battle_of_Issus> .
+
+ex:Satires rdf:type ex:Book ;
+           ex:title "Satires (Juvenal)" ;
+           ex:caption "Book by Juvenalis" ;
+           ex:href <https://en.wikipedia.org/wiki/Satires%20(Juvenal)> .
+
+ex:RomanEmpire rdf:type ex:Period ;
+              ex:title "Roman Empire" ;
+              ex:caption "Period of ancient Rome following the Republic" ;
+              ex:href <https://en.wikipedia.org/wiki/Roman%20Empire> .
+
+ex:Ballista rdf:type ex:Weapon ;
+            ex:title "Ballista" ;
+            ex:caption "Ancient missile weapon" ;
+            ex:href <https://en.wikipedia.org/wiki/Ballista> .
+
+ex:RomanEmperor rdf:type ex:Person ;
+                ex:title "Roman emperor" ;
+                ex:caption "Ruler of the Roman Empire during the imperial period" ;
+                ex:href <https://en.wikipedia.org/wiki/Roman%20emperor> .
+
+ex:WesternRomanEmpire rdf:type ex:Territory ;
+                      ex:title "Western Roman Empire" ;
+                      ex:caption "Independently administered western provinces of the Roman Empire" ;
+                      ex:href <https://en.wikipedia.org/wiki/Western%20Roman%20Empire> .
+
+ex:AncientRome rdf:type ex:Country ;
+              ex:title "Ancient Rome" ;
+              ex:caption "Country that began growing on the Italian Peninsula from the 8th century BC" ;
+              ex:href <https://en.wikipedia.org/wiki/Ancient%20Rome> .
+
+ex:Jesus rdf:type ex:Person ;
+         ex:title "Jesus" ;
+         ex:caption "Central figure of Christianity (6 or 4 BC – AD 30 or 33)" ;
+         ex:href <https://en.wikipedia.org/wiki/Jesus> .
+
+ex:ListofWorldHeritageSitesInSouthernEurope rdf:type ex:Article ;
+                                             ex:title "List of World Heritage Sites in Southern Europe" ;
+                                             ex:caption "Wikimedia list article" ;
+                                             ex:href <https://en.wikipedia.org/wiki/List%20of%20World%20Heritage%20Sites%20in%20Southern%20Europe> .
+
+# Define the triples
+ex:Trier ex:relatedTo ex:Augustus, ex:AlexanderTheGreat .
+ex:Augustus ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:Satires .
+ex:Trier ex:relatedTo ex:Satires, ex:AlexanderTheGreat .
+ex:Satires ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:RomanEmpire .
+ex:Trier ex:relatedTo ex:RomanEmpire, ex:AlexanderTheGreat .
+ex:RomanEmpire ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:Ballista .
+ex:Trier ex:relatedTo ex:Ballista, ex:AlexanderTheGreat .
+ex:Ballista ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:RomanEmperor .
+ex:Trier ex:relatedTo ex:RomanEmperor, ex:AlexanderTheGreat .
+ex:RomanEmperor ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:WesternRomanEmpire .
+ex:Trier ex:relatedTo ex:WesternRomanEmpire, ex:AlexanderTheGreat .
+ex:WesternRomanEmpire ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:AncientRome .
+ex:Trier ex:relatedTo ex:AncientRome, ex:AlexanderTheGreat .
+ex:AncientRome ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:Jesus .
+ex:Trier ex:relatedTo ex:Jesus, ex:AlexanderTheGreat .
+ex:Jesus ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .
+ex:AlexanderTheGreat ex:relatedTo ex:BattleOfIssus, ex:Trier .
+ex:BattleOfIssus ex:relatedTo ex:Trier, ex:ListofWorldHeritageSitesInSouthernEurope .
+ex:Trier ex:relatedTo ex:ListofWorldHeritageSitesInSouthernEurope, ex:AlexanderTheGreat .
+ex:ListofWorldHeritageSitesInSouthernEurope ex:relatedTo ex:AlexanderTheGreat, ex:BattleOfIssus .

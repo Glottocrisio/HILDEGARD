@@ -1,0 +1,64 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix dbpedia-it: <http://it.wikipedia.org/wiki/> .
+
+# Entities
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:Person .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:Agent .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:OfficeHolder .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:BritishRoyalty .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:Royalty .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:Monarch .
+dbpedia:Alessandro_Magno rdf:type dbpedia-it:Noble .
+dbpedia:Alessandro_Magno foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Alessandro_Magno> .
+
+dbpedia:Dario_III_di_Persia rdf:type dbpedia-it:Person .
+dbpedia:Dario_III_di_Persia rdf:type dbpedia-it:Agent .
+dbpedia:Dario_III_di_Persia rdf:type dbpedia-it:OfficeHolder .
+dbpedia:Dario_III_di_Persia rdf:type dbpedia-it:Monarch .
+dbpedia:Dario_III_di_Persia rdf:type dbpedia-it:Noble .
+dbpedia:Dario_III_di_Persia foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Dario_III_di_Persia> .
+
+dbpedia:Mosaico foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Mosaico> .
+
+dbpedia:Casa_del_Fauno rdf:type dbpedia-it:Place .
+dbpedia:Casa_del_Fauno foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Casa_del_Fauno> .
+
+dbpedia:Fauno foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Fauno> .
+
+dbpedia:Pompei rdf:type dbpedia-it:City .
+dbpedia:Pompei rdf:type dbpedia-it:Settlement .
+dbpedia:Pompei rdf:type dbpedia-it:PopulatedPlace .
+dbpedia:Pompei rdf:type dbpedia-it:Place .
+dbpedia:Pompei rdf:type dbpedia-it:AdministrativeRegion .
+dbpedia:Pompei rdf:type dbpedia-it:Region .
+dbpedia:Pompei foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Pompei> .
+
+dbpedia:Cavalleria rdf:type dbpedia-it:Agent .
+dbpedia:Cavalleria rdf:type dbpedia-it:Organisation .
+dbpedia:Cavalleria rdf:type dbpedia-it:MilitaryUnit .
+dbpedia:Cavalleria foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Cavalleria> .
+
+dbpedia:Corazza foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Corazza> .
+
+dbpedia:Gorgoneion foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Gorgoneion> .
+
+dbpedia:Lancia foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Lancia_(arma)> .
+
+dbpedia:Platanus rdf:type dbpedia-it:Eukaryote .
+dbpedia:Platanus rdf:type dbpedia-it:Species .
+dbpedia:Platanus rdf:type dbpedia-it:Plant .
+dbpedia:Platanus foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Platanus> .
+
+dbpedia:Esercito_romano rdf:type dbpedia-it:Event .
+dbpedia:Esercito_romano rdf:type dbpedia-it:MilitaryConflict .
+dbpedia:Esercito_romano foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Esercito_romano> .
+
+dbpedia:Regno_di_Macedonia rdf:type dbpedia-it:PopulatedPlace .
+dbpedia:Regno_di_Macedonia rdf:type dbpedia-it:Place .
+dbpedia:Regno_di_Macedonia rdf:type dbpedia-it:Country .
+dbpedia:Regno_di_Macedonia rdf:type dbpedia-it:Territory .
+dbpedia:Regno_di_Macedonia rdf:type dbpedia-it:OldTerritory .
+dbpedia:Regno_di_Macedonia foaf:isPrimaryTopicOf <http://it.wikipedia.org/wiki/Regno_di_Macedonia> .
