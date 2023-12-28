@@ -11,6 +11,7 @@ import os
 from py2neo import Graph
 from rdflib import Graph as RDFGraph
 import re
+import json
 
 #creare grafo di conoscenza a partire da dataset sui beni culturali
     # trovare collegamenti interni 
@@ -32,8 +33,9 @@ driver = GraphDatabase.driver("bolt://localhost:7687",
                               auth=("neo4j","pipi1233")) 
 
 
+
 with driver.session(database="dev") as session:
-   
+
     while True:
         try:
             kb =     input("Welcome to Hildegard, a tool for linking and enrich heritage objects contained in a specific site. Have you already uploaded your knowledge base to Neo4J? (y/n) \n")
@@ -284,7 +286,20 @@ with driver.session(database="dev") as session:
                 except Exception as e:
                     print("File does not exists: please retry.")
                
-                for triple in h_triples:
+                    triples_file = "C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\testharmonizedtriples.txt"  # Update with your file path
+
+                with open(triples_file, 'r') as file:
+                    fil = file.read()
+                    json_acceptable_string = fil.replace("'", "\"")
+                    file.close()
+                with open(triples_file.replace(".txt","")+"jsond.txt", "w") as jsond:
+                    jsond.write(json_acceptable_string)
+                    jsond.close()
+                with open(triples_file.replace(".txt","")+"jsond.txt", "r") as jsond:
+                    triples_data = json.load(jsond)
+
+                for triple in triples_data:
+                    # Insert each triple into Neo4j
                     session.execute_write(gm.insert_triples, triple)
         except Exception as e:
             pass
