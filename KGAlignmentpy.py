@@ -1,5 +1,4 @@
 import requests
-
 from rdflib import Graph
 from SPARQLWrapper import SPARQLWrapper, JSON
 

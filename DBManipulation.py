@@ -44,13 +44,33 @@ def delete(tx, subgraph):
         tx.run("MATCH (n) WHERE n.uri=$uri DETACH DELETE n", uri=uri)
 
 def insert_triples(tx, triple):
-    query = """
-    MERGE (s:Subject {name: $subject})
-    MERGE (o:Object {name: $object})
-    MERGE (s)-[:RELATIONSHIP {property: $predicate}]->(o)
-    """
-    tx.run(query, subject=triple['subject'], predicate=triple['predicate'], object=triple['object'])
+    labels = [key for key in triple.keys() if key != 'cidoc-relation']
+    query = (
+        "MERGE (s:" + str(labels[0]) + " {name: $subject}) "
+        "MERGE (o:" + str(labels[1]) + " {name: $object}) "
+        "MERGE (s)-[:" + triple['cidoc-relation'] + "]->(o)"
+    )
+    tx.run(query, subject=triple[labels[0]], object=triple[labels[1]])
 
+    #MERGE (a:LabelA {name: 'NodeName'})
+    #MERGE (b:LabelB {name: 'NodeName'})
+    #WITH a, b
+    #WHERE id(a) <> id(b)  // Ensure we're not merging the same node with itself
+    #CALL apoc.refactor.mergeNodes([a, b]) YIELD node
+    #RETURN node
+
+def merge_homonym_nodes(tx, nodeName):
+    
+    query = (
+        "MATCH (n:Node)"
+        "WITH n.name AS " + str(nodeName) + ", collect(n) AS nodes"
+        "WHERE size(nodes) > 1"
+        "CALL apoc.refactor.mergeNodes(nodes) YIELD node"
+        "RETURN node"
+    )
+    tx.run(query, nodeName=nodeName)
+
+  
 # Floyd Warshall Algorithm
 #Initialize distances
 #MATCH (o:Object)

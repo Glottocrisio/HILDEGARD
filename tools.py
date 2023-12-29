@@ -74,7 +74,8 @@ sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 def harmonize_triples2crm(input_filepath, output_filename):
     harmonizedtriples = []
     inputtriples = []
-    prev_subject = None
+    prev_title = None
+    
 
     with open(input_filepath, "r") as f:
         inputtriples = f.read()
@@ -110,65 +111,69 @@ def harmonize_triples2crm(input_filepath, output_filename):
             else:
                 triple = triple[1:]
                 triplet = ast.literal_eval(triple)
-            subject = triplet['title']
+            title = triplet['title']
             caption = triplet['caption']
             href = triplet['href']
+            
         
             current_triple = {
-                'subject': subject,
-                'predicate': 'P104',
-                'object': caption
+                'title': title,
+                'cidoc-relation': 'P104',
+                'descr': caption
             }
             harmonizedtriples.append(current_triple)
-            prev_subject = subject
+            harmonizedtriples.append({
+                    'descr': caption,
+                    'cidoc-relation': 'P196',
+                    'uri': href
+                })
+        
+            harmonizedtriples.append({
+                'uri': href,
+                'cidoc-relation': 'P102',
+                'title': title
+            })
+
+            harmonizedtriples.append({
+                'descr': caption,
+                'cidoc-relation': 'P196',
+                'title': title
+            })
+        
+            harmonizedtriples.append({
+                'title': title,
+                'cidoc-relation': 'P104',
+                'descr': caption
+            })
+
+            harmonizedtriples.append({
+                'uri': href,
+                'cidoc-relation': 'P67',
+                'descr': caption
+            })
+
+            harmonizedtriples.append({
+                'title': title,
+                'cidoc-relation': 'P67',
+                'uri': href
+            })
 
             if idx > 0:
-                harmonizedtriples.append({
-                    'subject': prev_subject,
-                    'predicate': 'P67',
-                    'object': subject
-                })
-        
-                harmonizedtriples.append({
-                    'subject': caption,
-                    'predicate': 'P196',
-                    'object': href
-                })
-        
-                harmonizedtriples.append({
-                    'subject': href,
-                    'predicate': 'P102',
-                    'object': subject
-                })
-
-                harmonizedtriples.append({
-                    'subject': caption,
-                    'predicate': 'P196',
-                    'object': subject
-                })
-        
-                harmonizedtriples.append({
-                    'subject': subject,
-                    'predicate': 'P104',
-                    'object': caption
-                })
-
-                harmonizedtriples.append({
-                    'subject': href,
-                    'predicate': 'P67',
-                    'object': caption
-                })
-
-                harmonizedtriples.append({
-                    'subject': subject,
-                    'predicate': 'P67',
-                    'object': href
-                })
-
-                prev_subject = subject
+                try:
+                    p_idx = int(idx)-1
+                    prev_triple = ast.literal_eval(list_input_striples[p_idx])
+                    prev_title = prev_triple['title']
+                    if prev_title != title and prev_title != None:
+                        harmonizedtriples.append({
+                            'prev_title': prev_title,
+                            'cidoc-relation': 'P67',
+                            'title': title
+                        })
+                except Exception as e:
+                    pass 
         except Exception as e:
             pass 
-    with open(f"C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\{output_filename}harmonizedtriples", "w") as o:
+    with open(f"C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\{output_filename}harmonizedtriples.txt", "w") as o:
         o.write(str(harmonizedtriples))
         o.close()
 

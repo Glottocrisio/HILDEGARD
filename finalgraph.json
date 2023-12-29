@@ -1,0 +1,2308 @@
+﻿[
+  {
+    "n": {
+      "identity": 0,
+      "labels": [
+        "_GraphConfig"
+      ],
+      "properties": {
+        "_classLabel": "Class",
+        "_handleRDFTypes": 0,
+        "_subClassOfRel": "SCO",
+        "_handleMultival": 0,
+        "_objectPropertyLabel": "Relationship",
+        "_rangeRel": "RANGE",
+        "_domainRel": "DOMAIN",
+        "_keepLangTag": false,
+        "_keepCustomDataTypes": false,
+        "_handleVocabUris": 0,
+        "_applyNeo4jNaming": false,
+        "_subPropertyOfRel": "SPO",
+        "_dataTypePropertyLabel": "Property"
+      },
+      "elementId": "0"
+    }
+  },
+  {
+    "n": {
+      "identity": 1,
+      "labels": [
+        "_NsPrefDef"
+      ],
+      "properties": {
+        "ns0": "http://www.w3.org/2005/sparql-results#"
+      },
+      "elementId": "1"
+    }
+  },
+  {
+    "n": {
+      "identity": 2,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "statuetta di Alessandro a cavallo, veduta posteriore (stampa) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1338"
+      },
+      "elementId": "2"
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1339"
+      },
+      "elementId": "3"
+    }
+  },
+  {
+    "n": {
+      "identity": 4,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1336"
+      },
+      "elementId": "4"
+    }
+  },
+  {
+    "n": {
+      "identity": 5,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1337"
+      },
+      "elementId": "5"
+    }
+  },
+  {
+    "n": {
+      "identity": 6,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893866"
+      },
+      "elementId": "6"
+    }
+  },
+  {
+    "n": {
+      "identity": 7,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio antropomorfo zoocefalo stante su base parallelepipeda e pilastro dorsale, che giunge fino alla parrucca, attraversato da un foro trasversale per la sospensione all'altezza dei gomiti",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1290"
+      },
+      "elementId": "7"
+    }
+  },
+  {
+    "n": {
+      "identity": 8,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (amuleto) (SECOLI/ XI a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1293"
+      },
+      "elementId": "8"
+    }
+  },
+  {
+    "n": {
+      "identity": 9,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1294"
+      },
+      "elementId": "9"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1291"
+      },
+      "elementId": "10"
+    }
+  },
+  {
+    "n": {
+      "identity": 11,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1292"
+      },
+      "elementId": "11"
+    }
+  },
+  {
+    "n": {
+      "identity": 12,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1297"
+      },
+      "elementId": "12"
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Costruzioni: Pompei: portico del tempio d'Iside. Architetture fantastiche: quinte architettoniche; pannelli; vignette paesistiche; delfini; tritone; Anubi; fregio con girali",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1330"
+      },
+      "elementId": "13"
+    }
+  },
+  {
+    "n": {
+      "identity": 14,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1298"
+      },
+      "elementId": "14"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1331"
+      },
+      "elementId": "15"
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale attraversato da foro trasversale per la sospensione all'altezza delle spalle",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1295"
+      },
+      "elementId": "16"
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1296"
+      },
+      "elementId": "17"
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1334"
+      },
+      "elementId": "18"
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Architetture fantastiche: scorcio architettonico. Divinità orientali: Anubi",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1335"
+      },
+      "elementId": "19"
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1299"
+      },
+      "elementId": "20"
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1332"
+      },
+      "elementId": "21"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "tempio di Iside: architetture e Anubi (matrice) di Campana Vincenzo, Nolli Carlo (sec. XVIII)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1333"
+      },
+      "elementId": "22"
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1327"
+      },
+      "elementId": "23"
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "portico con decorazione parietale (incisione) di Casanova Giovanni Battista (sec. XIX)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1328"
+      },
+      "elementId": "24"
+    }
+  },
+  {
+    "n": {
+      "identity": 25,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra è raffigurato Alessandro Magno a cavallo, munito di corazza con \"gorgoneion\" che, nell'intento di raggiungere Dario che si dà alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. La scena è inquadrata da una cornice a dentelli. Il disegnatore ha integrato le parti lacunose del mosaico",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1325"
+      },
+      "elementId": "25"
+    }
+  },
+  {
+    "n": {
+      "identity": 26,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1326"
+      },
+      "elementId": "26"
+    }
+  },
+  {
+    "n": {
+      "identity": 27,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1329"
+      },
+      "elementId": "27"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893735"
+      },
+      "elementId": "28"
+    }
+  },
+  {
+    "n": {
+      "identity": 29,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893736"
+      },
+      "elementId": "29"
+    }
+  },
+  {
+    "n": {
+      "identity": 30,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1282"
+      },
+      "elementId": "30"
+    }
+  },
+  {
+    "n": {
+      "identity": 31,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1283"
+      },
+      "elementId": "31"
+    }
+  },
+  {
+    "n": {
+      "identity": 32,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio Anubis cinocefalo su base parallelepipeda con pilastro dorsale attraversato all'altezza della nuca da foro per la sospensione",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1280"
+      },
+      "elementId": "32"
+    }
+  },
+  {
+    "n": {
+      "identity": 33,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1281"
+      },
+      "elementId": "33"
+    }
+  },
+  {
+    "n": {
+      "identity": 34,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1286"
+      },
+      "elementId": "34"
+    }
+  },
+  {
+    "n": {
+      "identity": 35,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1287"
+      },
+      "elementId": "35"
+    }
+  },
+  {
+    "n": {
+      "identity": 36,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto di divinità antropomorfa con testa di sciacallo rappresentante il dio Anubi",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1320"
+      },
+      "elementId": "36"
+    }
+  },
+  {
+    "n": {
+      "identity": 37,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1284"
+      },
+      "elementId": "37"
+    }
+  },
+  {
+    "n": {
+      "identity": 38,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione all'altezza delle spalle",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1285"
+      },
+      "elementId": "38"
+    }
+  },
+  {
+    "n": {
+      "identity": 39,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "battaglia di Alessandro, battaglia di Alessandro contro Dario (disegno) - ambito napoletano (secondo quarto sec. XIX)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1323"
+      },
+      "elementId": "39"
+    }
+  },
+  {
+    "n": {
+      "identity": 40,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1324"
+      },
+      "elementId": "40"
+    }
+  },
+  {
+    "n": {
+      "identity": 41,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ XI a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1288"
+      },
+      "elementId": "41"
+    }
+  },
+  {
+    "n": {
+      "identity": 42,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1321"
+      },
+      "elementId": "42"
+    }
+  },
+  {
+    "n": {
+      "identity": 43,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1289"
+      },
+      "elementId": "43"
+    }
+  },
+  {
+    "n": {
+      "identity": 44,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1322"
+      },
+      "elementId": "44"
+    }
+  },
+  {
+    "n": {
+      "identity": 45,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1316"
+      },
+      "elementId": "45"
+    }
+  },
+  {
+    "n": {
+      "identity": 46,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1317"
+      },
+      "elementId": "46"
+    }
+  },
+  {
+    "n": {
+      "identity": 47,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1314"
+      },
+      "elementId": "47"
+    }
+  },
+  {
+    "n": {
+      "identity": 48,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Statua di Anubis dalla testa di sciacallo stante sulla gamba sinistra, con la destra leggermente flessa e portata in avanti",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1315"
+      },
+      "elementId": "48"
+    }
+  },
+  {
+    "n": {
+      "identity": 49,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500573701"
+      },
+      "elementId": "49"
+    }
+  },
+  {
+    "n": {
+      "identity": 50,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1318"
+      },
+      "elementId": "50"
+    }
+  },
+  {
+    "n": {
+      "identity": 51,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1319"
+      },
+      "elementId": "51"
+    }
+  },
+  {
+    "n": {
+      "identity": 52,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893761"
+      },
+      "elementId": "52"
+    }
+  },
+  {
+    "n": {
+      "identity": 53,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1271"
+      },
+      "elementId": "53"
+    }
+  },
+  {
+    "n": {
+      "identity": 54,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1272"
+      },
+      "elementId": "54"
+    }
+  },
+  {
+    "n": {
+      "identity": 55,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893806"
+      },
+      "elementId": "55"
+    }
+  },
+  {
+    "n": {
+      "identity": 56,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo, su base rettangolare, sorretto posteriormente da un pilastro dorsale liscio attraversato da un foro trasversale per la sospensione all'altezza dei gomiti",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1270"
+      },
+      "elementId": "56"
+    }
+  },
+  {
+    "n": {
+      "identity": 57,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto antropomorfo zoocefalo su base parallelepipeda con pilastro dorsale e foro trasversale dietro la nuca",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1275"
+      },
+      "elementId": "57"
+    }
+  },
+  {
+    "n": {
+      "identity": 58,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1276"
+      },
+      "elementId": "58"
+    }
+  },
+  {
+    "n": {
+      "identity": 59,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1273"
+      },
+      "elementId": "59"
+    }
+  },
+  {
+    "n": {
+      "identity": 60,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1274"
+      },
+      "elementId": "60"
+    }
+  },
+  {
+    "n": {
+      "identity": 61,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1279"
+      },
+      "elementId": "61"
+    }
+  },
+  {
+    "n": {
+      "identity": 62,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1312"
+      },
+      "elementId": "62"
+    }
+  },
+  {
+    "n": {
+      "identity": 63,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (statua) (SECOLI/ I a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1313"
+      },
+      "elementId": "63"
+    }
+  },
+  {
+    "n": {
+      "identity": 64,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1277"
+      },
+      "elementId": "64"
+    }
+  },
+  {
+    "n": {
+      "identity": 65,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale a rilievo che termina all'altezza delle scapole attraversato da un foro passante per la sospensione",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1310"
+      },
+      "elementId": "65"
+    }
+  },
+  {
+    "n": {
+      "identity": 66,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1278"
+      },
+      "elementId": "66"
+    }
+  },
+  {
+    "n": {
+      "identity": 67,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1311"
+      },
+      "elementId": "67"
+    }
+  },
+  {
+    "n": {
+      "identity": 68,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio antropomorfo con testa di sciacallo, di cui è visibile solo l'orecchio destro. Il dio, su base parallelepipeda, è sorretto posteriormente da un pilastro dorsale, che giunge alla fine di ciò che resta della parrucca pieghettata, e che è attraversato da un foro trasversale per la sospensione",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1305"
+      },
+      "elementId": "68"
+    }
+  },
+  {
+    "n": {
+      "identity": 69,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1306"
+      },
+      "elementId": "69"
+    }
+  },
+  {
+    "n": {
+      "identity": 70,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1303"
+      },
+      "elementId": "70"
+    }
+  },
+  {
+    "n": {
+      "identity": 71,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572905"
+      },
+      "elementId": "71"
+    }
+  },
+  {
+    "n": {
+      "identity": 72,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1304"
+      },
+      "elementId": "72"
+    }
+  },
+  {
+    "n": {
+      "identity": 73,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1309"
+      },
+      "elementId": "73"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500395036"
+      },
+      "elementId": "74"
+    }
+  },
+  {
+    "n": {
+      "identity": 75,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1307"
+      },
+      "elementId": "75"
+    }
+  },
+  {
+    "n": {
+      "identity": 76,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1308"
+      },
+      "elementId": "76"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572907"
+      },
+      "elementId": "77"
+    }
+  },
+  {
+    "n": {
+      "identity": 78,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572906"
+      },
+      "elementId": "78"
+    }
+  },
+  {
+    "n": {
+      "identity": 79,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione tra il pilastro e le spalle della divinità",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1260"
+      },
+      "elementId": "79"
+    }
+  },
+  {
+    "n": {
+      "identity": 80,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1261"
+      },
+      "elementId": "80"
+    }
+  },
+  {
+    "n": {
+      "identity": 81,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1264"
+      },
+      "elementId": "81"
+    }
+  },
+  {
+    "n": {
+      "identity": 82,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio antropomorfo zoocefalo stante con base quadrilatera e addossato a pilastro dorsale che termina all'altezza della nuca, attraversato da foro per la sospensione",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1265"
+      },
+      "elementId": "82"
+    }
+  },
+  {
+    "n": {
+      "identity": 83,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1262"
+      },
+      "elementId": "83"
+    }
+  },
+  {
+    "n": {
+      "identity": 84,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (amuleto) (SECOLI/ XI a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1263"
+      },
+      "elementId": "84"
+    }
+  },
+  {
+    "n": {
+      "identity": 85,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1268"
+      },
+      "elementId": "85"
+    }
+  },
+  {
+    "n": {
+      "identity": 86,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1301"
+      },
+      "elementId": "86"
+    }
+  },
+  {
+    "n": {
+      "identity": 87,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1269"
+      },
+      "elementId": "87"
+    }
+  },
+  {
+    "n": {
+      "identity": 88,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1302"
+      },
+      "elementId": "88"
+    }
+  },
+  {
+    "n": {
+      "identity": 89,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1266"
+      },
+      "elementId": "89"
+    }
+  },
+  {
+    "n": {
+      "identity": 90,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1267"
+      },
+      "elementId": "90"
+    }
+  },
+  {
+    "n": {
+      "identity": 91,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo. Il dio è in piedi su base parallelepipeda con pilastro dorsale che termina all'altezza della parrucca, attraversato da foro trasversale per la sospensione",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1300"
+      },
+      "elementId": "91"
+    }
+  },
+  {
+    "n": {
+      "identity": 92,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500350798"
+      },
+      "elementId": "92"
+    }
+  },
+  {
+    "n": {
+      "identity": 93,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1259"
+      },
+      "elementId": "93"
+    }
+  },
+  {
+    "n": {
+      "identity": 94,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893263"
+      },
+      "elementId": "94"
+    }
+  },
+  {
+    "n": {
+      "identity": 95,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500382664"
+      },
+      "elementId": "95"
+    }
+  },
+  {
+    "n": {
+      "identity": 96,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893783"
+      },
+      "elementId": "96"
+    }
+  },
+  {
+    "n": {
+      "identity": 97,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale; attraversato da foro trasversale per la sospensione tra pilastro e corpo del dio, all'altezza dei gomiti",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1250"
+      },
+      "elementId": "97"
+    }
+  },
+  {
+    "n": {
+      "identity": 98,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1253"
+      },
+      "elementId": "98"
+    }
+  },
+  {
+    "n": {
+      "identity": 99,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1254"
+      },
+      "elementId": "99"
+    }
+  },
+  {
+    "n": {
+      "identity": 100,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1251"
+      },
+      "elementId": "100"
+    }
+  },
+  {
+    "n": {
+      "identity": 101,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1252"
+      },
+      "elementId": "101"
+    }
+  },
+  {
+    "n": {
+      "identity": 102,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1257"
+      },
+      "elementId": "102"
+    }
+  },
+  {
+    "n": {
+      "identity": 103,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubi (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1258"
+      },
+      "elementId": "103"
+    }
+  },
+  {
+    "n": {
+      "identity": 104,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Amuleto rappresentante il dio Anubi zoocefalo con pilastro dorsale attraversato da un foro trasversale per la sospensione all'altezza delle spalle",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1255"
+      },
+      "elementId": "104"
+    }
+  },
+  {
+    "n": {
+      "identity": 105,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1256"
+      },
+      "elementId": "105"
+    }
+  },
+  {
+    "n": {
+      "identity": 106,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (amuleto) (SECOLI/ XI a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1248"
+      },
+      "elementId": "106"
+    }
+  },
+  {
+    "n": {
+      "identity": 107,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1249"
+      },
+      "elementId": "107"
+    }
+  },
+  {
+    "n": {
+      "identity": 108,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893259"
+      },
+      "elementId": "108"
+    }
+  },
+  {
+    "n": {
+      "identity": 109,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dipinto",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1360"
+      },
+      "elementId": "109"
+    }
+  },
+  {
+    "n": {
+      "identity": 110,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1242"
+      },
+      "elementId": "110"
+    }
+  },
+  {
+    "n": {
+      "identity": 111,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "Anubis (amuleto) (SECOLI/ VII a.C)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1243"
+      },
+      "elementId": "111"
+    }
+  },
+  {
+    "n": {
+      "identity": 112,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1241"
+      },
+      "elementId": "112"
+    }
+  },
+  {
+    "n": {
+      "identity": 113,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1246"
+      },
+      "elementId": "113"
+    }
+  },
+  {
+    "n": {
+      "identity": 114,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1247"
+      },
+      "elementId": "114"
+    }
+  },
+  {
+    "n": {
+      "identity": 115,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1244"
+      },
+      "elementId": "115"
+    }
+  },
+  {
+    "n": {
+      "identity": 116,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Dio Anubis antropomorfo con testa di sciacallo posto su base parallelepipeda e addossato a un sottilissimo pilastro dorsale reso da due scanalature. Ha un foro trasversale che attraversa la testa",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1245"
+      },
+      "elementId": "116"
+    }
+  },
+  {
+    "n": {
+      "identity": 117,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "storie della vita di Alessandro Magno (dipinto) di Fischetti Fedele (sec. XVIII)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1358"
+      },
+      "elementId": "117"
+    }
+  },
+  {
+    "n": {
+      "identity": 118,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1359"
+      },
+      "elementId": "118"
+    }
+  },
+  {
+    "n": {
+      "identity": 119,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893566"
+      },
+      "elementId": "119"
+    }
+  },
+  {
+    "n": {
+      "identity": 120,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893564"
+      },
+      "elementId": "120"
+    }
+  },
+  {
+    "n": {
+      "identity": 121,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893567"
+      },
+      "elementId": "121"
+    }
+  },
+  {
+    "n": {
+      "identity": 122,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893727"
+      },
+      "elementId": "122"
+    }
+  },
+  {
+    "n": {
+      "identity": 123,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893967"
+      },
+      "elementId": "123"
+    }
+  },
+  {
+    "n": {
+      "identity": 124,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1352"
+      },
+      "elementId": "124"
+    }
+  },
+  {
+    "n": {
+      "identity": 125,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "statuetta di Alessandro a cavallo: veduta posteriore (matrice) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1353"
+      },
+      "elementId": "125"
+    }
+  },
+  {
+    "n": {
+      "identity": 126,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "La tempera riproduce un particolare del mosaico raffigurante la battaglia di Alessandro Magno contro Dario, proveniente dalla casa del Fauno a Pompei. Sono raffigurati i busti di due soldati macedoni a cavallo, muniti di elmo e corazze, l'uno rivolto a sinistra e l'altro a destra. Sono visibili porzioni di lance e parte delle teste dei cavalli. In basso è raffigurata la parte superiore di una testa ferita, da cui fuoriesce del sangue. Nel mosaico originale tale particolare non è più riscontrabile",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1350"
+      },
+      "elementId": "126"
+    }
+  },
+  {
+    "n": {
+      "identity": 127,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1351"
+      },
+      "elementId": "127"
+    }
+  },
+  {
+    "n": {
+      "identity": 128,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1356"
+      },
+      "elementId": "128"
+    }
+  },
+  {
+    "n": {
+      "identity": 129,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1357"
+      },
+      "elementId": "129"
+    }
+  },
+  {
+    "n": {
+      "identity": 130,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500351732"
+      },
+      "elementId": "130"
+    }
+  },
+  {
+    "n": {
+      "identity": 131,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1354"
+      },
+      "elementId": "131"
+    }
+  },
+  {
+    "n": {
+      "identity": 132,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Personaggi: Alessandro Magno. Animali: cavallo. Sculture: statuetta",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1355"
+      },
+      "elementId": "132"
+    }
+  },
+  {
+    "n": {
+      "identity": 133,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893271"
+      },
+      "elementId": "133"
+    }
+  },
+  {
+    "n": {
+      "identity": 134,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1349"
+      },
+      "elementId": "134"
+    }
+  },
+  {
+    "n": {
+      "identity": 135,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1347"
+      },
+      "elementId": "135"
+    }
+  },
+  {
+    "n": {
+      "identity": 136,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "busti di soldati (disegno) di Mastracchio Michele (secondo quarto sec. XIX)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1348"
+      },
+      "elementId": "136"
+    }
+  },
+  {
+    "n": {
+      "identity": 137,
+      "labels": [
+        "Resource",
+        "ns0__ResultSet"
+      ],
+      "properties": {
+        "uri": "bnode://genid-53eb604b2c074bf485f8f80673ba41b18-_",
+        "ns0__resultVariable": "descr"
+      },
+      "elementId": "137"
+    }
+  },
+  {
+    "n": {
+      "identity": 138,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893555"
+      },
+      "elementId": "138"
+    }
+  },
+  {
+    "n": {
+      "identity": 139,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893553"
+      },
+      "elementId": "139"
+    }
+  },
+  {
+    "n": {
+      "identity": 140,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1341"
+      },
+      "elementId": "140"
+    }
+  },
+  {
+    "n": {
+      "identity": 141,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "cultobj",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1342"
+      },
+      "elementId": "141"
+    }
+  },
+  {
+    "n": {
+      "identity": 142,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Personaggi: Alessandro Magno. Soggetti profani: Alessandro Magno acavallo",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1340"
+      },
+      "elementId": "142"
+    }
+  },
+  {
+    "n": {
+      "identity": 143,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "descr",
+        "ns0__value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra è raffigurato Alessandro Magno a cavallo, munito di corazza con \"gorgoneion\" che, nell'intento di raggiungere Dario che si dà alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. Il disegnatore ha integrato le parti lacunose del mosaico",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1345"
+      },
+      "elementId": "143"
+    }
+  },
+  {
+    "n": {
+      "identity": 144,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1346"
+      },
+      "elementId": "144"
+    }
+  },
+  {
+    "n": {
+      "identity": 145,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "title",
+        "ns0__value": "battaglia di Alessandro, battaglia di Alessandro contro Dario (disegno) - ambito napoletano (secondo quarto sec. XIX)",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1343"
+      },
+      "elementId": "145"
+    }
+  },
+  {
+    "n": {
+      "identity": 146,
+      "labels": [
+        "Resource"
+      ],
+      "properties": {
+        "ns0__variable": "museo",
+        "ns0__value": "Museo Archeologico Nazionale di Napoli",
+        "uri": "bnode://4725ac15d2a946a78bafefca2d5151c1344"
+      },
+      "elementId": "146"
+    }
+  },
+  {
+    "n": {
+      "identity": 147,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Anthropomorphism"
+      },
+      "elementId": "147"
+    }
+  },
+  {
+    "n": {
+      "identity": 148,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Attribution of human traits, emotions, or intentions to non-human entities"
+      },
+      "elementId": "148"
+    }
+  },
+  {
+    "n": {
+      "identity": 149,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Human–animal hybrid"
+      },
+      "elementId": "149"
+    }
+  },
+  {
+    "n": {
+      "identity": 150,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Entity that incorporates elements from both humans and non-human animals"
+      },
+      "elementId": "150"
+    }
+  },
+  {
+    "n": {
+      "identity": 151,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Human–animal hybrid"
+      },
+      "elementId": "151"
+    }
+  },
+  {
+    "n": {
+      "identity": 152,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Entity that incorporates elements from both humans and non-human animals"
+      },
+      "elementId": "152"
+    }
+  },
+  {
+    "n": {
+      "identity": 153,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
+      },
+      "elementId": "153"
+    }
+  },
+  {
+    "n": {
+      "identity": 154,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
+      },
+      "elementId": "154"
+    }
+  },
+  {
+    "n": {
+      "identity": 155,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Anubis"
+      },
+      "elementId": "155"
+    }
+  },
+  {
+    "n": {
+      "identity": 156,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Egyptian deity of mummification and the afterlife, usually depicted as a man with a canine head"
+      },
+      "elementId": "156"
+    }
+  },
+  {
+    "n": {
+      "identity": 157,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Anubis"
+      },
+      "elementId": "157"
+    }
+  },
+  {
+    "n": {
+      "identity": 158,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Egyptian deity of mummification and the afterlife, usually depicted as a man with a canine head"
+      },
+      "elementId": "158"
+    }
+  },
+  {
+    "n": {
+      "identity": 159,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anubis"
+      },
+      "elementId": "159"
+    }
+  },
+  {
+    "n": {
+      "identity": 160,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anubis"
+      },
+      "elementId": "160"
+    }
+  },
+  {
+    "n": {
+      "identity": 161,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Anthropomorphism"
+      },
+      "elementId": "161"
+    }
+  },
+  {
+    "n": {
+      "identity": 162,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Attribution of human traits, emotions, or intentions to non-human entities"
+      },
+      "elementId": "162"
+    }
+  },
+  {
+    "n": {
+      "identity": 163,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
+      },
+      "elementId": "163"
+    }
+  },
+  {
+    "n": {
+      "identity": 164,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
+      },
+      "elementId": "164"
+    }
+  },
+  {
+    "n": {
+      "identity": 165,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Tale of Two Brothers"
+      },
+      "elementId": "165"
+    }
+  },
+  {
+    "n": {
+      "identity": 166,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Ancient Egyptian literary work"
+      },
+      "elementId": "166"
+    }
+  },
+  {
+    "n": {
+      "identity": 167,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Tale of Two Brothers"
+      },
+      "elementId": "167"
+    }
+  },
+  {
+    "n": {
+      "identity": 168,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Ancient Egyptian literary work"
+      },
+      "elementId": "168"
+    }
+  },
+  {
+    "n": {
+      "identity": 169,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Tale of Two Brothers"
+      },
+      "elementId": "169"
+    }
+  },
+  {
+    "n": {
+      "identity": 170,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Tale of Two Brothers"
+      },
+      "elementId": "170"
+    }
+  },
+  {
+    "n": {
+      "identity": 171,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Cynocephaly"
+      },
+      "elementId": "171"
+    }
+  },
+  {
+    "n": {
+      "identity": 172,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Mythical creature"
+      },
+      "elementId": "172"
+    }
+  },
+  {
+    "n": {
+      "identity": 173,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "Cynocephaly"
+      },
+      "elementId": "173"
+    }
+  },
+  {
+    "n": {
+      "identity": 174,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "Mythical creature"
+      },
+      "elementId": "174"
+    }
+  },
+  {
+    "n": {
+      "identity": 175,
+      "labels": [
+        "Object"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Cynocephaly"
+      },
+      "elementId": "175"
+    }
+  },
+  {
+    "n": {
+      "identity": 176,
+      "labels": [
+        "Subject"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Cynocephaly"
+      },
+      "elementId": "176"
+    }
+  }
+]

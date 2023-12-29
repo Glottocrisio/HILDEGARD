@@ -3,7 +3,7 @@ import DBManipulation as gm
 import KGAlignmentpy as kga
 import wikifier as w
 import tools as t
-#import ImportDataset  as id
+import ImportDataset  as id
 from SPARQLWrapper import SPARQLWrapper, JSON
 import sdowmock as sdow
 import metrics as metr
@@ -34,7 +34,7 @@ driver = GraphDatabase.driver("bolt://localhost:7687",
 
 
 
-with driver.session(database="dev") as session:
+with driver.session(database="dev2") as session:
 
     while True:
         try:
@@ -279,28 +279,31 @@ with driver.session(database="dev") as session:
             res = input("Would you like to merge the retrieved triples in the original knowledge base?  (y/n): \n")
             
             if res=="y":
-               # select_triples_file = input("Insert the name of the file where triples are stored:")
+                select_triples_file = input("Insert the name of the file where triples are stored:")
                 try:
                     triples_file = "C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\" + str(select_triples_file)
                     h_triples = t.harmonize_triples2crm(triples_file, "h_triples_file")
                 except Exception as e:
                     print("File does not exists: please retry.")
                
-                    triples_file = "C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\testharmonizedtriples.txt"  # Update with your file path
+                    triples_file = input("Please insert the path of the file where all triples are stored: \n")#"C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\testharmonizedtriples.txt"  
 
-                with open(triples_file, 'r') as file:
-                    fil = file.read()
-                    json_acceptable_string = fil.replace("'", "\"")
-                    file.close()
-                with open(triples_file.replace(".txt","")+"jsond.txt", "w") as jsond:
-                    jsond.write(json_acceptable_string)
-                    jsond.close()
-                with open(triples_file.replace(".txt","")+"jsond.txt", "r") as jsond:
-                    triples_data = json.load(jsond)
+            with open(triples_file, 'r') as file:
+                fil = file.read()
+                json_acceptable_string = fil.replace("'", "\"")
+                file.close()
+            with open(triples_file.replace(".txt","")+"jsond.txt", "w") as jsond:
+                jsond.write(json_acceptable_string)
+                jsond.close()
+            with open(triples_file.replace(".txt","")+"jsond.txt", "r") as jsond:
+                triples_data = json.load(jsond)
 
-                for triple in triples_data:
-                    # Insert each triple into Neo4j
+            for triple in triples_data:
+                # Insert each triple into Neo4j
+                try:
                     session.execute_write(gm.insert_triples, triple)
+                except Exception as e:
+                    pass
         except Exception as e:
             pass
         try:
