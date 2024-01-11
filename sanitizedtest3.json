@@ -1,0 +1,467 @@
+{
+  "head": {
+    "vars": [ "cultobj", "title", "museo", "descr" ]
+  },
+  "results": {
+    "distinct": "False",
+    "ordered": "True",
+    "bindings": [
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893553"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio Anubis antropomorfo con testa di sciacallo posto su base parallelepipeda e addossato a un sottilissimo pilastro dorsale reso da due scanalature. Ha un foro trasversale che attraversa la testa"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893567"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale; attraversato da foro trasversale per la sospensione tra pilastro e corpo del dio, all'altezza dei gomiti"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893263"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto rappresentante il dio Anubi zoocefalo con pilastro dorsale attraversato da un foro trasversale per la sospensione all'altezza delle spalle"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893735"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione tra il pilastro e le spalle della divinità"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893564"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio antropomorfo zoocefalo stante con base quadrilatera e addossato a pilastro dorsale che termina all'altezza della nuca, attraversato da foro per la sospensione"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893259"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo, su base rettangolare, sorretto posteriormente da un pilastro dorsale liscio attraversato da un foro trasversale per la sospensione all'altezza dei gomiti"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893727"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto antropomorfo zoocefalo su base parallelepipeda con pilastro dorsale e foro trasversale dietro la nuca"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893555"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio Anubis cinocefalo su base parallelepipeda con pilastro dorsale attraversato all'altezza della nuca da foro per la sospensione"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893736"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione all'altezza delle spalle"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893271"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ XI a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio antropomorfo zoocefalo stante su base parallelepipeda e pilastro dorsale, che giunge fino alla parrucca, attraversato da un foro trasversale per la sospensione all'altezza dei gomiti"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893566"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale attraversato da foro trasversale per la sospensione all'altezza delle spalle"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893783"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo. Il dio è in piedi su base parallelepipeda con pilastro dorsale che termina all'altezza della parrucca, attraversato da foro trasversale per la sospensione"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893866"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dio antropomorfo con testa di sciacallo, di cui è visibile solo l'orecchio destro. Il dio, su base parallelepipeda, è sorretto posteriormente da un pilastro dorsale, che giunge alla fine di ciò che resta della parrucca pieghettata, e che è attraversato da un foro trasversale per la sospensione"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893761"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale a rilievo che termina all'altezza delle scapole attraversato da un foro passante per la sospensione"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893967"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubis (statua) (SECOLI/ I a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Statua di Anubis dalla testa di sciacallo stante sulla gamba sinistra, con la destra leggermente flessa e portata in avanti"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893806"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Amuleto di divinità antropomorfa con testa di sciacallo rappresentante il dio Anubi"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572906"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "battaglia di Alessandro, battaglia di Alessandro contro Dario (disegno) - ambito napoletano (secondo quarto sec. XIX)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra è raffigurato Alessandro Magno a cavallo, munito di corazza con gorgoneion che, nell'intento di raggiungere Dario che si dà alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. La scena è inquadrata da una cornice a dentelli. Il disegnatore ha integrato le parti lacunose del mosaico"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500573701"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "portico con decorazione parietale (incisione) di Casanova Giovanni Battista (sec. XIX)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Costruzioni: Pompei: portico del tempio d'Iside. Architetture fantastiche: quinte architettoniche; pannelli; vignette paesistiche; delfini; tritone; Anubi; fregio con girali"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500351732"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "tempio di Iside: architetture e Anubi (matrice) di Campana Vincenzo, Nolli Carlo (sec. XVIII)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Architetture fantastiche: scorcio architettonico. Divinità orientali: Anubi"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500395036"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "statuetta di Alessandro a cavallo, veduta posteriore (stampa) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Personaggi: Alessandro Magno. Soggetti profani: Alessandro Magno acavallo"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572905"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "battaglia di Alessandro, battaglia di Alessandro contro Dario (disegno) - ambito napoletano (secondo quarto sec. XIX)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra è raffigurato Alessandro Magno a cavallo, munito di corazza con gorgoneion che, nell'intento di raggiungere Dario che si dà alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. La scena è inquadrata da una cornice a dentelli. Il disegnatore ha integrato le parti lacunose del mosaico"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572907"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "busti di soldati (disegno) di Mastracchio Michele (secondo quarto sec. XIX)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "La tempera riproduce un particolare del mosaico raffigurante la battaglia di Alessandro Magno contro Dario, proveniente dalla casa del Fauno a Pompei. Sono raffigurati i busti di due soldati macedoni a cavallo, muniti di elmo e corazze, l'uno rivolto a sinistra e l'altro a destra. Sono visibili porzioni di lance e parte delle teste dei cavalli. In basso è raffigurata la parte superiore di una testa ferita, da cui fuoriesce del sangue. Nel mosaico originale tale particolare non è più riscontrabile"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500350798"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "statuetta di Alessandro a cavallo: veduta posteriore (matrice) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Personaggi: Alessandro Magno. Animali: cavallo. Sculture: statuetta"
+        }
+      },
+      {
+        "cultobj": {
+          "type": "uri",
+          "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500382664"
+        },
+        "title": {
+          "type": "literal",
+          "xml:lang": "it",
+          "value": "storie della vita di Alessandro Magno (dipinto) di Fischetti Fedele (sec. XVIII)"
+        },
+        "museo": {
+          "type": "literal",
+          "value": "Museo Archeologico Nazionale di Napoli"
+        },
+        "descr": {
+          "type": "literal",
+          "value": "Dipinto"
+        }
+      }
+    ]
+  }
+}

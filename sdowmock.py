@@ -75,7 +75,7 @@ def triples_triples(triples):
     i = i + 1
   return grouped_triples
 
-def related_entities_triples(start, end, bi = True, file = True):
+def related_entities_triples(start, end, kgr, bi = True, file = True):
     options = Options()
     options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
     browser = webdriver.Firefox(executable_path=r'C:\Program Files\Mozilla Firefox\gecko\geckodriver.exe', options=options)
@@ -137,12 +137,17 @@ def related_entities_triples(start, end, bi = True, file = True):
     for line in ropeslist:
         if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) < len(ropeslist) - 1:
             titles_list.append(line)
-            try:
-                chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
-                hrefs_list.append(chref)
-            except Exception as e:
-                chref = f"https://en.wikipedia.org/wiki/{line}"
-                hrefs_list.append(chref)
+         
+            chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
+               
+        
+            if kgr == "yago":
+                chref = f"https://yago-knowledge.org/resource/yago:{line}"
+            elif lang != "en" and lang != "de":
+                chref = "https://"+str(lang)+ f"dbpedia.org/page/{line}"
+            else:
+                chref = f"https://dbpedia.org/page/{line}"
+            hrefs_list.append(chref)
         else: pass
     print(hrefs_list)
     print(titles_list)
@@ -189,12 +194,15 @@ def related_entities_triples(start, end, bi = True, file = True):
         for line in ropeslist:
             if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) < len(ropeslist) - 1:
                 titles_list.append(line)
-                try:
-                    chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
-                    hrefs_list.append(chref)
-                except Exception as e:
-                    chref = f"https://en.wikipedia.org/wiki/{line}"
-                    hrefs_list.append(chref)
+                chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
+
+                if kgr == "yago":
+                    chref = f"https://yago-knowledge.org/resource/yago:{line}"
+                elif lang != "en" and lang != "de":
+                    chref = "https://"+str(lang)+ f"dbpedia.org/page/{line}"
+                else:
+                    chref = f"https://dbpedia.org/page/{line}"
+                hrefs_list.append(chref)
             else: pass
         print(hrefs_list)
         print(titles_list)
@@ -203,7 +211,6 @@ def related_entities_triples(start, end, bi = True, file = True):
             if ropeslist.index(line) % 2 == 1 and ropeslist.index(line) >= 1:
                captions_list.append(line)
         print(captions_list)
-
 
 
     for line in ropeslist:

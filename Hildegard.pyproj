@@ -24,7 +24,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Hildegard.py" />
-    <Compile Include="ImportDataset.py">
+    <Compile Include="importdataset.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="DBManipulation.py">
@@ -49,6 +49,9 @@
   <ItemGroup>
     <Content Include="cidoc-crm.txt" />
     <Content Include="cidoc-crm_7_1_2.xml" />
+    <Content Include="sanitizedtest3.json" />
+    <Content Include="test3" />
+    <Content Include="test3.csv" />
     <Content Include="wikifiedtripless.ttl" />
   </ItemGroup>
   <ItemGroup>

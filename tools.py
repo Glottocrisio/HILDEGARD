@@ -18,6 +18,7 @@ import csv
 import pandas as pd
 import os
 import ast
+import openai
 
 cidoc_class_mapping = {
     "E2": "Temporal Entity",
@@ -69,6 +70,66 @@ cidoc_property_mapping = {
 
 sparql = SPARQLWrapper("http://dbpedia.org/sparql")
 
+
+
+def json2csv(input_json, output_csv):
+
+    with open(input_json, 'r') as json_file:
+        fil = json_file.read()
+        fil = fil.replace("\\","")
+        i = 0
+        json_acceptable_string = ""
+        while i < len(fil):
+            if fil[i] == "'" and (fil[i-2] == "," or fil[i-2] == ":" or fil[i-2] == "}" or fil[i+1] == "," or fil[i+1] == ":" or fil[i+1] == ":" or fil[i+1] == "}" or fil[i+1] == "]" or fil[i-1] == ":" or fil[i-1] == "{" or fil[i-1] == "["):
+                json_acceptable_string += fil[i].replace("\'","\"")
+            elif fil[i]== "\"":
+                if fil[i-2]== ":" or fil[i+1] == "}":
+                    json_acceptable_string += fil[i]
+                else:
+                    json_acceptable_string += fil[i].replace("\"","")
+            else:
+                json_acceptable_string += fil[i]
+            i+=1
+                
+
+   
+    if os.path.exists("C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\sanitized"+input_json.replace(".json","").replace("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\","")+".json") == False or os.path.getsize("C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\sanitized"+input_json.replace(".json","").replace("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\","")+".json")==0:
+        with open(input_json.replace(".json","")+"sanitized.json", "w") as s_json_file:
+            s_json_file.write(str(json_acceptable_string))
+    
+    
+    with open(input_json.replace(".json","")+"sanitized.json", "r") as s_json_file:
+        data = json.load(s_json_file)
+
+    # Extract headers from JSON keys (assuming all items have the same structure)
+    headers = list(data['head']['vars'])
+    with open('C:\\Users\\Palma\\.Neo4jDesktop\\relate-data\\dbmss\\dbms-3f4078ad-d08d-4625-b967-c1e0ee8a2a81\\import\\'+output_csv, 'w', newline='') as csv_file:
+        writer = csv.DictWriter(csv_file, fieldnames=headers)
+        writer.writeheader()
+        values = []
+        list_dicto = []
+        for d in data['results']['bindings']:
+            for header in d:
+                values.append(d[str(header)]['value'])
+        while len(values)>0:
+            dicto = {}
+            dicto = dict(zip(headers, values))
+            list_dicto.append(dicto)
+            values = values[len(headers):]
+        writer.writerows(list_dicto)
+
+
+def csv2json(input_csv, output_json):
+    data = []
+    with open(input_csv, 'r') as csv_file:
+        reader = csv.DictReader(csv_file)
+        for row in reader:
+            data.append(row)
+
+    with open(output_json, 'w') as json_file:
+        json.dump(data, json_file, indent=4)
+
+
 #Takes as input a text file with the extracted triples and returns the triple harmonized with our model
 
 def harmonize_triples2crm(input_filepath, output_filename):
@@ -85,7 +146,7 @@ def harmonize_triples2crm(input_filepath, output_filename):
         while i < len(inputtriples):
             batch_triples += inputtriples[i]
             if inputtriples[i] == ')' and i + 1 < len(inputtriples) and inputtriples[i + 1] == ',':
-                batch_triples = batch_triples + ';'
+                batch_triples += ';'
                 i += 1
             i += 1
 
@@ -97,7 +158,7 @@ def harmonize_triples2crm(input_filepath, output_filename):
     i = 0
     while i < len(inputtriples):
         s_triples += inputtriples[i]
-        if inputtriples[i] == '}' and i + 1 < len(inputtriples) and inputtriples[i + 1] == ',':
+        if (inputtriples[i] == '}' and i + 1 < len(inputtriples) and inputtriples[i + 1] == ',') or (inputtriples[i] == ')' and i + 1 < len(inputtriples) and inputtriples[i + 2] == '('):
             s_triples = s_triples + ';'
             i += 1
         i += 1
@@ -161,7 +222,7 @@ def harmonize_triples2crm(input_filepath, output_filename):
             if idx > 0:
                 try:
                     p_idx = int(idx)-1
-                    prev_triple = ast.literal_eval(list_input_striples[p_idx])
+                    prev_triple = ast.literal_eval(str(list_input_striples[p_idx])[1:])
                     prev_title = prev_triple['title']
                     if prev_title != title and prev_title != None:
                         harmonizedtriples.append({
@@ -169,6 +230,7 @@ def harmonize_triples2crm(input_filepath, output_filename):
                             'cidoc-relation': 'P67',
                             'title': title
                         })
+                    prev_triple = None
                 except Exception as e:
                     pass 
         except Exception as e:
@@ -493,3 +555,14 @@ def get_combos(elements):
         couplets.append((elements[i], elements[j]))
         seen_couplets.add((elements[i], elements[j]))
   return couplets
+
+def llm(user_question):
+    api_key = "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"
+    openai.api_key = api_key
+
+    response = openai.Completion.create(
+        engine="davinci",  #text-davinci-003
+        prompt=user_question,
+        max_tokens=50  
+    )
+    print(response.choices[0].text.strip())

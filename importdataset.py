@@ -1,8 +1,7 @@
 import requests
 from neo4j import GraphDatabase
 from SPARQLWrapper import SPARQLWrapper, JSON, RDF, TURTLE
-#import beautifulsoup4 as bs
-
+from rdflib import Graph, Namespace, URIRef
 
 def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
     if endpoint == "w":
@@ -52,7 +51,6 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
             sparql.setQuery(query)
             sparql.setReturnFormat(JSON)
 
-            # Execute the query
             results = sparql.query().convert()
             i = 0
             while i <  len(results['results']['bindings']):
@@ -110,28 +108,34 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
             SELECT DISTINCT ?cultobj ?title ?museo ?descr
             WHERE {
             {?cultobj arco-arco:hasCataloguingAgency  <""" + str(catalogagency) + """>.
-                 <""" + str(catalogagency) + """>  rdfs:label  ?museo.
+                    <""" + str(catalogagency) + """>  rdfs:label  ?museo.
                 ?cultobj   dc:description ?descr.
                 ?cultobj  rdfs:label ?title}
-              union
-              {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
-              <""" + str(cultinst) + """> rdfs:label  ?museo.
-               ?cultobj   dc:description ?descr.
-               ?cultobj  rdfs:label ?title }
-            FILTER(LANG(?title) = '"""+ lang +"""')    }
-        """
-            sparql.setQuery(query)
-            sparql.setReturnFormat(TURTLE)
-            results = sparql.query().convert()
+                union
+                {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
+                <""" + str(cultinst) + """> rdfs:label  ?museo.
+                ?cultobj   dc:description ?descr.
+                ?cultobj  rdfs:label ?title }
+            FILTER(LANG(?title) = '"""+ lang +"""')    }"""
+            if len(obj_list) == 0:
+                sparql.setQuery(query)
+                sparql.setReturnFormat(JSON)
+                results = sparql.query().convert()
             
+            else:            
+                i = 0
+                query = query[:-1] + """FILTER ("""
+                while i < len(obj_list):
+                    query = query + f"""CONTAINS(?title, "{obj_list[i]}") || CONTAINS(?descr, "{obj_list[i]}")""" 
+                    if i + 1 != len(obj_list):
+                        query = query + """ || """
+                    i = i + 1
+                query = query + """)
+                }"""
+                sparql.setQuery(query)
+                sparql.setReturnFormat(JSON)
+                results = sparql.query().convert()
         
-
-            #    # Specify the folder and file path to save the results
-            #    file_path = "C:/Users/Palma/Desktop/PHD/DatasetThesis/HildegardData/"
-            #    file_path = filepath + input("Insert the name of the file you want to save as KB:")
-            #    # Save the results to the specified file
-            #    with open(file_path, 'w') as file:
-            #        file.write(result_data)  
         else:
             museo = input("Insert the name of the museum or site you want to explore:\n")
             query =  """
@@ -184,14 +188,14 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
             SELECT DISTINCT ?cultobj ?title ?museo ?descr
             WHERE {
             {?cultobj arco-arco:hasCataloguingAgency  <""" + str(catalogagency) + """>.
-                 <""" + str(catalogagency) + """>  rdfs:label  ?museo.
+                    <""" + str(catalogagency) + """>  rdfs:label  ?museo.
                 ?cultobj   dc:description ?descr.
                 ?cultobj  rdfs:label ?title}
-              union
-              {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
-              <""" + str(cultinst) + """> rdfs:label  ?museo.
-               ?cultobj   dc:description ?descr.
-               ?cultobj  rdfs:label ?title }
+                union
+                {?cultobj  arco-location:hasCulturalInstituteOrSite <""" + str(cultinst) + """>.
+                <""" + str(cultinst) + """> rdfs:label  ?museo.
+                ?cultobj   dc:description ?descr.
+                ?cultobj  rdfs:label ?title }
             FILTER(LANG(?title) = '"""+ lang +"""')   
             FILTER("""
 
@@ -204,15 +208,28 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
             query = query + """)
             }"""
             sparql.setQuery(query)
-            sparql.setReturnFormat(TURTLE)
+            sparql.setReturnFormat(JSON)
             results = sparql.query().convert()
 
- 
-            # Specify the folder and file path to save the results
-            file_path = "C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\"
-            file_path = file_path + input("Insert the name of the file you want to save as KB:")
-            # Save the results to the specified file
-            with open(file_path, 'w') as file:
-                file.write(str(results))
+    g = Graph()
+
+    #for result in results["results"]["bindings"]:
+    #    subject = result["subject"]["value"]
+    #    predicate = result["predicate"]["value"]
+    #    obj = result["object"]["value"]
+
+    #    g.add((URIRef(subject), URIRef(predicate), URIRef(obj)))
+
+    #turtle_data = g.serialize(format='turtle')
+
+    #print(turtle_data.decode()) 
+
+    file_path = "C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\"
+    file_path = file_path + input("Insert the name of the file you want to save as KB:")
+    # Save the results to the specified file
+    global file_path_json_kb
+    file_path_json_kb = file_path
+    with open(file_path, 'w') as file:
+        file.write(str(results))
 
      

@@ -16,8 +16,13 @@ def find_related_key(tx, value):
     for record in tx.run(query, value=value):
         print(record["n"])
 
-def find_related_descr(tx, element_id):
+def find_related_descr_turtle(tx, element_id):
     query = ("MATCH (n) WHERE n.ns0__variable = \"title\" AND n.ns0__value = \"" + str(element_id) + "\" MATCH (n)<-[:ns0__binding]-(linkedNode)-[:ns0__binding]->(descr) WHERE descr.ns0__variable=\"descr\" RETURN DISTINCT descr.ns0__value as descr  LIMIT 1")
+    for record in tx.run(query, element_id=element_id):
+        print(record["descr"])
+
+def find_related_descr_json(tx, element_id):
+    query = ("MATCH (n) ,(descr)  WHERE n.value = \"" + str(element_id) + "\" AND (n)<-[:defines]-(descr) RETURN DISTINCT descr.value as descr LIMIT 1")
     for record in tx.run(query, element_id=element_id):
         print(record["descr"])
 
@@ -31,11 +36,15 @@ def shortest_path(tx, nnodes):
     for record in tx.run(query, names=names):
         print(record["n"])
 
-def create_link(tx, link, node_type1:str, node_type2:str):
+def create_link_turtle(tx, link, node_type1:str, node_type2:str):
     query = (f"MATCH (d) where d.ns0__variable=\"{node_type1}\" MATCH (t) where t.ns0__variable=\"{node_type2}\" MATCH (d)<-[:ns0__binding]-(commonNode)- [:ns0__binding]->(t) CREATE (d)-[:{link}]->(t);")
     for record in tx.run(query, link=link):
         print(record["n"])
 
+def create_link_json(tx, node_type1:str, node_type2:str, link="P67:refers_to"):
+    query = (f"MATCH (d) WHERE d.value=\"{node_type1}\" MATCH (t) WHERE t.name=\"{node_type2}\"  CREATE (d)-[{link}]->(t);")
+    for record in tx.run(query, link=link):
+        print(record["n"])
 
 def delete(tx, subgraph):
     query = ("MATCH (n) WHERE NOT n.ns0__value IN " + str(subgraph) + " RETURN n;")
@@ -70,7 +79,20 @@ def merge_homonym_nodes(tx, nodeName):
     )
     tx.run(query, nodeName=nodeName)
 
-  
+def initialize_graph(tx):
+    query = (
+       
+        "CALL n10s.graphconfig.init()"
+        )
+    tx.run(query)
+
+def create_constraint(tx):
+    query = (
+       "CREATE CONSTRAINT n10s_unique_uri FOR (r:Resource)"
+        "REQUIRE r.uri IS UNIQUE;"
+        )
+    tx.run(query)
+
 # Floyd Warshall Algorithm
 #Initialize distances
 #MATCH (o:Object)
@@ -95,8 +117,29 @@ def importKnowledgebase(self, datapath):
         if datapath[0] != "h":
             datapath = "file:///" + datapath.replace("\\", "/")
         if datapath[-3:] == "csv":
-            query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' AS row CREATE (:Object {cultobj: row.cultobj, title: row.title,  museum: row.museo,  description: row.descr});")
+            query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' as row "
+                       " MERGE (nodeA:cultobj {value: row.cultobj})"
+                       " MERGE (nodeB:title {value: row.title})"
+                       " MERGE (nodeC:museum {value: row.museo})"
+                       " MERGE (nodeD:descr {value: row.descr})"
+                       " MERGE (nodeA)-[P102:has_title]->(nodeB)"
+                       " MERGE (nodeD)-[P196:defines]->(nodeA)"
+                       " MERGE (nodeC)-[P172:contains]->(nodeA)"
+                       " MERGE (nodeA)-[P129:is_about]->(nodeD)"
+                       )
+            #query = ("LOAD CSV WITH HEADERS FROM '" + str(datapath) +"' AS row CREATE (:Object {cultobj: row.cultobj, title: row.title,  museum: row.museo,  description: row.descr});")
         else: #we suppose that the available fromats are only csv and ttl. This option captures also the case of a uri ending in ".git"
             query = ("CALL n10s.rdf.import.fetch(\"" + str(datapath) +"\",\"Turtle\");") # {{handleVocabUris: 'IGNORE', handleMultival: 'ARRAY', commitSize: 500, nodeCacheSize: 200000}})
         for record in self.run(query, datapath=datapath):
             print(record)
+
+def link_similar_nodes(tx):
+    query = (
+        "MATCH (n:title), (m:title)"
+        "WITH SPLIT(m.value,' ')[0] as token"
+        "WHERE n.value <> m.value "
+        "AND apoc.text.levenshteinSimilarity(n.value,token)  > 0.85 "
+        "AND size(n.value)>4"
+        "MERGE (n)-[P130:shows_features_of]->(m)"
+    )
+    tx.run(query)
