@@ -1,0 +1,998 @@
+﻿[
+  {
+    "n": {
+      "identity": 0,
+      "labels": [
+        "_GraphConfig"
+      ],
+      "properties": {
+        "_classLabel": "Class",
+        "_handleRDFTypes": 0,
+        "_subClassOfRel": "SCO",
+        "_handleMultival": 0,
+        "_objectPropertyLabel": "Relationship",
+        "_rangeRel": "RANGE",
+        "_domainRel": "DOMAIN",
+        "_keepLangTag": false,
+        "_keepCustomDataTypes": false,
+        "_handleVocabUris": 0,
+        "_applyNeo4jNaming": false,
+        "_subPropertyOfRel": "SPO",
+        "_dataTypePropertyLabel": "Property"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:0"
+    }
+  },
+  {
+    "n": {
+      "identity": 1,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893553"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:1"
+    }
+  },
+  {
+    "n": {
+      "identity": 2,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893567"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:2"
+    }
+  },
+  {
+    "n": {
+      "identity": 3,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893263"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:3"
+    }
+  },
+  {
+    "n": {
+      "identity": 4,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893735"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:4"
+    }
+  },
+  {
+    "n": {
+      "identity": 5,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893564"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:5"
+    }
+  },
+  {
+    "n": {
+      "identity": 6,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893259"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:6"
+    }
+  },
+  {
+    "n": {
+      "identity": 7,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893727"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:7"
+    }
+  },
+  {
+    "n": {
+      "identity": 8,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893555"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:8"
+    }
+  },
+  {
+    "n": {
+      "identity": 9,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893736"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:9"
+    }
+  },
+  {
+    "n": {
+      "identity": 10,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893271"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:10"
+    }
+  },
+  {
+    "n": {
+      "identity": 11,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893566"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:11"
+    }
+  },
+  {
+    "n": {
+      "identity": 12,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893783"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:12"
+    }
+  },
+  {
+    "n": {
+      "identity": 13,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893866"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:13"
+    }
+  },
+  {
+    "n": {
+      "identity": 14,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893761"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:14"
+    }
+  },
+  {
+    "n": {
+      "identity": 15,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893967"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:15"
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893806"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:16"
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572906"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:17"
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500573701"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:18"
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500351732"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:19"
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500395036"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:20"
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572905"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:21"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572907"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:22"
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500350798"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:23"
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500382664"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:24"
+    }
+  },
+  {
+    "n": {
+      "identity": 25,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:25"
+    }
+  },
+  {
+    "n": {
+      "identity": 26,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:26"
+    }
+  },
+  {
+    "n": {
+      "identity": 27,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubi (amuleto) (SECOLI/ XI a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:28"
+    }
+  },
+  {
+    "n": {
+      "identity": 29,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubis (statua) (SECOLI/ I a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:29"
+    }
+  },
+  {
+    "n": {
+      "identity": 30,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "battaglia di Alessandro, battaglia di Alessandro contro Dario (disegno) - ambito napoletano (secondo quarto sec. XIX)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:30"
+    }
+  },
+  {
+    "n": {
+      "identity": 31,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "portico con decorazione parietale (incisione) di Casanova Giovanni Battista (sec. XIX)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:31"
+    }
+  },
+  {
+    "n": {
+      "identity": 32,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "tempio di Iside: architetture e Anubi (matrice) di Campana Vincenzo, Nolli Carlo (sec. XVIII)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:32"
+    }
+  },
+  {
+    "n": {
+      "identity": 33,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "statuetta di Alessandro a cavallo, veduta posteriore (stampa) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:33"
+    }
+  },
+  {
+    "n": {
+      "identity": 34,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "busti di soldati (disegno) di Mastracchio Michele (secondo quarto sec. XIX)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:34"
+    }
+  },
+  {
+    "n": {
+      "identity": 35,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "statuetta di Alessandro a cavallo: veduta posteriore (matrice) di Cepparoli Francesco, Casanova Giovanni Battista (sec. XVIII)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:35"
+    }
+  },
+  {
+    "n": {
+      "identity": 36,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "storie della vita di Alessandro Magno (dipinto) di Fischetti Fedele (sec. XVIII)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:36"
+    }
+  },
+  {
+    "n": {
+      "identity": 37,
+      "labels": [
+        "museum"
+      ],
+      "properties": {
+        "value": "Museo Archeologico Nazionale di Napoli"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:37"
+    }
+  },
+  {
+    "n": {
+      "identity": 38,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio Anubis antropomorfo con testa di sciacallo posto su base parallelepipeda e addossato a un sottilissimo pilastro dorsale reso da due scanalature. Ha un foro trasversale che attraversa la testa"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:38"
+    }
+  },
+  {
+    "n": {
+      "identity": 39,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale; attraversato da foro trasversale per la sospensione tra pilastro e corpo del dio, all'altezza dei gomiti"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:39"
+    }
+  },
+  {
+    "n": {
+      "identity": 40,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto rappresentante il dio Anubi zoocefalo con pilastro dorsale attraversato da un foro trasversale per la sospensione all'altezza delle spalle"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:40"
+    }
+  },
+  {
+    "n": {
+      "identity": 41,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione tra il pilastro e le spalle della divinit�"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:41"
+    }
+  },
+  {
+    "n": {
+      "identity": 42,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio antropomorfo zoocefalo stante con base quadrilatera e addossato a pilastro dorsale che termina all'altezza della nuca, attraversato da foro per la sospensione"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:42"
+    }
+  },
+  {
+    "n": {
+      "identity": 43,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo, su base rettangolare, sorretto posteriormente da un pilastro dorsale liscio attraversato da un foro trasversale per la sospensione all'altezza dei gomiti"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:43"
+    }
+  },
+  {
+    "n": {
+      "identity": 44,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto antropomorfo zoocefalo su base parallelepipeda con pilastro dorsale e foro trasversale dietro la nuca"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:44"
+    }
+  },
+  {
+    "n": {
+      "identity": 45,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio Anubis cinocefalo su base parallelepipeda con pilastro dorsale attraversato all'altezza della nuca da foro per la sospensione"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:45"
+    }
+  },
+  {
+    "n": {
+      "identity": 46,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale che giunge alla cervice e foro trasversale per la sospensione all'altezza delle spalle"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:46"
+    }
+  },
+  {
+    "n": {
+      "identity": 47,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio antropomorfo zoocefalo stante su base parallelepipeda e pilastro dorsale, che giunge fino alla parrucca, attraversato da un foro trasversale per la sospensione all'altezza dei gomiti"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:47"
+    }
+  },
+  {
+    "n": {
+      "identity": 48,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio antropomorfo zoocefalo stante su base quadrilatera e addossato a pilastro dorsale attraversato da foro trasversale per la sospensione all'altezza delle spalle"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:48"
+    }
+  },
+  {
+    "n": {
+      "identity": 49,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto rappresentante il dio Anubi con corpo umano e testa di sciacallo. Il dio � in piedi su base parallelepipeda con pilastro dorsale che termina all'altezza della parrucca, attraversato da foro trasversale per la sospensione"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:49"
+    }
+  },
+  {
+    "n": {
+      "identity": 50,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dio antropomorfo con testa di sciacallo, di cui � visibile solo l'orecchio destro. Il dio, su base parallelepipeda, � sorretto posteriormente da un pilastro dorsale, che giunge alla fine di ci� che resta della parrucca pieghettata, e che � attraversato da un foro trasversale per la sospensione"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:50"
+    }
+  },
+  {
+    "n": {
+      "identity": 51,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto antropomorfo, zoocefalo con pilastro dorsale a rilievo che termina all'altezza delle scapole attraversato da un foro passante per la sospensione"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:51"
+    }
+  },
+  {
+    "n": {
+      "identity": 52,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Statua di Anubis dalla testa di sciacallo stante sulla gamba sinistra, con la destra leggermente flessa e portata in avanti"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:52"
+    }
+  },
+  {
+    "n": {
+      "identity": 53,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Amuleto di divinit� antropomorfa con testa di sciacallo rappresentante il dio Anubi"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:53"
+    }
+  },
+  {
+    "n": {
+      "identity": 54,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra � raffigurato Alessandro Magno a cavallo, munito di corazza con gorgoneion che, nell'intento di raggiungere Dario che si d� alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. La scena � inquadrata da una cornice a dentelli. Il disegnatore ha integrato le parti lacunose del mosaico"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:54"
+    }
+  },
+  {
+    "n": {
+      "identity": 55,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Costruzioni: Pompei: portico del tempio d'Iside. Architetture fantastiche: quinte architettoniche; pannelli; vignette paesistiche; delfini; tritone; Anubi; fregio con girali"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:55"
+    }
+  },
+  {
+    "n": {
+      "identity": 56,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Architetture fantastiche: scorcio architettonico. Divinit� orientali: Anubi"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:56"
+    }
+  },
+  {
+    "n": {
+      "identity": 57,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Personaggi: Alessandro Magno. Soggetti profani: Alessandro Magno acavallo"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:57"
+    }
+  },
+  {
+    "n": {
+      "identity": 58,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Il disegno raffgura la battaglia di Alessandro Magno contro Dario del noto mosaico proveniente dalla Casa del Fauno a Pompei. In primo piano sulla sinistra � raffigurato Alessandro Magno a cavallo, munito di corazza con gorgoneion che, nell'intento di raggiungere Dario che si d� alla fuga, trafigge con la lancia un cavaliere che alza il braccio sinistro sopra la testa mentre con la destra afferra l'asta che lo ha colpito. Sullo sfondo si scoge un platano senza fronde ed uno stuolo di soldati macedoni all'attacco. In basso a destra un altro persiano, caduto da cavallo, sta per essere schiacciato sotto la ruota del carro di Dario. Questi, con un copricapo di stoffa sul capo, compare in primo piano, quasi al centro della scena, in piedi sul suo carro; dietro di lui, sullo sfondo, si spiega l'esercito persiano colto in un movimento a vortice, enfatizzato dall'auriga in primo piano, che ha invertito la rotta del carro. Il disegnatore ha integrato le parti lacunose del mosaico"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:58"
+    }
+  },
+  {
+    "n": {
+      "identity": 59,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "La tempera riproduce un particolare del mosaico raffigurante la battaglia di Alessandro Magno contro Dario, proveniente dalla casa del Fauno a Pompei. Sono raffigurati i busti di due soldati macedoni a cavallo, muniti di elmo e corazze, l'uno rivolto a sinistra e l'altro a destra. Sono visibili porzioni di lance e parte delle teste dei cavalli. In basso � raffigurata la parte superiore di una testa ferita, da cui fuoriesce del sangue. Nel mosaico originale tale particolare non � pi� riscontrabile"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:59"
+    }
+  },
+  {
+    "n": {
+      "identity": 60,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Personaggi: Alessandro Magno. Animali: cavallo. Sculture: statuetta"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:60"
+    }
+  },
+  {
+    "n": {
+      "identity": 61,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "value": "Dipinto"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:61"
+    }
+  },
+  {
+    "n": {
+      "identity": 62,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "name": "Anthropomorphism"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:62"
+    }
+  },
+  {
+    "n": {
+      "identity": 63,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "name": "Attribution of human traits, emotions, or intentions to non-human entities"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:63"
+    }
+  },
+  {
+    "n": {
+      "identity": 64,
+      "labels": [
+        "uri"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:64"
+    }
+  },
+  {
+    "n": {
+      "identity": 65,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "name": "Human–animal hybrid"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:65"
+    }
+  },
+  {
+    "n": {
+      "identity": 66,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "name": "Entity that incorporates elements from both humans and non-human animals"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:66"
+    }
+  },
+  {
+    "n": {
+      "identity": 67,
+      "labels": [
+        "uri"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:67"
+    }
+  },
+  {
+    "n": {
+      "identity": 68,
+      "labels": [
+        "prev_title"
+      ],
+      "properties": {
+        "name": "Anthropomorphism"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:68"
+    }
+  },
+  {
+    "n": {
+      "identity": 69,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "name": "Anubis"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+    }
+  },
+  {
+    "n": {
+      "identity": 70,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "name": "Egyptian deity of mummification and the afterlife, usually depicted as a man with a canine head"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:70"
+    }
+  },
+  {
+    "n": {
+      "identity": 71,
+      "labels": [
+        "uri"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Anubis"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:71"
+    }
+  },
+  {
+    "n": {
+      "identity": 72,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "name": "Tale of Two Brothers"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:72"
+    }
+  },
+  {
+    "n": {
+      "identity": 73,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "name": "Ancient Egyptian literary work"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:73"
+    }
+  },
+  {
+    "n": {
+      "identity": 74,
+      "labels": [
+        "uri"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Tale of Two Brothers"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:74"
+    }
+  },
+  {
+    "n": {
+      "identity": 75,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "name": "Cynocephaly"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:75"
+    }
+  },
+  {
+    "n": {
+      "identity": 76,
+      "labels": [
+        "descr"
+      ],
+      "properties": {
+        "name": "Mythical creature"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:76"
+    }
+  },
+  {
+    "n": {
+      "identity": 77,
+      "labels": [
+        "uri"
+      ],
+      "properties": {
+        "name": "https://en.wikipedia.org/wiki/Cynocephaly"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:77"
+    }
+  },
+  {
+    "n": {
+      "identity": 78,
+      "labels": [
+        "prev_title"
+      ],
+      "properties": {
+        "name": "Human–animal hybrid"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:78"
+    }
+  },
+  {
+    "n": {
+      "identity": 79,
+      "labels": [
+        "prev_title"
+      ],
+      "properties": {
+        "name": "Anubis"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:79"
+    }
+  },
+  {
+    "n": {
+      "identity": 80,
+      "labels": [
+        "prev_title"
+      ],
+      "properties": {
+        "name": "Tale of Two Brothers"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:80"
+    }
+  },
+  {
+    "n": {
+      "identity": 81,
+      "labels": [
+        "prev_title"
+      ],
+      "properties": {
+        "name": "Cynocephaly"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:81"
+    }
+  }
+]
