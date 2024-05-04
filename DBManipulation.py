@@ -61,13 +61,6 @@ def insert_triples(tx, triple):
     )
     tx.run(query, subject=triple[labels[0]], object=triple[labels[1]])
 
-    #MERGE (a:LabelA {name: 'NodeName'})
-    #MERGE (b:LabelB {name: 'NodeName'})
-    #WITH a, b
-    #WHERE id(a) <> id(b)  // Ensure we're not merging the same node with itself
-    #CALL apoc.refactor.mergeNodes([a, b]) YIELD node
-    #RETURN node
-
 def merge_homonym_nodes(tx, nodeName):
     
     query = (
@@ -78,7 +71,18 @@ def merge_homonym_nodes(tx, nodeName):
         "RETURN node"
     )
     tx.run(query, nodeName=nodeName)
-
+    
+def link_similar_nodes(tx):
+    query = (
+        "MATCH (n:title), (m:title)"
+        "WITH SPLIT(m.value,' ')[0] as token"
+        "WHERE n.value <> m.value "
+        "AND apoc.text.levenshteinSimilarity(n.value,token)  > 0.85 "
+        "AND size(n.value)>4"
+        "MERGE (n)-[P130:shows_features_of]->(m)"
+    )
+    tx.run(query)
+    
 def initialize_graph(tx):
     query = (
        
@@ -109,6 +113,12 @@ def create_constraint(tx):
 #WHERE a.distance + newWeight < c.distance
 #SET c.distance = a.distance + newWeight
      
+#MERGE (a:LabelA {name: 'NodeName'})
+#MERGE (b:LabelB {name: 'NodeName'})
+#WITH a, b
+#WHERE id(a) <> id(b)  // Ensure we're not merging the same node with itself
+#CALL apoc.refactor.mergeNodes([a, b]) YIELD node
+#RETURN node
 
 #Momentarily, KGs are at disposal only in Turtle Format
 
@@ -133,13 +143,7 @@ def importKnowledgebase(self, datapath):
         for record in self.run(query, datapath=datapath):
             print(record)
 
-def link_similar_nodes(tx):
-    query = (
-        "MATCH (n:title), (m:title)"
-        "WITH SPLIT(m.value,' ')[0] as token"
-        "WHERE n.value <> m.value "
-        "AND apoc.text.levenshteinSimilarity(n.value,token)  > 0.85 "
-        "AND size(n.value)>4"
-        "MERGE (n)-[P130:shows_features_of]->(m)"
-    )
-    tx.run(query)
+# driver = GraphDatabase.driver("bolt://localhost:7687",
+#                               auth=("neo4j","pipi1233")) 
+# with driver.session(database="europeana") as session:
+#     session.execute_write(importKnowledgebase, "C:\\Users\\Palma\\Downloads\\2048714_Ag_EU_3D-ICONS_ITABC.csv")

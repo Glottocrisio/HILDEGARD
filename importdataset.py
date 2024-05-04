@@ -2,8 +2,12 @@ import requests
 from neo4j import GraphDatabase
 from SPARQLWrapper import SPARQLWrapper, JSON, RDF, TURTLE
 from rdflib import Graph, Namespace, URIRef
+import ssl
+import urllib.request
 
-def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
+
+
+def fetchSPARQLendpoint(endpoint, lang, obj_list=None):
     if endpoint == "w":
         sparql = SPARQLWrapper(
             "https://query.wikidata.org/sparql/"
@@ -23,9 +27,86 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
         sparql = SPARQLWrapper(
             "https://sparql.europeana.eu/"
         )
+        query = """
+            PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+
+
+            SELECT DISTINCT ?Dataset
+            WHERE {
+              ?Aggregation edm:collectionName ?Dataset;
+ 	            edm:language ?language.
+
+              VALUES ?language {\"""" + str(lang) + """\"}
+            }
+
+
+        """
         
+        sparql.setQuery(query)
+        sparql.setReturnFormat(JSON)
+        ssl._create_default_https_context = ssl._create_unverified_context
+        # # Create an unverified SSL context
+        # context = ssl._create_unverified_context()
+
+        # # Use this context to open a URL
+        # response = urllib.request.urlopen('https://sparql.europeana.eu/', context=context)
+        #print(response.read())
+        results = sparql.query().convert()
+        i = 0
+        while i <  len(results['results']['bindings']):
+            print(results['results']['bindings'][i]['Dataset']['value'])
+            i = i + 1
+            
+        datapro = input("Insert the name of the dataset you want to explore, from the previous output:\n")
+        query =  """
+            PREFIX edm: <http://www.europeana.eu/schemas/edm/>
+            PREFIX dc: <http://purl.org/dc/elements/1.1/>
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+
+            SELECT DISTINCT ?museo ?cultobj ?title ?descr
+            WHERE {
+              ?aggregation edm:collectionName \"""" + str(datapro) + """\";
+                           edm:aggregatedCHO ?cultobj.
+              ?Proxy ore:proxyFor ?cultobj;
+  	            dc:title ?title;
+                    dc:description ?descr.
+              BIND(\"""" + str(datapro) + """\" AS ?museo)
+        """
+        if obj_list != None:
+            i = 0
+            while i < len(obj_list):
+                query = query + f"""CONTAINS(?title, "{obj_list[i]}") || CONTAINS(?descr, "{obj_list[i]}")"""
+                if i + 1 != len(obj_list):
+                    query = query + """ || """
+                i = i + 1
+            query = query + """)
+            }"""
+        else:
+            query = query + """  }"""
+        sparql.setQuery(query)
+        sparql.setReturnFormat(JSON)
+
+        results = sparql.query().convert()
+        i = 0
+        while i <  len(results['results']['bindings']):
+            print(results['results']['bindings'][i]['object']['value'])
+            i = i + 1
+
     elif endpoint == "a":
         sparql = SPARQLWrapper("https://dati.cultura.gov.it/sparql")
+        while True:
+            try:
+                text =     input("Da dove vuoi partire nella tua ricerca di oggetti culturali?"
+                + "Digita 'region' o 'museum': \n" + "Where do you want to start your search for heritage objects?"
+                + "Type 'region' or 'museum': \n")
+                if text == "region" or text == "museum":
+                    # Valid input
+                    break
+                else:
+                    print("Invalid input. Please type 'region' or 'museum'.\n"
+                            +"Input non valido. Prego inserire 'region' oppure 'museum': \n")
+            except Exception as e:
+                print(f"An error occurred: {e}")
         if text=="region":
             region = input("Insert the name of the region you want to explore: \n")
             query = """
@@ -232,4 +313,6 @@ def fetchSPARQLendpoint(text, endpoint, lang, obj_list):
     with open(file_path, 'w') as file:
         file.write(str(results))
 
-     
+
+
+fetchSPARQLendpoint('region', 'e', 'it')

@@ -30,9 +30,6 @@
     <Compile Include="DBManipulation.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="KGAlignmentpy.py">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Include="metrics.py">
       <SubType>Code</SubType>
     </Compile>
@@ -50,7 +47,6 @@
     <Content Include="cidoc-crm.txt" />
     <Content Include="cidoc-crm_7_1_2.xml" />
     <Content Include="sanitizedtest3.json" />
-    <Content Include="test3" />
     <Content Include="test3.csv" />
     <Content Include="wikifiedtripless.ttl" />
   </ItemGroup>

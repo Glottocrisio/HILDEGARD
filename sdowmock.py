@@ -75,7 +75,7 @@ def triples_triples(triples):
     i = i + 1
   return grouped_triples
 
-def related_entities_triples(start, end, kgr, bi = True, file = True):
+def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
     options = Options()
     options.binary_location = r'C:\Program Files\Mozilla Firefox\firefox.exe'
     browser = webdriver.Firefox(executable_path=r'C:\Program Files\Mozilla Firefox\gecko\geckodriver.exe', options=options)

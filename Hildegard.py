@@ -1,6 +1,5 @@
 from neo4j import GraphDatabase
 import DBManipulation as gm
-import KGAlignmentpy as kga
 import wikifier as w
 import tools as t
 import importdataset  as id
@@ -29,6 +28,38 @@ import json
 
 #CASE 3: More seeds.
 
+# langs = {'albanian':'als',
+#             'arabic':'arb',
+#             'bulgarian':'bul',
+#             'chinese_simplified':'cmn',
+#             'chinese_traditional':'qcn',
+#             'danish':'dan',
+#             'greek':'ell',
+#             'english':'eng',
+#             'persian':'fas',
+#             'finnish':'fin',
+#             'french':'fra',
+#             'hebrew':'heb',
+#             'croatian':'hrv',
+#             'icelandic':'isl',
+#             'italian':'ita',
+#             'japanese':'jpn',
+#             'catalan':'cat',
+#             'basque':'eus',
+#             'galicain':'glg',
+#             'spanish':'spa',
+#             'indonesian':'ind',
+#             'malay':'zsm',
+#             'dutch':'nld',
+#             'polish':'pol',
+#             'portuguese':'por',
+#             'romanian':'ron',
+#             'lithuanian':'lit',
+#             'slovak':'slk',
+#             'slovene':'slv',
+#             'swedish':'swe',
+#             'thai':'tha'}
+
 driver = GraphDatabase.driver("bolt://localhost:7687",
                               auth=("neo4j","pipi1233")) 
 
@@ -36,31 +67,6 @@ driver = GraphDatabase.driver("bolt://localhost:7687",
 
 with driver.session(database="dev2") as session:
 
-
-    #try:
-    #    triples_file = "C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\AnthropomorphismtoAnubisshortestpath_relations_triples.txt"
-    #    h_triples = t.harmonize_triples2crm(triples_file, "h_triples_file")
-    #except Exception as e:
-    #    print("File does not exists: please retry.")
-               
-    triples_file = "C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\h_triples_fileharmonizedtriples.txt"#C:\\Users\\Palma\\Desktop\\PHD\\HILD&GARD\\testharmonizedtriples.txt"  
-
-    with open(triples_file, 'r') as file:
-        fil = file.read()
-        json_acceptable_string = fil.replace("'", "\"")
-        file.close()
-    with open(triples_file.replace(".txt","")+"jsond.json", "w") as jsond:
-        jsond.write(json_acceptable_string)
-        jsond.close()
-    with open(triples_file.replace(".txt","")+"jsond.json", "r") as jsond:
-        triples_data = json.load(jsond)
-
-    for triple in triples_data:
-        # Insert each triple into Neo4j
-        try:
-            session.execute_write(gm.insert_triples, triple)
-        except Exception as e:
-            pass
 
     while True:
         try:
@@ -88,19 +94,7 @@ with driver.session(database="dev2") as session:
                             +"Input non valido. Prego inserire 'a', 'w', 'y', 'd' oppure 'e': \n")
             except Exception as e:
                 print(f"An error occurred: {e}")
-        while True:
-            try:
-                text =     input("Da dove vuoi partire nella tua ricerca di oggetti culturali?"
-                + "Digita 'region' o 'museum': \n" + "Where do you want to start your search for heritage objects?"
-                + "Type 'region' or 'museum': \n")
-                if text == "region" or text == "museum":
-                    # Valid input
-                    break
-                else:
-                    print("Invalid input. Please type 'region' or 'museum'.\n"
-                            +"Input non valido. Prego inserire 'region' oppure 'museum': \n")
-            except Exception as e:
-                print(f"An error occurred: {e}")
+        
         while True:
             try:
                 lang =     input("In quale lingua vuoi creare il grafo di conoscenza?"
@@ -135,7 +129,7 @@ with driver.session(database="dev2") as session:
             obj_list.append(keyword)
             seeds = seeds - 1
         
-        id.fetchSPARQLendpoint(text, endpoint, lang, obj_list)
+        id.fetchSPARQLendpoint(endpoint, lang, obj_list)
         output_csv = input("Inserisci il nome del csv file \n"+"Insert the name of the .csv file: \n")
         t.json2csv(id.file_path_json_kb, output_csv)
         #kgdatapath = input("Please insert the path of the database file folder, if offline, or the uri where it is stored. In this case, provide the link of the github raw file")
@@ -281,7 +275,7 @@ with driver.session(database="dev2") as session:
             kgr = "dbpedia"
         else:
             kgr = "yago"
-        sdow.related_entities_triples(start_article, end_article, kgr)
+        sdow.related_entities_triples(start_article, end_article, kgr, lang)
     else:
         filename = input("Insert name of file where entities from wikification are stored \n")
         delimiter = ","
