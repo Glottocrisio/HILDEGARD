@@ -1,6 +1,33 @@
 ﻿[
   {
     "n": {
+<<<<<<< HEAD
+=======
+      "identity": 0,
+      "labels": [
+        "_GraphConfig"
+      ],
+      "properties": {
+        "_classLabel": "Class",
+        "_handleRDFTypes": 0,
+        "_subClassOfRel": "SCO",
+        "_handleMultival": 0,
+        "_objectPropertyLabel": "Relationship",
+        "_rangeRel": "RANGE",
+        "_domainRel": "DOMAIN",
+        "_keepLangTag": false,
+        "_keepCustomDataTypes": false,
+        "_handleVocabUris": 0,
+        "_applyNeo4jNaming": false,
+        "_subPropertyOfRel": "SPO",
+        "_dataTypePropertyLabel": "Property"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:0"
+    }
+  },
+  {
+    "n": {
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 1,
       "labels": [
         "cultobj"
@@ -9,6 +36,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893553"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:1"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 0,
@@ -31,6 +59,8 @@
         "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:25"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -43,6 +73,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893567"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:2"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 1,
@@ -65,6 +96,8 @@
         "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:26"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -77,6 +110,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893263"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:3"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 2,
@@ -99,6 +133,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -111,6 +147,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893735"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:4"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 3,
@@ -133,6 +170,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -145,6 +184,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893564"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:5"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 4,
@@ -167,6 +207,8 @@
         "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:26"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -179,6 +221,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893259"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:6"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 5,
@@ -201,6 +244,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -213,6 +258,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893727"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:7"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 6,
@@ -235,6 +281,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -247,6 +295,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893555"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:8"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 7,
@@ -269,6 +318,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -281,6 +332,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893736"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:9"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 8,
@@ -303,6 +355,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -315,6 +369,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893271"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:10"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 9,
@@ -337,6 +392,8 @@
         "value": "Anubi (amuleto) (SECOLI/ XI a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:28"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -349,6 +406,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893566"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:11"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 10,
@@ -371,6 +429,8 @@
         "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:26"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -383,6 +443,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893783"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:12"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 11,
@@ -405,6 +466,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -417,6 +480,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893866"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:13"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 12,
@@ -439,6 +503,8 @@
         "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:25"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -451,6 +517,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893761"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:14"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 13,
@@ -473,6 +540,8 @@
         "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -485,6 +554,7 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893967"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:15"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 14,
@@ -499,6 +569,168 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:29"
     },
     "m": {
+=======
+    }
+  },
+  {
+    "n": {
+      "identity": 16,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893806"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:16"
+    }
+  },
+  {
+    "n": {
+      "identity": 17,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572906"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:17"
+    }
+  },
+  {
+    "n": {
+      "identity": 18,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500573701"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:18"
+    }
+  },
+  {
+    "n": {
+      "identity": 19,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500351732"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:19"
+    }
+  },
+  {
+    "n": {
+      "identity": 20,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500395036"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:20"
+    }
+  },
+  {
+    "n": {
+      "identity": 21,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572905"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:21"
+    }
+  },
+  {
+    "n": {
+      "identity": 22,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500572907"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:22"
+    }
+  },
+  {
+    "n": {
+      "identity": 23,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500350798"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:23"
+    }
+  },
+  {
+    "n": {
+      "identity": 24,
+      "labels": [
+        "cultobj"
+      ],
+      "properties": {
+        "value": "https://w3id.org/arco/resource/HistoricOrArtisticProperty/1500382664"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:24"
+    }
+  },
+  {
+    "n": {
+      "identity": 25,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubis (amuleto) (SECOLI/ VII a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:25"
+    }
+  },
+  {
+    "n": {
+      "identity": 26,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubis (amuleto) (SECOLI/ XI a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:26"
+    }
+  },
+  {
+    "n": {
+      "identity": 27,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubi (amuleto) (SECOLI/ VII a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:27"
+    }
+  },
+  {
+    "n": {
+      "identity": 28,
+      "labels": [
+        "title"
+      ],
+      "properties": {
+        "value": "Anubi (amuleto) (SECOLI/ XI a.C)"
+      },
+      "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:28"
+    }
+  },
+  {
+    "n": {
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 29,
       "labels": [
         "title"
@@ -511,6 +743,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 16,
       "labels": [
         "cultobj"
@@ -567,6 +800,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:30"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 30,
       "labels": [
         "title"
@@ -579,6 +814,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 18,
       "labels": [
         "cultobj"
@@ -601,6 +837,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:31"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 31,
       "labels": [
         "title"
@@ -613,6 +851,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 19,
       "labels": [
         "cultobj"
@@ -635,6 +874,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:32"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 32,
       "labels": [
         "title"
@@ -647,6 +888,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 20,
       "labels": [
         "cultobj"
@@ -669,6 +911,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:33"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 33,
       "labels": [
         "title"
@@ -681,6 +925,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 21,
       "labels": [
         "cultobj"
@@ -737,6 +982,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:34"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 34,
       "labels": [
         "title"
@@ -749,6 +996,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 23,
       "labels": [
         "cultobj"
@@ -771,6 +1019,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:35"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 35,
       "labels": [
         "title"
@@ -783,6 +1033,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 24,
       "labels": [
         "cultobj"
@@ -805,6 +1056,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:36"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 36,
       "labels": [
         "title"
@@ -817,6 +1070,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 38,
       "labels": [
         "descr"
@@ -1633,6 +1887,8 @@
   },
   {
     "n": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 37,
       "labels": [
         "museum"
@@ -1641,6 +1897,7 @@
         "value": "Museo Archeologico Nazionale di Napoli"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:37"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 48,
@@ -1663,10 +1920,13 @@
         "value": "https://w3id.org/arco/resource/ArchaeologicalProperty/1500893553"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:1"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 37,
       "labels": [
         "museum"
@@ -2471,6 +2731,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:38"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 38,
       "labels": [
         "descr"
@@ -2483,6 +2745,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 2,
       "labels": [
         "cultobj"
@@ -2505,6 +2768,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:39"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 39,
       "labels": [
         "descr"
@@ -2517,6 +2782,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 3,
       "labels": [
         "cultobj"
@@ -2539,6 +2805,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:40"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 40,
       "labels": [
         "descr"
@@ -2551,6 +2819,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 4,
       "labels": [
         "cultobj"
@@ -2573,6 +2842,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:41"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 41,
       "labels": [
         "descr"
@@ -2585,6 +2856,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 5,
       "labels": [
         "cultobj"
@@ -2607,6 +2879,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:42"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 42,
       "labels": [
         "descr"
@@ -2619,6 +2893,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 6,
       "labels": [
         "cultobj"
@@ -2641,6 +2916,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:43"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 43,
       "labels": [
         "descr"
@@ -2653,6 +2930,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 7,
       "labels": [
         "cultobj"
@@ -2675,6 +2953,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:44"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 44,
       "labels": [
         "descr"
@@ -2687,6 +2967,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 8,
       "labels": [
         "cultobj"
@@ -2709,6 +2990,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:45"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 45,
       "labels": [
         "descr"
@@ -2721,6 +3004,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 9,
       "labels": [
         "cultobj"
@@ -2743,6 +3027,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:46"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 46,
       "labels": [
         "descr"
@@ -2755,6 +3041,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 10,
       "labels": [
         "cultobj"
@@ -2777,6 +3064,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:47"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 47,
       "labels": [
         "descr"
@@ -2789,6 +3078,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 11,
       "labels": [
         "cultobj"
@@ -2811,6 +3101,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:48"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 48,
       "labels": [
         "descr"
@@ -2823,6 +3115,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 12,
       "labels": [
         "cultobj"
@@ -2845,6 +3138,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:49"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 49,
       "labels": [
         "descr"
@@ -2857,6 +3152,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 13,
       "labels": [
         "cultobj"
@@ -2879,6 +3175,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:50"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 50,
       "labels": [
         "descr"
@@ -2891,6 +3189,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 14,
       "labels": [
         "cultobj"
@@ -2913,6 +3212,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:51"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 51,
       "labels": [
         "descr"
@@ -2925,6 +3226,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 15,
       "labels": [
         "cultobj"
@@ -2947,6 +3249,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:52"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 52,
       "labels": [
         "descr"
@@ -2959,6 +3263,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 16,
       "labels": [
         "cultobj"
@@ -2981,6 +3286,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:53"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 53,
       "labels": [
         "descr"
@@ -2993,6 +3300,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 17,
       "labels": [
         "cultobj"
@@ -3015,6 +3323,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:54"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 54,
       "labels": [
         "descr"
@@ -3027,6 +3337,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 18,
       "labels": [
         "cultobj"
@@ -3049,6 +3360,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:55"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 55,
       "labels": [
         "descr"
@@ -3061,6 +3374,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 19,
       "labels": [
         "cultobj"
@@ -3083,6 +3397,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:56"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 56,
       "labels": [
         "descr"
@@ -3095,6 +3411,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 20,
       "labels": [
         "cultobj"
@@ -3117,6 +3434,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:57"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 57,
       "labels": [
         "descr"
@@ -3129,6 +3448,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 21,
       "labels": [
         "cultobj"
@@ -3151,6 +3471,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:58"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 58,
       "labels": [
         "descr"
@@ -3163,6 +3485,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 22,
       "labels": [
         "cultobj"
@@ -3185,6 +3508,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:59"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 59,
       "labels": [
         "descr"
@@ -3197,6 +3522,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 23,
       "labels": [
         "cultobj"
@@ -3219,6 +3545,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:60"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 60,
       "labels": [
         "descr"
@@ -3231,6 +3559,7 @@
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 24,
       "labels": [
         "cultobj"
@@ -3253,6 +3582,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:61"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 61,
       "labels": [
         "descr"
@@ -3273,6 +3604,7 @@
         "name": "Anthropomorphism"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:62"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 96,
@@ -3295,6 +3627,8 @@
         "name": "Attribution of human traits, emotions, or intentions to non-human entities"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:63"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3307,6 +3641,7 @@
         "name": "Attribution of human traits, emotions, or intentions to non-human entities"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:63"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 97,
@@ -3329,6 +3664,8 @@
         "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:64"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3341,6 +3678,7 @@
         "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:64"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 98,
@@ -3465,6 +3803,8 @@
         "name": "https://en.wikipedia.org/wiki/Anthropomorphism"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:64"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3477,6 +3817,7 @@
         "name": "Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:65"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 102,
@@ -3499,6 +3840,8 @@
         "name": "Entity that incorporates elements from both humans and non-human animals"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:66"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3511,6 +3854,7 @@
         "name": "Entity that incorporates elements from both humans and non-human animals"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:66"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 103,
@@ -3533,6 +3877,8 @@
         "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:67"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3545,6 +3891,7 @@
         "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:67"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 104,
@@ -3669,6 +4016,8 @@
         "name": "https://en.wikipedia.org/wiki/Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:67"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3681,6 +4030,7 @@
         "name": "Anthropomorphism"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:68"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 108,
@@ -3703,6 +4053,8 @@
         "name": "Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:65"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3715,6 +4067,7 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 109,
@@ -3805,6 +4158,8 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3817,6 +4172,7 @@
         "name": "Egyptian deity of mummification and the afterlife, usually depicted as a man with a canine head"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:70"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 112,
@@ -3839,6 +4195,8 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -3851,6 +4209,7 @@
         "name": "https://en.wikipedia.org/wiki/Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:71"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 113,
@@ -3873,10 +4232,13 @@
         "name": "Egyptian deity of mummification and the afterlife, usually depicted as a man with a canine head"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:70"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 69,
       "labels": [
         "title"
@@ -4001,6 +4363,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:72"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 72,
       "labels": [
         "title"
@@ -4021,6 +4385,7 @@
         "name": "Ancient Egyptian literary work"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:73"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 118,
@@ -4043,6 +4408,8 @@
         "name": "Tale of Two Brothers"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:72"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -4055,6 +4422,7 @@
         "name": "https://en.wikipedia.org/wiki/Tale of Two Brothers"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:74"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 119,
@@ -4077,10 +4445,13 @@
         "name": "Ancient Egyptian literary work"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:73"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
     "n": {
+<<<<<<< HEAD
       "identity": 72,
       "labels": [
         "title"
@@ -4205,6 +4576,8 @@
       "endNodeElementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:75"
     },
     "m": {
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
       "identity": 75,
       "labels": [
         "title"
@@ -4225,6 +4598,7 @@
         "name": "Mythical creature"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:76"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 124,
@@ -4247,6 +4621,8 @@
         "name": "Cynocephaly"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:75"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -4259,6 +4635,7 @@
         "name": "https://en.wikipedia.org/wiki/Cynocephaly"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:77"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 125,
@@ -5233,6 +5610,8 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -5245,6 +5624,7 @@
         "name": "Human–animal hybrid"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:78"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 154,
@@ -5267,6 +5647,8 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -5279,6 +5661,7 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:79"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 155,
@@ -5335,6 +5718,8 @@
         "name": "Tale of Two Brothers"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:72"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -5347,6 +5732,7 @@
         "name": "Tale of Two Brothers"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:80"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 157,
@@ -5403,6 +5789,8 @@
         "name": "Cynocephaly"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:75"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   },
   {
@@ -5415,6 +5803,7 @@
         "name": "Cynocephaly"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:81"
+<<<<<<< HEAD
     },
     "r": {
       "identity": 159,
@@ -5437,6 +5826,8 @@
         "name": "Anubis"
       },
       "elementId": "4:950256a7-25a0-46fc-812b-5c219a68a9d9:69"
+=======
+>>>>>>> d42b060a9aa2af0e8586cf897091c11fe5aa0cb7
     }
   }
 ]
