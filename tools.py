@@ -19,6 +19,10 @@ import pandas as pd
 import os
 import ast
 import openai
+import time
+import json
+import argparse
+
 
 cidoc_class_mapping = {
     "E2": "Temporal Entity",
@@ -387,7 +391,7 @@ def get_dbpedia_uri_italian(wikipedia_entity_english):
     return dbpedia_uri_italian
 
 
-
+#it works
 def retrieve_common_entities(start, end):
     sparql.setQuery(f"""
     PREFIX dbo: <http://dbpedia.org/ontology/>
@@ -404,6 +408,38 @@ def retrieve_common_entities(start, end):
 
     return results
 
+def get_dbpedia_relationships(entity1, entity2, filter=False):
+    sparql = SPARQLWrapper("http://dbpedia.org/sparql")
+    query = f"""
+        PREFIX dbo: <http://dbpedia.org/ontology/>
+        PREFIX dbr: <http://dbpedia.org/resource/>
+        PREFIX owl: <http://www.w3.org/2002/07/owl#>
+
+        SELECT * WHERE {{
+          dbr:{entity1} ?pf1 ?of1 .
+          ?of1 ?pf2 ?c .
+          dbr:{entity2} ?ps1 ?os1 .
+          ?os1 ?ps2 ?c .
+          """
+    if filter:
+        query += f"""
+          
+        }} LIMIT 50
+        """
+    else:
+        query +=  f"""
+            FILTER (?pf2 NOT IN (dbo:Person, dbo:wikiPageWikiLink, owl:Thing))
+            FILTER (?pf1 NOT IN (dbo:Person, dbo:wikiPageWikiLink, owl:Thing))
+            FILTER (?ps2 NOT IN (dbo:Person, dbo:wikiPageWikiLink, owl:Thing))
+            FILTER (?ps1 NOT IN (dbo:Person, dbo:wikiPageWikiLink, owl:Thing))
+            FILTER (?c NOT IN (dbo:Person, dbo:wikiPageWikiLink, owl:Thing))
+        }} LIMIT 50
+        """
+    
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    results = sparql.query().convert()
 
 def get_direct_neighbors(entity):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
@@ -500,39 +536,20 @@ def get_wikilinks(article_title):
     page = wiki_wiki.page(article_title)
     return [link.title for link in page.links]
 
-# Depth-First Search (DFS) to find the shortest path
-def dfs(current_article, path, visited, depth):
-    if depth > max_depth:
-        return None
+# def enttype(text):
+#     # Load the English language model
+#     nlp = spacy.load("en_core_web_sm")
 
-    visited.add(current_article)
-    path.append(current_article)
+#     # Process the text with spaCy
+#     doc = nlp(text)
 
-    if current_article == end_article:
-        return path
-
-    for link in get_links(current_article):
-        if link not in visited:
-            result = dfs(link, path.copy(), visited, depth + 1)
-            if result:
-                return result
-
-    return None
-
-def enttype(text):
-    # Load the English language model
-    nlp = spacy.load("en_core_web_sm")
-
-    # Process the text with spaCy
-    doc = nlp(text)
-
-    # Extract entities and their types
-    entities = [(ent.text, ent.label_) for ent in doc.ents]
-    print = ""
-    for entity, entity_type in entities:
-        print = f"Entity: {entity}, Type: {entity_type}"
-    print(print)
-    return print
+#     # Extract entities and their types
+#     entities = [(ent.text, ent.label_) for ent in doc.ents]
+#     print = ""
+#     for entity, entity_type in entities:
+#         print = f"Entity: {entity}, Type: {entity_type}"
+#     print(print)
+#     return print
 
 def text2list(filename, delimiter=","):
     try:
@@ -557,7 +574,7 @@ def get_combos(elements):
   return couplets
 
 def llm(user_question):
-    api_key = "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"
+    api_key = "***"
     openai.api_key = api_key
 
     response = openai.Completion.create(
@@ -566,3 +583,97 @@ def llm(user_question):
         max_tokens=50  
     )
     print(response.choices[0].text.strip())
+
+
+import requests
+import random
+
+def get_links(title):
+    url = f"https://en.wikipedia.org/w/api.php"
+    params = {
+        "action": "query",
+        "format": "json",
+        "titles": title,
+        "prop": "links",
+        "pllimit": "max"
+    }
+    response = json.loads(requests.get(url, params=params).text)
+    page = next(iter(response["query"]["pages"].values()))
+    return [link["title"] for link in page.get("links", [])]
+
+def clickstream_walk(start, end, max_steps=20):
+    current = start
+    path = [current]
+    
+    for _ in range(max_steps):
+        if current == end:
+            return path
+        
+        links = get_links(current)
+        if end in links:
+            path.append(end)
+            return path
+        
+        next_page = random.choice(links)
+        path.append(next_page)
+        current = next_page
+    
+    return path + ["(Target not reached)"]
+
+# # Example usage
+# start_entity = "Anubis"
+# end_entity = "Alexander the Great"
+
+# result = clickstream_walk(start_entity, end_entity)
+# print(" -> ".join(result))
+
+
+
+def csv_to_json(csv_file_path, json_file_path, text_column):
+    
+    data = []
+
+    with open(csv_file_path, 'r', encoding='utf-8') as csv_file:
+        csv_reader = csv.DictReader(csv_file)
+        
+        if text_column not in csv_reader.fieldnames:
+            raise ValueError(f"Column '{text_column}' not found in the CSV file.")
+        
+        for row in csv_reader:
+            text = row[text_column].strip()
+            
+            if text:
+                data.append({"text": text})
+
+    with open(json_file_path, 'w', encoding='utf-8') as json_file:
+        json.dump(data, json_file, ensure_ascii=False, indent=2)
+
+    print(f"Successfully converted {len(data)} entries from CSV to JSON.")
+
+# if __name__ == "__main__":
+#     parser = argparse.ArgumentParser(description="Convert a column from a CSV file to a JSON file.")
+#     parser.add_argument("csv_file", help="Path to the input CSV file")
+#     parser.add_argument("json_file", help="Path to the output JSON file")
+#     parser.add_argument("text_column", help="Name of the column containing the text to be extracted")
+
+#     args = parser.parse_args()
+
+
+def filter_json_by_length(input_file, output_file, min_length):
+    # Read the input JSON file
+    with open(input_file, 'r', encoding='utf-8') as f:
+        data = json.load(f)
+    
+    # Filter the data
+    filtered_data = [item for item in data if len(item['text']) >= min_length]
+    
+    # Write the filtered data to the output JSON file
+    with open(output_file, 'w', encoding='utf-8') as f:
+        json.dump(filtered_data, f, ensure_ascii=False, indent=2)
+    
+    print(f"Original number of texts: {len(data)}")
+    print(f"Number of texts after filtering: {len(filtered_data)}")
+    print(f"Filtered JSON saved to {output_file}")
+
+#filter_json_by_length("test_data_entity_linking.json", "test_data_entity_linking_short.json", 100)
+#csv_to_json("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\oggetticulturalimuseoarcheologiconapoliit.csv", "test_data_entity_linking.json", "descr")
