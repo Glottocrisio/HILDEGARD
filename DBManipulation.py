@@ -307,7 +307,7 @@ def importKnowledgebase(self, datapath):
             print(record)
 
 # driver = GraphDatabase.driver("bolt://localhost:7687",
-#                               auth=("neo4j","pipi1233")) 
+#                               auth=("neo4j","***")) 
 # with driver.session(database="europeana") as session:
 #     session.execute_write(importKnowledgebase, "C:\\Users\\Palma\\Downloads\\2048714_Ag_EU_3D-ICONS_ITABC.csv")
 
