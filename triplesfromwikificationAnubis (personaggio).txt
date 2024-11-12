@@ -1,1 +1,0 @@
-[('Anubis (personaggio)', 'Person,Agent,FictionalCharacter', 'http://it.wikipedia.org/wiki/Anubis_(personaggio)')]
