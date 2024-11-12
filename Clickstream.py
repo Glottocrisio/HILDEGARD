@@ -58,14 +58,13 @@ def clickstream_walk(start, end, max_steps=20):
     
     return path, relations
 
-# Example usage
+
 start_entity = "Alexander the Great"
 end_entity = "Anubis"
 
 path, relations = clickstream_walk(start_entity, end_entity)
 
 print("Clickstream walk:")
-
 print("First Method")
 for i in range(len(path) - 1):
     print(f"{path[i]} --[{relations[i]}]--> {path[i+1]}")
@@ -140,7 +139,6 @@ def clickstream_walk_2(start, end, max_steps=20):
     return path + ["(Target not reached)"], relations
 
 
-# Example usage
 start_entity = "Anubis"
 end_entity = "Alexander the Great"
 print("Second Method")

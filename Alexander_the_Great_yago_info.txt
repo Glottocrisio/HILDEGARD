@@ -1,0 +1,90 @@
+Information about Alexander_the_Great (in Italian):
+
+Property:
+  - http://schema.org/deathDate
+  - http://schema.org/alternateName
+  - http://www.w3.org/2000/01/rdf-schema#comment
+  - http://schema.org/image
+  - http://schema.org/birthDate
+  - http://www.w3.org/2000/01/rdf-schema#label
+  - http://schema.org/sameAs
+
+Value:
+  - Alessandro il Grande
+  - Alessandro il Conquistatore
+  - http://commons.wikimedia.org/wiki/Special:FilePath/Alexander%20and%20Bucephalus%20-%20Battle%20of%20Issus%20mosaic%20-%20Museo%20Archeologico%20Nazionale%20-%20Naples%20BW.jpg
+  - -0355-07-15T00:00:00.000Z
+  - fondatore dell'impero ellenistico, fu re di Macedonia, egemone della lega ellenica, faraone d'Egitto e imperatore di Persia
+  - Alessandro Magno
+  - Alessandro III di Macedonia
+  - Alessandro III
+  - /m/0jrg
+  - -0322-06-05T00:00:00.000Z
+  - Alessandro il Macedone
+
+Type:
+  - http://yago-knowledge.org/resource/Military_Leader_Q1402561
+  - http://yago-knowledge.org/resource/Monarch
+
+Parent:
+  - http://yago-knowledge.org/resource/Politician
+  - http://yago-knowledge.org/resource/Official
+  - http://yago-knowledge.org/resource/Statesman
+  - http://yago-knowledge.org/resource/Warrior
+  - http://yago-knowledge.org/resource/Civil_servant
+  - http://yago-knowledge.org/resource/Head_of_state
+  - http://yago-knowledge.org/resource/Military_personnel
+  - http://yago-knowledge.org/resource/Employee
+  - http://yago-knowledge.org/resource/Monarch
+  - http://yago-knowledge.org/resource/Soldier
+  - http://yago-knowledge.org/resource/Officer__u0028_armed_forces_u0029_
+
+Wdparent:
+  - http://www.wikidata.org/entity/Q703534
+  - http://www.wikidata.org/entity/Q372436
+  - http://yago-knowledge.org/resource/Politician
+  - http://www.wikidata.org/entity/Q599151
+  - http://www.wikidata.org/entity/Q47064
+  - http://www.wikidata.org/entity/Q48352
+  - http://www.wikidata.org/entity/Q1250916
+  - http://www.wikidata.org/entity/Q4991371
+  - http://www.wikidata.org/entity/Q116
+  - http://www.wikidata.org/entity/Q189290
+  - http://www.wikidata.org/entity/Q212238
+
+Ancestor:
+  - http://yago-knowledge.org/resource/Worker
+  - http://yago-knowledge.org/resource/Official
+  - http://yago-knowledge.org/resource/Politician
+  - http://yago-knowledge.org/resource/Statesman
+  - http://yago-knowledge.org/resource/Warrior
+  - http://yago-knowledge.org/resource/Bureaucrat
+  - http://yago-knowledge.org/resource/Civil_servant
+  - http://yago-knowledge.org/resource/Head_of_state
+  - http://yago-knowledge.org/resource/Employee
+  - http://yago-knowledge.org/resource/Combatant
+  - http://yago-knowledge.org/resource/Military_personnel
+  - http://yago-knowledge.org/resource/Sovereign
+  - http://yago-knowledge.org/resource/Soldier
+
+Wdancestor:
+  - http://www.wikidata.org/entity/Q703534
+  - http://www.wikidata.org/entity/Q372436
+  - http://yago-knowledge.org/resource/Worker
+  - http://yago-knowledge.org/resource/Politician
+  - http://www.wikidata.org/entity/Q599151
+  - http://www.wikidata.org/entity/Q47064
+  - http://www.wikidata.org/entity/Q48352
+  - http://www.wikidata.org/entity/Q1250916
+  - http://www.wikidata.org/entity/Q4991371
+  - http://www.wikidata.org/entity/Q2304859
+  - http://www.wikidata.org/entity/Q1414937
+  - http://www.wikidata.org/entity/Q572700
+  - http://www.wikidata.org/entity/Q212238
+
+Wikidatalink:
+  - http://www.wikidata.org/entity/Q8409
+
+Image:
+  - http://commons.wikimedia.org/wiki/Special:FilePath/Alexander%20and%20Bucephalus%20-%20Battle%20of%20Issus%20mosaic%20-%20Museo%20Archeologico%20Nazionale%20-%20Naples%20BW.jpg
+

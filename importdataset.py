@@ -305,7 +305,7 @@ def fetchSPARQLendpoint(endpoint, lang, obj_list=None):
 
     #print(turtle_data.decode()) 
 
-    file_path = "C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\"
+    file_path = "C:\\Users\\Palma\\Desktop\\PHD\\***\\HildegardData\\"
     file_path = file_path + input("Insert the name of the file you want to save as KB:")
     # Save the results to the specified file
     global file_path_json_kb
@@ -315,4 +315,4 @@ def fetchSPARQLendpoint(endpoint, lang, obj_list=None):
 
 
 
-fetchSPARQLendpoint('region', 'e', 'it')
+#fetchSPARQLendpoint('region', 'e', 'it')

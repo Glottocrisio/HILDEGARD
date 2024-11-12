@@ -90,6 +90,9 @@ def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
 
     try:
         webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0] 
+        for _ in range(5):  # Scroll 5 times
+            browser.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+            time.sleep(1)  # Wait for content to load
         webtexto = webtext.text
         #if len(webtexto) < 20:
         #    div2 = True 
@@ -120,7 +123,7 @@ def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
     #except OSError as e:
     #    print(e)
 
-    webtexto = webtext.text
+    #webtexto = webtext.text
 
     print(webtexto)
     if div2:
@@ -137,9 +140,10 @@ def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
     for line in ropeslist:
         if ropeslist.index(line) % 2 != 1 and ropeslist.index(line) < len(ropeslist) - 1:
             titles_list.append(line)
-         
-            chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
-               
+            try:
+                chref = browser.find_element(By.LINK_TEXT, line).get_property("href")
+            except Exception as e:
+                chref = "https://"+lang+".wikipedia.org/wiki/"+line.replace(" ", "_")               
         
             if kgr == "yago":
                 chref = f"https://yago-knowledge.org/resource/yago:{line}"
@@ -162,6 +166,9 @@ def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
         div2 = False
         try:
             webtext = browser.find_elements(By.XPATH, "//div[1]/div[2]/div[5]")[0] 
+            for _ in range(5):  # Scroll 10 times
+                browser.find_element(By.TAG_NAME, 'body').send_keys(Keys.PAGE_DOWN)
+                time.sleep(1) 
             if len(webtext) < 20:
                 div2 = True 
                 response = requests.get(f"https://www.sixdegreesofwikipedia.com/?source={start}&target={end}")
@@ -241,3 +248,35 @@ def related_entities_triples(start, end, kgr, lang, bi = True, file = True):
 
     return triplestriples
 
+
+
+# combos = [
+# ('Honeymoon', 'Luxembourg'),
+# ('Resistance movement', 'Historiography'),
+# ('Social norm', 'Anschluss'),
+# ('Wehrmacht', 'Symbol'),
+# ('Technology', 'Society'),
+# ('World War II', 'Bicycle'),
+# ('Nazi Germany', 'Globalization')
+# ]
+ 
+# 'Resistance movement'; 'Historiography' 
+# 'Social norm'; 'Anschluss' 
+# 'Wehrmacht'; 'Symbol'
+#  'Technology'; 'Society'
+#  'Freedom of the press'; 'Forced labour'
+#  'Honeymoon'; 'Luxembourg' ]
+# 'World War II'; 'Bicycle' 
+# 'Nazi Germany'; 'Globalization' 
+# 'Resistance movement'; 'Historiography' 
+# 'Social norm'; 'Anschluss' 
+# 'Wehrmacht'; 'Symbol'
+#  'Technology'; 'Society'
+#  'Freedom of the press'; 'Forced labour'
+#  'Honeymoon'; 'Luxembourg' 
+
+# for ele in combos:
+#     start_page = str(ele[0])
+#     end_page = str(ele[1])
+#     shortest_path = related_entities_triples(start_page, end_page, "dbpedia", "en", False, True)
+#     print(shortest_path)

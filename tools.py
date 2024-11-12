@@ -1,7 +1,7 @@
 import wikipediaapi as wa
 import requests
 from bs4 import BeautifulSoup
-from collections import deque
+from collections import deque, defaultdict
 from SPARQLWrapper import SPARQLWrapper, JSON
 import re
 import spacy
@@ -677,3 +677,192 @@ def filter_json_by_length(input_file, output_file, min_length):
 
 #filter_json_by_length("test_data_entity_linking.json", "test_data_entity_linking_short.json", 100)
 #csv_to_json("C:\\Users\\Palma\\Desktop\\PHD\\DatasetThesis\\HildegardData\\oggetticulturalimuseoarcheologiconapoliit.csv", "test_data_entity_linking.json", "descr")
+
+
+def run_yago_query(entity, lang="it"):
+    endpoint_url = "https://yago-knowledge.org/sparql/query"
+    sparql = SPARQLWrapper(endpoint_url)
+
+    query = f"""
+    PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    PREFIX yago: <http://yago-knowledge.org/resource/>
+    PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+    PREFIX schema: <http://schema.org/>
+    PREFIX owl: <http://www.w3.org/2002/07/owl#>
+    PREFIX dbo: <http://dbpedia.org/ontology/>
+    PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+    
+    SELECT DISTINCT ?property ?value ?type ?parent ?wdparent ?ancestor ?wdancestor
+                    ?description ?wikidataLink ?wikipediaLink ?image
+                    ?subclass ?instance ?related
+                    ?influenced ?influencedBy
+    WHERE {{
+      yago:{entity} ?property ?value.
+      yago:{entity} rdf:type ?type.
+      ?type rdfs:subClassOf* ?parent.
+      ?parent rdfs:subClassOf ?ancestor.
+      ?parent owl:sameAs ?wdparent.
+      ?ancestor owl:sameAs ?wdancestor.
+      
+      OPTIONAL {{ yago:{entity} schema:description ?description. }}
+      OPTIONAL {{ yago:{entity} owl:sameAs ?wikidataLink. 
+                 FILTER(STRSTARTS(STR(?wikidataLink), "http://www.wikidata.org/entity/")) }}
+      OPTIONAL {{ yago:{entity} schema:sameAs ?wikipediaLink. 
+                 FILTER(STRSTARTS(STR(?wikipediaLink), "https://it.wikipedia.org/wiki/")) }}
+      OPTIONAL {{ yago:{entity} schema:image ?image. }}
+      OPTIONAL {{ ?subclass rdfs:subClassOf yago:{entity}. }}
+      OPTIONAL {{ ?instance rdf:type yago:{entity}. }}
+      OPTIONAL {{ yago:{entity} skos:related ?related. }}
+      OPTIONAL {{ yago:{entity} dbo:influenced ?influenced. }}
+      OPTIONAL {{ yago:{entity} dbo:influencedBy ?influencedBy. }}
+      
+      FILTER (LANG(?value) = "{lang}" || LANG(?value) = "")
+      FILTER (?property != schema:mainEntityOfPage && ?property != schema:AlternateName)
+    }}
+    LIMIT 1000
+    """
+
+    sparql.setQuery(query)
+    sparql.setReturnFormat(JSON)
+
+    try:
+        results = sparql.query().convert()
+
+        entity_info = defaultdict(set)
+        for result in results["results"]["bindings"]:
+            for key, value in result.items():
+                entity_info[key].add(value["value"])
+
+        return entity_info
+
+    except Exception as e:
+        print(f"An error occurred: {e}")
+        import traceback
+        traceback.print_exc()
+        return None
+
+def yago_write_results_to_file(entity, entity_info):
+    output_file = f"{entity}_yago_info.txt"
+    with open(output_file, 'w', encoding='utf-8') as f:
+        f.write(f"Information about {entity} in Italian.\n\n")
+        for key, values in entity_info.items():
+            f.write(f"{key.capitalize()}:\n")
+            for value in values:
+                f.write(f"  - {value}\n")
+            f.write("\n")
+    print(f"Results written to {output_file}")
+
+def yago_query_and_save(entity):
+    output_file = f"{entity}_yago_knowledge.txt"
+    results = run_yago_query(entity)
+    if results:
+        yago_write_results_to_file(entity, results)
+    else:
+        print("No results to write.")
+
+
+#yago_query_and_save("Alexander_the_Great")
+#yago_query_and_save("Anubis")
+
+def parse_input_file(file_path):
+    with open(file_path, 'r', encoding='utf-8') as file:
+        content = file.read()
+
+    data = {}
+    current_key = None
+
+    for line in content.split('\n'):
+        line = line.strip()
+        if line.startswith('Property:'):
+            current_key = 'properties'
+            data[current_key] = []
+        elif line.startswith('Information'):
+            current_key = 'entity_name'
+            data[current_key] = []
+        elif line.startswith('Value:'):
+            current_key = 'values'
+            data[current_key] = []
+        elif line.startswith('Type:'):
+            current_key = 'types'
+            data[current_key] = []
+        elif line.startswith('Parent:'):
+            current_key = 'parents'
+            data[current_key] = []
+        elif line.startswith('Ancestor:'):
+            current_key = 'ancestors'
+            data[current_key] = []
+        elif line and current_key:
+
+            data[current_key].append(line.strip('- '))
+
+    for line in content.split('\n'):
+        line = line.strip()
+        if line.startswith('Information'):
+            data['entity_name']= line.replace('Information about ', '').replace(' (in Italian):', '')
+            break
+
+    return data
+
+def generate_cypher_query(data):
+    
+    properties = {
+        "label": next(v for v in data['values'] if not v.startswith("http")),
+        "comment": next((v for v in data['values'] if v.startswith("fondatore") or len(v) > 50), ""),
+        "image": next((v for v in data['values'] if v.startswith("http://commons.wikimedia.org")), ""),
+        "birthDate": next((v for v in data['values'] if v.startswith("0")), ""),
+        "deathDate" : "",
+    }
+    
+    alternate_names = [v for v in data['values'] if v not in properties.values() and not v.startswith("http") and not v.startswith("0")]
+    properties["deathDate"] = next((v for v in data['values'] if v.startswith("0") and v != properties["birthDate"]), "")
+    types = data['types']
+    ancestors = data.get('ancestors', [])
+    entity_name = data['entity_name']
+
+    query = f"""
+    WITH {{
+        name: "http://dbpedia.org/resource/{entity_name}",
+        properties: {{
+            label: "{properties['label']}",
+            comment: "{properties['comment']}",
+            image: "{properties['image']}",
+            birthDate: "{properties['birthDate']}",
+            deathDate: "{properties['deathDate']}"
+        }},
+        types: ["{types[0]}", "{types[1]}"],
+        alternateNames: {alternate_names},
+        ancestors: {ancestors}
+    }} AS entityData
+
+    MERGE (entity:`{{entityData.name}}` {{name: entityData.name}})
+    SET entity += entityData.properties
+    SET entity.cidoc_crm = "E21"
+    SET entity.type = "Person"
+
+    WITH entity, entityData
+    UNWIND entityData.types AS typeName
+    MERGE (type:`{{typeName}}` {{name: typeName}})
+    SET type.cidoc_crm = "E55"
+    MERGE (entity)-[r:`:has_type`]->(type)
+    SET r.cidoc_crm_relationship = "P2"
+
+    WITH entity, entityData
+    UNWIND entityData.alternateNames AS altName
+    MERGE (altNameNode:`{{altName}}` {{name: altName}})
+    SET altNameNode.cidoc_crm = "E41"
+    SET altNameNode.type = "Appellation"
+    MERGE (entity)-[r:`:is_identified_by`]->(altNameNode)
+    SET r.cidoc_crm_relationship = "P1"
+
+    WITH entity, entityData
+    UNWIND entityData.ancestors AS ancestor
+    MERGE (ancestorNode:`{{ancestor}}` {{name: ancestor}})
+    SET ancestorNode.cidoc_crm = "E55"
+    MERGE (entity)-[r:`:has_broader_term`]->(ancestorNode)
+    SET r.cidoc_crm_relationship = "P127"
+    """
+    print(query)
+    return query
+
+data = parse_input_file("Anubis_yago_info.txt")
+generate_cypher_query(data)

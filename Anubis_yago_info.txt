@@ -1,0 +1,46 @@
+Information about Anubis (in Italian):
+
+Property:
+  - http://schema.org/sameAs
+  - http://www.w3.org/2000/01/rdf-schema#comment
+  - http://schema.org/image
+  - http://www.w3.org/2000/01/rdf-schema#label
+
+Value:
+  - /m/012_7
+  - http://commons.wikimedia.org/wiki/Special:FilePath/Anubis%20standing.svg
+  - dio egizio della mummificazione e dei cimiteri
+  - Anubi
+
+Type:
+  - http://yago-knowledge.org/resource/Ancient_Egyptian_deities
+  - http://yago-knowledge.org/resource/Hybrid_beasts_in_folklore
+
+Parent:
+  - http://yago-knowledge.org/resource/Ancient_Egyptian_deities
+  - http://yago-knowledge.org/resource/Chimera__u0028_genetics_u0029_
+  - http://yago-knowledge.org/resource/Hybrid_beasts_in_folklore
+
+Wdparent:
+  - http://www.wikidata.org/entity/Q146083
+  - http://www.wikidata.org/entity/Q1387388
+  - http://www.wikidata.org/entity/Q281721
+
+Ancestor:
+  - http://yago-knowledge.org/resource/Chimera__u0028_genetics_u0029_
+  - http://yago-knowledge.org/resource/Legendary_creature
+  - http://yago-knowledge.org/resource/Hybrid__u0028_biology_u0029_
+  - http://yago-knowledge.org/resource/Deity
+
+Wdancestor:
+  - http://www.wikidata.org/entity/Q42621
+  - http://www.wikidata.org/entity/Q178885
+  - http://www.wikidata.org/entity/Q2239243
+  - http://www.wikidata.org/entity/Q281721
+
+Wikidatalink:
+  - http://www.wikidata.org/entity/Q47534
+
+Image:
+  - http://commons.wikimedia.org/wiki/Special:FilePath/Anubis%20standing.svg
+

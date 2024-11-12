@@ -5,7 +5,7 @@ import tools as t
 import importdataset  as id
 from SPARQLWrapper import SPARQLWrapper, JSON
 import sdowmock as sdow
-import metrics as metr
+#import metrics as metr
 import os
 from py2neo import Graph
 from rdflib import Graph as RDFGraph
@@ -61,11 +61,11 @@ import json
 #             'thai':'tha'}
 
 driver = GraphDatabase.driver("bolt://localhost:7687",
-                              auth=("neo4j","pipi1233")) 
+                              auth=("neo4j","***")) 
 
 
 
-with driver.session(database="dev2") as session:
+with driver.session(database="dev") as session:
 
 
     while True:
@@ -389,5 +389,17 @@ with driver.session(database="dev2") as session:
                    session.execute_write(gm.create_link_json, elem, entity)
 
         session.execute_write(gm.link_similar_nodes, rell, entity, elem)
-
+        session.write_transaction(gm.assign_entity_types)
+        session.write_transaction(gm.assign_relationship_names)
+        session.write_transaction(gm.remove_descr_type)
+        session.write_transaction(gm.set_dbpedia_types)
+        session.write_transaction(gm.set_cidoc_crm_relationships)
+        session.write_transaction(gm.assign_cidoc_crm_entities)
+        session.write_transaction(gm.link_museum2dbpedia)
+        session.write_transaction(gm.add_labels_from_properties)
+        session.write_transaction(gm.merge_sameLabels_nodes)
+        session.write_transaction(gm.merge_sameName_nodes)
+        session.write_transaction(gm.export_graph_as_json)
+        session.write_transaction(gm.export_graph_as_csv)
+        
     driver.close()

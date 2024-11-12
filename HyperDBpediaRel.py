@@ -1,6 +1,7 @@
 from SPARQLWrapper import SPARQLWrapper, JSON
 import re
 
+
 def execute_query(query):
     sparql = SPARQLWrapper("http://dbpedia.org/sparql")
     sparql.setQuery(query)
@@ -57,18 +58,33 @@ def process_entity_pair(entity1, entity2):
             print("No results found. Increasing the number of mids.")
             num_mids += 1
         
-        if num_mids > 5:  # Arbitrary limit to prevent infinite loop
+        if num_mids > 7:  # Arbitrary limit to prevent infinite loop
             print("Reached maximum number of mids without results.")
             break
 
 
 def extract_entity_pairs(content):
     pairs = re.findall(r"'([^']+)'; '([^']+)'", content)
-    return list(set(pairs))  # Remove duplicates
+    return list(set(pairs))  
+
+def extract_entities(text):
+    # Split the text by '>>' to separate each entity
+    entries = text.split('>>')
+    
+    # Use a set comprehension to extract unique entities
+    # The regular expression removes numbers, 'W', 'D', and spaces at the start of each entry
+    entities = {re.sub(r'^[\d.\s]+[WD]\s*', '', entry.strip()) for entry in entries if entry.strip()}
+    
+    return entities
+
+
+text = """0.0269World War II W DWorld War II>>0.0198Luxembourg W DLuxembourg>>0.0133Nazi Germany W DNazi Germany>>0.0065Resistance movement DResistance movement>>0.0054Social norm DSocial norm>>0.0053Wehrmacht W DWehrmacht>>0.0050Technology W DTechnology>>0.0049Symbol DSymbol>>0.0046Anschluss W DAnschluss>>0.0045Society W DSociety>>0.0045Globalization W DGlobalization>>0.0045Bicycle W DBicycle>>0.0043Freedom of the press DFreedom of the press>>0.0042Honeymoon DHoneymoon>>0.0041Historiography W DHistoriography>>0.0041Forced labour DForced labour>>"""
+
+result = extract_entities(text)
+print(result)
 
 def main():
-    # Your provided content
-    content = '''
+    content_random = '''
 'Barney_(given_name)'; 'Barney_Stinson'; '12'
 'Wayne_Brady'; 'Barney_Stinson'; '19'
 'Armenian_Apostolic_Church'; 'Cyril_of_Alexandria'; '29'
@@ -119,7 +135,12 @@ def main():
 'Voltaire'; 'Cyril_of_Alexandria'; '10'
     '''
 
-    entity_pairs = extract_entity_pairs(content)
+
+    entity_couples = '''
+    'Honey_Moon '; 'Belle_\u00C9poque'
+    '''
+
+    entity_pairs = extract_entity_pairs(entity_couples)
     
     for entity1, entity2 in entity_pairs:
         process_entity_pair(entity1, entity2)

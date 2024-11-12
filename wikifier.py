@@ -2,7 +2,7 @@ import requests
 
 import urllib.parse, urllib.request, json
 
-def CallWikifier(text, lang="it", threshold=0.6):
+def CallWikifier(text, lang="en", threshold=0.6):
    
     data = urllib.parse.urlencode([
         ("text", text), ("lang", lang),
@@ -82,3 +82,6 @@ def CallWikifier(text, lang="it", threshold=0.6):
         
     return annotations #annotazioni?
 
+
+#text = "The year 1942 was a tumultuous time globally"
+#CallWikifier(text)
