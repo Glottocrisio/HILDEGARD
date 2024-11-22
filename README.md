@@ -9,6 +9,29 @@ Palma, C. (2024). HILDEGARD: Human-in-the-Loop Data Extraction and Graphically A
   <img src="Data/hildergardlogo.png" alt="Hildegard" width="50%" />
 </p>
 
+### Requirements
 
+- Install Neo4j locally
+- Python 3.7 or higher
+- Install Selenium
 
+<p align="center">
+  <img src="ui.png" alt="ui"/>
+</p>
+
+<p align="center">
+  <img src="Data/hildergardlogo.png" alt="Hildegard" />
+</p>
+
+<p align="center">
+  <img src="Data/hildergardlogo.png" alt="Hildegard" />
+</p>
+
+<p align="center">
+  <img src="Data/hildergardlogo.png" alt="Hildegard" />
+</p>
+
+<p align="center">
+  <img src="Data/hildergardlogo.png" alt="Hildegard" />
+</p>
 
