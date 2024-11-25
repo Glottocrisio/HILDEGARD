@@ -11,12 +11,12 @@ Palma, C. (2024). HILDEGARD: Human-in-the-Loop Data Extraction and Graphically A
 
 ### Requirements
 
-- Install Neo4j locally
+- Neo4j installed locally
 - Python 3.7 or higher
-- Install Selenium
+- Selenium web-driver installed locally
 
 <p align="center">
-  <img src="ui.png" alt="ui"/>
+  <img src="pics/ui.png" alt="ui"/>
 </p>
 
 <p align="center">
