@@ -61,8 +61,7 @@ The core function of this application is the "Six-Degrees-of-Wikipedia" wrapper 
 After performing the Ontology Harmonization of the retrieved entities (defined by title, uri and description) with the CIDOC-CRM Ontology:
 
 <p align="center">
-  <img src="pics/CIDOC-CRM_harmonization_schema.png
-" alt="CIDOC-CRM_harmonization_schema" width="80%"/>
+  <img src="pics/CIDOCCRM_harmonization_schema.png" alt="CIDOC-CRM_harmonization_schema" width="80%"/>
 </p>
 
 
