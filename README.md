@@ -61,7 +61,7 @@ The core function of this application is the "Six-Degrees-of-Wikipedia" wrapper 
 After performing the Ontology Harmonization of the retrieved entities (defined by title, uri and description) with the CIDOC-CRM Ontology:
 
 <p align="center">
-  <img src="CIDOC-CRM_harmonization_schema.png
+  <img src="pics/CIDOC-CRM_harmonization_schema.png
 " alt="CIDOC-CRM_harmonization_schema" width="80%"/>
 </p>
 
@@ -69,7 +69,7 @@ After performing the Ontology Harmonization of the retrieved entities (defined b
 this is how the output JSON file looks like:
 
 <p align="center">
-  <img src="jsonoutput.png" alt="jsonoutput" width="80%"/>
+  <img src="pics/jsonoutput.png" alt="jsonoutput" width="80%"/>
 </p>
 
 The final graph is supposed to include also DBpedia relationships:
